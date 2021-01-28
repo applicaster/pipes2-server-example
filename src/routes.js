@@ -26,46 +26,6 @@ const absoluteReqBasePath = (req) => {
   });
 };
 
-const seriesEntry = (req, id) => {
-  return {
-    id: id,
-    title: `Series ${id} Title`,
-    summary: `Series ${id} summary`,
-    type: {
-      value: "series",
-    },
-    media_group: [
-      {
-        type: "image",
-        media_item: [
-          {
-            // size 1242x699
-            src: absoluteReqBasePath(req) + "images/full-16x9.png",
-            key: "full-16x9",
-          },
-          {
-            src: absoluteReqBasePath(req) + "images/half-2x3.png",
-            key: "half-2x3",
-          },
-          {
-            src: absoluteReqBasePath(req) + "images/third-1x1.png",
-            key: "third-1x1",
-          },
-        ],
-      },
-    ],
-
-    extensions: {
-      channel: "4",
-      category: "my-category",
-      customKeyExample: "customValue",
-      analyticsCustomProperties: {
-        programId: `${id}`,
-        customKeyExample: "customValue",
-      },
-    },
-  };
-};
 
 const renderDummyMediaGroup = (req) => {
   return {
