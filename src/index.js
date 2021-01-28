@@ -1,8 +1,10 @@
 const express = require("express");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-const routes = require("./routes");
 const path = require("path");
+const seriesRoutes = require("./series-routes");
+const edgeCasesRoutes = require("./edge-cases-routes");
+const { absoluteReqBasePath } = require("./utils");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,17 +18,21 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/",
+        url: absoluteReqBasePath,
       },
     ],
   },
-  apis: [path.join(__dirname, "routes.js")],
+  apis: [
+    path.join(__dirname, "series-routes.js"),
+    path.join(__dirname, "edge-cases-routes.js"),
+  ],
 };
 
 const specs = swaggerJsdoc(options);
 app.use(express.static("public"));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
-routes.setup(app);
+seriesRoutes.setup(app);
+edgeCasesRoutes.setup(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

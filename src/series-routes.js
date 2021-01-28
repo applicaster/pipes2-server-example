@@ -1,82 +1,66 @@
-const _ = require("lodash");
-const url = require("url");
-
+const e = require("express");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
+const { absoluteReqPath, renderDummyMediaGroup } = require("./utils");
 
 const adapter = new FileSync("db.json");
 const db = low(adapter);
-
-const itemsPerPage = 50;
-const pageLimit = 4;
-
-const absoluteReqPath = (req) => {
-  return url.format({
-    protocol: req.protocol,
-    host: req.get("x-forwarded-host") || req.get("host"),
-    pathname: url.parse(req.url).pathname,
-  });
-};
-
-const absoluteReqBasePath = (req) => {
-  return url.format({
-    protocol: req.protocol,
-    host: req.get("x-forwarded-host") || req.get("host"),
-    pathname: "/",
-  });
-};
-
-
-const renderDummyMediaGroup = (req) => {
-  return {
-    media_group: [
-      {
-        type: "image",
-        media_item: [
-          {
-            // size 1242x699
-            src: absoluteReqBasePath(req) + "images/full-16x9.png",
-            key: "full-16x9",
-          },
-          {
-            src: absoluteReqBasePath(req) + "images/half-2x3.png",
-            key: "half-2x3",
-          },
-          {
-            src: absoluteReqBasePath(req) + "images/third-1x1.png",
-            key: "third-1x1",
-          },
-        ],
-      },
-    ],
-  };
-};
 
 const renderSeriesEntry = (req) => (series) => {
   const { id, title, category } = series;
   return {
     id,
     title,
+    // Will open the screen that is mapped to "series"
     type: { value: "series" },
     extensions: {
       category,
     },
-    ...renderDummyMediaGroup(req),
+    ...renderDummyMediaGroup,
   };
 };
 
-const renderEpisodeEntry = (req) => (series) => {
-  const { id, title, category, duration } = series;
-  return {
+const renderEpisodeEntry = (req) => (episode) => {
+  
+  const { id, title, category, duration, streamURL, type } = episode;
+  const common = {
     id,
     title,
-    type: { value: "episode" },
+
     extensions: {
       category,
       duration,
     },
-    ...renderDummyMediaGroup(req),
+    ...renderDummyMediaGroup,
   };
+  switch (type) {
+    case "now-live":
+      return {
+        ...common,
+        // Will open the live player in full screen
+        type: { value: "program" },
+        content: {
+          src: streamURL,
+          type: "video/hls",
+        },
+      };
+    case "vod":
+      return {
+        ...common,
+        // Will open the video player in full screen
+        type: { value: "video" },
+        content: {
+          src: streamURL,
+          type: "video/hls",
+        },
+      };
+    case "coming-soon":
+      return {
+        ...common,
+        // Will open the screen that is mapped to "episode-coming-soon"
+        type: { value: "episode-coming-soon" },
+      };
+  }
 };
 
 module.exports.setup = (app) => {
@@ -119,7 +103,7 @@ module.exports.setup = (app) => {
    *         example: 2
    *         description: The Season Number
    *     tags: [Series]
-   *     description: List episodes by seriesId and season Number - sort by episode number.
+   *     description: List episodes by seriesId and season Number - sort by episode number (descending).
    *     responses:
    *       200:
    *         description: Success
@@ -127,7 +111,6 @@ module.exports.setup = (app) => {
   app.get("/series/:seriesId/seasons/:seasonNumber/episodes", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     const { seriesId, seasonNumber } = req.params;
-    const series = db.get("series").find({ id: seriesId }).value();
     const season = db
       .get("seasons")
       .find({ seriesId, seasonNumber: Number(seasonNumber) })
@@ -146,21 +129,37 @@ module.exports.setup = (app) => {
 
   /**
    * @swagger
-   * /empty-feed:
+   * /episodes/{episodeId}:
    *   get:
-   *     tags: [Utils]
-   *     description: Example that simulates an empty feed - empty items can be ignored when using in groups
+   *     parameters:
+   *       - in: path
+   *         name: episodeId
+   *         example: series-1--series-1--season-1--episode-1
+   *         description: The Series Id
+   *
+   *     tags: [Series]
+   *     description: Get an episode entry
    *     responses:
    *       200:
    *         description: Success
    */
-  app.get("/empty-feed", (req, res) => {
-    const page = req.query.page ? Number(req.query.page) : 0;
+  app.get("/episodes/:episodeId", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    const { episodeId } = req.params;
+    const episode = db.get("episodes").find({ id: episodeId }).value();
+    const series = db.get("series").find({ id: episode.seriesId }).value();
+
+    console.log(episode)
     res.json({
-      id: "/empty-feed",
-      title: "Empty Feed",
-      route: absoluteReqBasePath(req),
-      entry: [],
+      id: absoluteReqPath(req),
+      title: episode.title,
+      type: {
+        value: "feed",
+      },
+      extensions: {
+        ...renderSeriesEntry(req)(series),
+      },
+      entry: [renderEpisodeEntry(req)(episode)],
     });
   });
 };

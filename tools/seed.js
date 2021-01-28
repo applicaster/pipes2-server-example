@@ -14,6 +14,8 @@ const seriesPrefix = "series";
 const seasonPrefix = "season";
 const episodePrefix = "episode";
 const categories = ["Drama", "Comedy", "Action"];
+const sampleHls =
+  "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
 
 const series = _.times(totalSeries).map((index) => {
   const counter = index + 1;
@@ -49,8 +51,8 @@ const createSeasonsEpisodes = (season) =>
     // create 3 types of episodes - (live now, coming soon, already broadcasted - VODs )
     if (season.seasonNumber == totalSeasons && counter === episodesPerSeason) {
       extras = {
-        streamURL: "",
-        nowLive: true,
+        type: "now-live",
+        streamURL: sampleHls,
         secondsFromBroadcast: 2 * 60,
       };
     } else if (
@@ -58,12 +60,13 @@ const createSeasonsEpisodes = (season) =>
       counter > episodesPerSeason - 3
     ) {
       extras = {
-        comingSoon: true,
+        type: "coming-soon",
         secondsToBroadcast: 24 * 60 * 60,
       };
     } else {
       extras = {
-        streamURL: "",
+        type: "vod",
+        streamURL: sampleHls,
         secondsFromBroadcast: 24 * 60 * 60,
       };
     }
@@ -77,7 +80,7 @@ const createSeasonsEpisodes = (season) =>
       episodeNumber: counter,
       seriesId: season.seriesId,
       category: SeasonSeries.category,
-      extras,
+      ...extras,
     };
   });
 
