@@ -3,7 +3,7 @@
 In the repo you will find an `express.js` app that implements the `Zapp Pipes V2 Protocol`.
 For more information please go to https://docs.applicaster.com/integrations/pipes2-endpoint-implementation-guide
 
-The API covers a few common protocols for Broadcaster APIs - feel free to poke around.
+The API covers a few common feeds for Broadcaster APIs - feel free to poke around.
 
 All API calls are document using the Open API standard:
 
@@ -17,3 +17,18 @@ All API calls are document using the Open API standard:
 
 
 ## Covered UX patterns
+
+### Series
+
+- Get All Series.
+
+- Get All Episodes by series Id and Season number.
+
+- Get a specific episode by Ids.
+
+
+### Edge cases
+
+- Get an empty feed
+
+- Context keys - Get items by device type

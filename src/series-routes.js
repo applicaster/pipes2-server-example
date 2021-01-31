@@ -6,13 +6,19 @@ const { absoluteReqPath, renderDummyMediaGroup } = require("./utils");
 const adapter = new FileSync("db.json");
 const db = low(adapter);
 
+const SCREEN_TYPES = {
+  LIVE: "program", // program is a reserved word - it will open the live player in full screen
+  VOD: "video", // video a reserved word - it will open the VOD player in full screen
+  COMING_SOON_EPISODE: "example-coming-soon-episode",
+  SERIES: "example-series",
+};
+
 const renderSeriesEntry = (req) => (series) => {
   const { id, title, category } = series;
   return {
     id,
     title,
-    // Will open the screen that is mapped to "series"
-    type: { value: "series" },
+    type: { value: SCREEN_TYPES.SERIES },
     extensions: {
       category,
     },
@@ -21,12 +27,10 @@ const renderSeriesEntry = (req) => (series) => {
 };
 
 const renderEpisodeEntry = (req) => (episode) => {
-  
   const { id, title, category, duration, streamURL, type } = episode;
   const common = {
     id,
     title,
-
     extensions: {
       category,
       duration,
@@ -38,7 +42,7 @@ const renderEpisodeEntry = (req) => (episode) => {
       return {
         ...common,
         // Will open the live player in full screen
-        type: { value: "program" },
+        type: { value: SCREEN_TYPES.LIVE },
         content: {
           src: streamURL,
           type: "video/hls",
@@ -47,8 +51,7 @@ const renderEpisodeEntry = (req) => (episode) => {
     case "vod":
       return {
         ...common,
-        // Will open the video player in full screen
-        type: { value: "video" },
+        type: { value: SCREEN_TYPES.VOD },
         content: {
           src: streamURL,
           type: "video/hls",
@@ -57,8 +60,7 @@ const renderEpisodeEntry = (req) => (episode) => {
     case "coming-soon":
       return {
         ...common,
-        // Will open the screen that is mapped to "episode-coming-soon"
-        type: { value: "episode-coming-soon" },
+        type: { value: SCREEN_TYPES.COMING_SOON_EPISODE },
       };
   }
 };
@@ -115,6 +117,7 @@ module.exports.setup = (app) => {
       .get("seasons")
       .find({ seriesId, seasonNumber: Number(seasonNumber) })
       .value();
+
     res.json({
       id: absoluteReqPath(req),
       title: season.title,
@@ -149,7 +152,6 @@ module.exports.setup = (app) => {
     const episode = db.get("episodes").find({ id: episodeId }).value();
     const series = db.get("series").find({ id: episode.seriesId }).value();
 
-    console.log(episode)
     res.json({
       id: absoluteReqPath(req),
       title: episode.title,
