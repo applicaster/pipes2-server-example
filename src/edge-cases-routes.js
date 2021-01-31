@@ -27,7 +27,7 @@ module.exports.setup = (app) => {
   app.get("/with-context/by-platform", (req, res) => {
     /**
    * @swagger
-   * /empty-feed:
+   * /with-context/by-platform:
    *   get:
    *     tags: [Edge-Cases]
    *     description: Example that simulates the use of context keys (platform)
