@@ -33,7 +33,7 @@ const createSeriesSeasons = (series) =>
 
     return {
       id: `${seriesId}--${seasonPrefix}-${counter}`,
-      title: `Season ${counter} (Series ${seriesId})`,
+      title: `Season ${counter} (${seriesId})`,
       seasonNumber: counter,
       seriesId,
     };
@@ -73,7 +73,7 @@ const createSeasonsEpisodes = (season) =>
 
     return {
       id: `${season.seriesId}--${season.id}--${episodePrefix}-${counter}`,
-      title: `E${counter}S${season.seasonNumber} (Series ${season.seriesId})`,
+      title: `E${counter}S${season.seasonNumber} (${season.seriesId})`,
       summary: `E${counter}S${season.seasonNumber} Summary`,
       duration: 60 * 30,
       seasonNumber: season.seasonNumber,
