@@ -24,10 +24,10 @@ module.exports.setup = (app) => {
     });
   });
 
-  app.get("/with-context/by-platform", (req, res) => {
+  app.get("/by-platforms/featured-videos", (req, res) => {
     /**
    * @swagger
-   * /with-context/by-platform:
+   * /by-platforms/featured-videos:
    *   get:
    *     tags: [Edge-Cases]
    *     description: Example that simulates the use of context keys (platform)
