@@ -66,7 +66,7 @@ const createSeasonsEpisodes = (season) =>
     const SeasonSeries = series.find((item) => item.id === season.seriesId);
 
     return {
-      id: `${season.seriesId}--${season.id}--${episodePrefix}-${counter}`,
+      id: `${season.id}--${episodePrefix}-${counter}`,
       type: "episode",
       title: `E${counter}S${season.seasonNumber} (${season.seriesId})`,
       summary: `E${counter}S${season.seasonNumber} Summary`,
