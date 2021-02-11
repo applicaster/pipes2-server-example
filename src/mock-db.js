@@ -69,15 +69,8 @@ const calculateLimit = (limit) =>
 const now = DateTime.local();
 const startOfWeek = now.startOf("week");
 
-module.exports.getMediaItems = ({
-  filters,
-  sorts,
-  maxPage,
-  perPage,
-  page,
-  q,
-}) => {
-  const calculateSorts = sorts.reduce(
+const calculateSorts = (sorts) => {
+  return sorts.reduce(
     (acc, item) => {
       acc.keys.push(item.split(":")[0]);
       if (_.endsWith(item, ":desc")) {
@@ -93,23 +86,43 @@ module.exports.getMediaItems = ({
       order: [],
     }
   );
+};
+
+const getNextPage = ({ total, maxPage, perPage, page }) => {
+  if (maxPage > page && total > page * perPage) {
+    return Number(page) + 1;
+  }
+  return undefined;
+};
+
+module.exports.getMediaItems = ({
+  filters,
+  sorts,
+  maxPage,
+  perPage,
+  page,
+  q,
+}) => {
+  const { keys, order } = calculateSorts(sorts);
 
   const baseQuery = db
     .get("media")
     .filter(filters)
     .fuse(q)
-    .orderBy(calculateSorts.keys, calculateSorts.order);
+    .orderBy(keys, order);
+
   const total = baseQuery.size().value();
-  let nextPage;
   const currentPage = _.defaultTo(page, 1);
   currentPerPage = _.defaultTo(perPage, 20);
   currentMaxPage = _.defaultTo(maxPage, 100);
   if (currentPage > currentMaxPage) return { items: [] };
 
-  if (currentMaxPage > currentPage && total > currentPage * currentPerPage) {
-    nextPage = Number(currentPage) + 1;
-  }
-  console.log({ currentPerPage });
+  const nextPage = getNextPage({
+    total,
+    maxPage: currentMaxPage,
+    perPage: currentPerPage,
+    page: currentPage,
+  });
   return {
     nextPage,
     items: baseQuery
@@ -125,18 +138,39 @@ module.exports.getMediaItems = ({
   };
 };
 
-module.exports.getPrograms = ({ filters, epgFilters, limit }) => {
+module.exports.getPrograms = ({
+  filters,
+  epgFilters,
+  maxPage,
+  perPage,
+  page,
+}) => {
+  const baseQuery = db
+    .get("programs")
+    .filter(filters)
+    .map((program) => {
+      program.airTimestamp = startOfWeek.plus(program.airTime);
+      return program;
+    })
+    .epgUtils(epgFilters);
+
+  const total = baseQuery.size().value();
+  const currentPage = _.defaultTo(page, 1);
+  currentPerPage = _.defaultTo(perPage, 20);
+  currentMaxPage = _.defaultTo(maxPage, 100);
+  if (currentPage > currentMaxPage) return { items: [] };
+
+  const nextPage = getNextPage({
+    total,
+    maxPage: currentMaxPage,
+    perPage: currentPerPage,
+    page: currentPage,
+  });
   return {
-    items: db
-      .get("programs")
-      .filter(filters)
-      .map((program) => {
-        program.airTimestamp = startOfWeek.plus(program.airTime);
-        return program;
-      })
-      .epgUtils(epgFilters)
-      //   .filter(setEpgFilter)
-      .take(calculateLimit(limit))
+    nextPage,
+    items: baseQuery
+      .drop((currentPage - 1) * currentPerPage)
+      .take(currentPerPage)
       .value(),
   };
 };

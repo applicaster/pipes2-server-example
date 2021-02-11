@@ -26,6 +26,8 @@ const entryRenderers = {
       summary,
       seasonNumber,
       episodeNumber,
+      airTimestamp,
+      isLive,
     } = episode;
     return {
       id,
@@ -45,6 +47,11 @@ const entryRenderers = {
         channel,
         seasonNumber,
         episodeNumber,
+        relativeBroadcastDate:
+          airTimestamp &&
+          DateTime.fromMillis(Number(airTimestamp)).toRelative(),
+        broadcastDate:  DateTime.fromMillis(Number(airTimestamp)).toFormat("LLL dd, h:mma"),
+        isLive,
         analyticsCustomProperties: {
           seriesId,
           genre,
@@ -292,7 +299,16 @@ module.exports.setup = (app) => {
    * /epg:
    *   get:
    *     description: |
-   *       Get programs on the EPG according to a given query params
+   *       Get programs on the EPG according to given query params
+   *
+   *       Examples:
+   *
+   *        - Get all programs that are currently running [/epg?now=true](/epg?now=true)
+   *        - Get all programs that are currently running on a specific channel [/epg?now=true&byChannel=channel-1](/epg?now=true&byChannel=channel-1)
+   *        - Get all up next programs [/epg?upNext=true](/epg?upNext=true)
+   *        - Get all just ended programs [/epg?justEnded=true](/epg?justEnded=true)
+   *        - Get All Programs for a given day  [/epg?forDay=<REPLACE_WITH_TIMESTAMP>](/epg?forDay=<REPLACE_WITH_TIMESTAMP>)
+   *
    *
    *     parameters:
    *       - in: query
@@ -300,6 +316,61 @@ module.exports.setup = (app) => {
    *         description: Override the feed title
    *         schema:
    *           type: string
+   *
+   *       - in: query
+   *         name: byId
+   *         description: Get an item by its id (the result will be an array with single item)
+   *         schema:
+   *           type: string
+   *
+   *       - in: query
+   *         name: byType
+   *         schema:
+   *           type: string
+   *           enum: [series, season, episode, channel]
+   *
+   *       - in: query
+   *         name: bySeasonNumber
+   *         description: For episodes  - find episodes with the given season number.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: byEpisodeNumber
+   *         description: For episodes  - find episodes with the given episode number.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: byChannel
+   *         description: Find items by a for a specific channel.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: byGenre
+   *         description:  Find items by a for a specific genre.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: page
+   *         description: Page number - (defaults to 20)
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: perPage
+   *         description: Items per page - starts from 1 (defaults to 1)
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: maxPage
+   *         description: Max page number - if you want to remove pagination set the max page to the current page number
+   *         schema:
+   *           type: number
+   *
    *
    *     responses:
    *       200:
@@ -327,11 +398,21 @@ module.exports.setup = (app) => {
       forDay: req.query.forDay,
     };
 
-    const { items } = mockDb.getPrograms({
+    const { items, nextPage } = mockDb.getPrograms({
       filters,
       epgFilters,
-      limit: req.query.limit,
+
+      maxPage: req.query.maxPage,
+      perPage: req.query.perPage,
+      page: req.query.page,
     });
+
+    let next;
+    if (nextPage) {
+      next = new URI(absoluteReqPath(req));
+      console.log({ nextPage });
+      next.setQuery("page", nextPage);
+    }
 
     res.json({
       id: absoluteReqPath(req),
@@ -339,7 +420,10 @@ module.exports.setup = (app) => {
       type: {
         value: "feed",
       },
-      entry: items,
+      next: next && next.toString(),
+      entry: items.map((item) => {
+        return entryRenderers[item.type](item);
+      }),
     });
   });
 
