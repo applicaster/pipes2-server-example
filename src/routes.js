@@ -254,6 +254,41 @@ module.exports.setup = (app) => {
 
   /**
    * @swagger
+   * /epg/days:
+   *   get:
+   *     description: |
+   *        List of the current week days to populate the EPG tabs
+   *
+   *     parameters:
+   *       - in: query
+   *         name: feedTitle
+   *         description: Override the feed title
+   *         schema:
+   *           type: string
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
+  app.get("/epg/days", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      id: absoluteReqPath(req),
+      title: req.query.feedTitle || "EPG",
+      entry: _.times(7).map((index) => {
+        const day = DateTime.local().startOf("week").plus({ days: index });
+
+        return {
+          id: day.toMillis(),
+          title: day.toFormat("cccc"),
+        };
+      }),
+    });
+  });
+
+  /**
+   * @swagger
    * /epg:
    *   get:
    *     description: |
