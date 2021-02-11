@@ -77,7 +77,28 @@ module.exports.getMediaItems = ({
   page,
   q,
 }) => {
-  const baseQuery = db.get("media").filter(filters).fuse(q).sortBy(sorts);
+  const calculateSorts = sorts.reduce(
+    (acc, item) => {
+      acc.keys.push(item.split(":")[0]);
+      if (_.endsWith(item, ":desc")) {
+        acc.order.push("desc");
+      } else {
+        acc.order.push("asc");
+      }
+      return acc;
+    },
+    {
+      keys: [],
+
+      order: [],
+    }
+  );
+
+  const baseQuery = db
+    .get("media")
+    .filter(filters)
+    .fuse(q)
+    .orderBy(calculateSorts.keys, calculateSorts.order);
   const total = baseQuery.size().value();
   let nextPage;
   const currentPage = _.defaultTo(page, 1);
