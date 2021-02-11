@@ -25,7 +25,7 @@ const options = {
   },
   apis: [
     path.join(__dirname, "routes.js"),
-    path.join(__dirname, "edge-cases-routes.js"),
+    // path.join(__dirname, "edge-cases-routes.js"),
   ],
 };
 
