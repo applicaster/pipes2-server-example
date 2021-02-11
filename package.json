@@ -12,11 +12,14 @@
   "dependencies": {
     "base64url": "^3.0.1",
     "express": "^4.17.1",
+    "fuse.js": "^6.4.6",
     "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
+    "luxon": "^1.25.0",
     "swagger-jsdoc": "^6.0.1",
     "swagger-ui-dist": "^3.40.0",
-    "swagger-ui-express": "^4.1.6"
+    "swagger-ui-express": "^4.1.6",
+    "urijs": "^1.19.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

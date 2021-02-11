@@ -1,10 +1,9 @@
-const _ = require("lodash");
-const url = require("url");
 const path = require("path");
 
 const absoluteReqBasePath = process.env.BASE_URL || "http://localhost:3000/";
+
 const absoluteReqPath = (req) => {
-  return path.join(absoluteReqBasePath, url.parse(req.url).pathname);
+  return req.protocol + "://" + req.get("host") + req.originalUrl;
 };
 
 const renderDummyMediaGroup = {
