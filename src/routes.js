@@ -108,6 +108,98 @@ const entryRenderers = {
 };
 
 module.exports.setup = (app) => {
+  /**
+   * @swagger
+   * /media:
+   *   get:
+   *     description: |
+   *        Search for media items
+   *
+   *        Examples:
+   *
+   *          - Get all series: [/media?byType=series](/media?byType=series)
+   *          - Get series by Id: [/media?byType=series&byId=series-1](/media?byType=series&byId=series-1)
+   *          - Get all series with genre-1: [/media?byType=series&byGenre=genre-1](/media?byType=series&byGenre=genre-1)
+   *          - Get all episodes of series-1 & season number 3 on descending order: [/media?byType=episode&bySeriesId=series-1&bySeasonNumber=3&sortBy=episodeNumber:desc](/media?byType=episode&bySeriesId=series-1&bySeasonNumber=3&sortBy=episodeNumber:desc)
+   *          - Search for episodes that contain the text `E2S1`: [/media?byType=episode&q=E2S1](/media?byType=episode&q=E2S1)
+   *
+   *
+   *     parameters:
+   *       - in: query
+   *         name: byId
+   *         description: Get an item by its id (the result will be an array with single item)
+   *         schema:
+   *           type: string
+   *
+   *       - in: query
+   *         name: byType
+   *         schema:
+   *           type: string
+   *           enum: [series, season, episode, channel]
+   *
+   *       - in: query
+   *         name: bySeasonNumber
+   *         description: For episodes  - find episodes with the given season number.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: byEpisodeNumber
+   *         description: For episodes  - find episodes with the given episode number.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: byChannel
+   *         description: Find items by a for a specific channel.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: byGenre
+   *         description:  Find items by a for a specific genre.
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: sortBy
+   *         description: |
+   *           Sort by one parameter or more (comma separated).
+   *
+   *           You can suffix the paramter with `:decs` to reverse its order
+   *         schema:
+   *           type: string
+   *           enum: [episodeNumber, seasonNumber, channel, genre, episodeNumber:decs, seasonNumber:decs, channel:decs, genre:decs]
+   *
+   *       - in: query
+   *         name: q
+   *         description: Free text search.
+   *         schema:
+   *           type: string
+   *
+   *       - in: query
+   *         name: page
+   *         description: Page number - (defaults to 20)
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: perPage
+   *         description: Items per page - starts from 1 (defaults to 1)
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: maxPage
+   *         description: Max page number - if you want to remove pagination set the max page to the current page number
+   *         schema:
+   *           type: number
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
   app.get("/media", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     const filters = _.reduce(
@@ -160,6 +252,25 @@ module.exports.setup = (app) => {
     });
   });
 
+  /**
+   * @swagger
+   * /epg:
+   *   get:
+   *     description: |
+   *       Get programs on the EPG according to a given query params
+   *
+   *     parameters:
+   *       - in: query
+   *         name: feedTitle
+   *         description: Override the feed title
+   *         schema:
+   *           type: string
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
   app.get("/epg", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     const filters = _.reduce(
