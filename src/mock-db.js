@@ -185,24 +185,24 @@ module.exports.getCollectionByName = ({ name }) => {
         .take(1),
     },
 
-    featuredDrama: {
+    featuredGenre1: {
       items: db
         .get("media")
-        .filter((item) => item.type === "series" && item.category === "Drama")
+        .filter((item) => item.type === "series" && item.genre === "genre-1")
         .shuffle()
         .take(6),
     },
 
-    featuredAction: {
+    featuredGenre2: {
       items: db
         .get("media")
-        .filter((item) => item.type === "series" && item.category === "Action")
+        .filter((item) => item.type === "series" && item.genre === "genre-2")
         .shuffle()
         .take(6),
     },
 
     genres: {
-      items: [{ id: "drama", title: "Drama" }],
+      items: [{ id: "genre-1", title: "Genre 1" }],
     },
   };
   return { items: collections[name].items.value() };

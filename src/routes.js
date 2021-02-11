@@ -50,7 +50,9 @@ const entryRenderers = {
         relativeBroadcastDate:
           airTimestamp &&
           DateTime.fromMillis(Number(airTimestamp)).toRelative(),
-        broadcastDate:  DateTime.fromMillis(Number(airTimestamp)).toFormat("LLL dd, h:mma"),
+        broadcastDate: DateTime.fromMillis(Number(airTimestamp)).toFormat(
+          "LLL dd, h:mma"
+        ),
         isLive,
         analyticsCustomProperties: {
           seriesId,
@@ -427,6 +429,31 @@ module.exports.setup = (app) => {
     });
   });
 
+  /**
+   * @swagger
+   * /collections/{collectionName}:
+   *   get:
+   *     description: |
+   *        Get collection by name
+   *
+   *     parameters:
+   *       - in: query
+   *         name: feedTitle
+   *         description: Override the feed title
+   *         schema:
+   *           type: string
+   *       - in: path
+   *         name: collectionName
+   *         description: Predefined collection name
+   *         schema:
+   *           type: string
+   *           enum: [homeFeatured, featuredGenre1, featuredGenre2, genres]
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
   app.get("/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
 
@@ -436,14 +463,42 @@ module.exports.setup = (app) => {
 
     res.json({
       id: absoluteReqPath(req),
-      title: req.query.feedTitle,
+      title: req.query.feedTitle || req.params.collectionName,
       type: {
         value: "feed",
       },
-      entry: items,
+      entry: items.map((item) => {
+        return entryRenderers[item.type](item);
+      }),
     });
   });
 
+
+  /**
+   * @swagger
+   * /user/collections/{collectionName}:
+   *   get:
+   *     description: |
+   *        User collection (user info from ctx)
+   *
+   *     parameters:
+   *       - in: query
+   *         name: feedTitle
+   *         description: Override the feed title
+   *         schema:
+   *           type: string
+   *       - in: path
+   *         name: collectionName
+   *         description: Predefined collection name
+   *         schema:
+   *           type: string
+   *           enum: [myFavorites]
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
   app.get("/user/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     let context = {};
