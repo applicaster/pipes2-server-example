@@ -13,6 +13,7 @@ const SCREEN_TYPES = {
   EXAMPLE_COMING_SOON_SERIES: "example-coming-soon-series",
   EXAMPLE_CHANNEL: "example-channel",
   EXAMPLE_GENRE: "example-genre",
+  EXAMPLE_SEASON: "example-season",
 };
 
 const entryRenderers = {
@@ -145,7 +146,7 @@ const entryRenderers = {
       id,
       title: id,
       type: {
-        value: SCREEN_TYPES.SEASON_CHANNEL,
+        value: SCREEN_TYPES.EXAMPLE_SEASON,
       },
       extensions: {
         cta,
@@ -428,7 +429,7 @@ module.exports.setup = (app) => {
    *         schema:
    *           type: number
    *
-   *    *
+   *    
    *       - in: query
    *         name: page
    *         description: Page number - (defaults to 1)
@@ -473,7 +474,7 @@ module.exports.setup = (app) => {
       upNext: req.query.upNext,
       justEnded: req.query.justEnded,
       forDay: req.query.forDay,
-      futureForDay: req.query.futureForDay
+      futureForDay: req.query.futureForDay,
     };
 
     const { items, nextPage } = mockDb.getPrograms({

@@ -76,7 +76,7 @@ db._.mixin({
         keys: ["id", "title", "summary"],
       });
       const result = fuse.search(searchString).map(({ item }) => item);
-      return result;
+      return result.filter((item) => item.type !== "season");
     }
     return items;
   },
