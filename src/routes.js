@@ -249,6 +249,7 @@ module.exports.setup = (app) => {
    */
   app.get("/media", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader('Cache-Control', 'public, max-age=300');
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
@@ -320,6 +321,7 @@ module.exports.setup = (app) => {
    */
   app.get("/epg/days", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader('Cache-Control', 'public, max-age=300');
     res.json({
       id: absoluteReqPath(req),
       title: req.query.feedTitle || "EPG",
@@ -419,6 +421,7 @@ module.exports.setup = (app) => {
    */
   app.get("/epg", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader('Cache-Control', 'public, max-age=300');
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
@@ -494,7 +497,7 @@ module.exports.setup = (app) => {
    */
   app.get("/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
-
+    res.setHeader('Cache-Control', 'public, max-age=300');
     const { items } = mockDb.getCollectionByName({
       name: req.params.collectionName,
     });
@@ -538,6 +541,7 @@ module.exports.setup = (app) => {
    */
   app.get("/user/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader('Cache-Control', 'public, max-age=300');
     let context = {};
     try {
       context = JSON.parse(base64url.decode(req.query.ctx));
