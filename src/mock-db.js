@@ -46,6 +46,25 @@ const epgUtils = (programs, epgFilters) => {
     });
   }
 
+  if (epgFilters.futureForDay) {
+    return modifiedPrograms.filter((program) => {
+      console.log(
+        "local",
+        DateTime.local().toMillis(),
+        "program",
+        program.airTimestamp.toMillis(),
+        program.airTimestamp.toMillis() > DateTime.local().toMillis(),
+        program.airTimestamp.ordinal,
+        DateTime.fromMillis(Number(epgFilters.futureForDay)).ordinal
+      );
+      return (
+        program.airTimestamp.ordinal ==
+          DateTime.fromMillis(Number(epgFilters.futureForDay)).ordinal &&
+        program.airTimestamp.toMillis() >= DateTime.local().toMillis()
+      );
+    });
+  }
+
   return modifiedPrograms;
 };
 

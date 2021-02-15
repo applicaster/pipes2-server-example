@@ -5,6 +5,7 @@ const { DateTime } = require("luxon");
 const URI = require("urijs");
 
 const mockDb = require("./mock-db");
+const { query } = require("express");
 
 const SCREEN_TYPES = {
   EXAMPLE_EPISODE: "example-episode",
@@ -249,7 +250,7 @@ module.exports.setup = (app) => {
    */
   app.get("/media", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
-    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.setHeader("Cache-Control", "public, max-age=300");
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
@@ -321,13 +322,14 @@ module.exports.setup = (app) => {
    */
   app.get("/epg/days", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
-    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.setHeader("Cache-Control", "public, max-age=300");
     res.json({
       id: absoluteReqPath(req),
       title: req.query.feedTitle || "EPG",
       entry: _.times(7).map((index) => {
-        const day = DateTime.local().startOf("week").plus({ days: index });
-
+        const day = DateTime.local()
+          .startOf(req.query.startToday === "true" ? "day" : "week")
+          .plus({ days: index });
         return {
           id: day.toMillis(),
           title: day.toFormat("cccc"),
@@ -349,7 +351,8 @@ module.exports.setup = (app) => {
    *        - Get all programs that are currently running on a specific channel [/epg?now=true&byChannel=channel-1](/epg?now=true&byChannel=channel-1)
    *        - Get all up next programs [/epg?upNext=true](/epg?upNext=true)
    *        - Get all just ended programs [/epg?justEnded=true](/epg?justEnded=true)
-   *        - Get All Programs for a given day  [/epg?forDay=<REPLACE_WITH_TIMESTAMP>](/epg?forDay=<REPLACE_WITH_TIMESTAMP>)
+   *        - Get all programs for a given day  [/epg?forDay=<REPLACE_WITH_TIMESTAMP>](/epg?forDay=<REPLACE_WITH_TIMESTAMP>)
+   *        - Get all future programs for a given day  [/epg?futureForDay=<REPLACE_WITH_TIMESTAMP>](/epg?futureForDay=<REPLACE_WITH_TIMESTAMP>)
    *
    *
    *     parameters:
@@ -394,16 +397,47 @@ module.exports.setup = (app) => {
    *         description:  Find items by a for a specific genre.
    *         schema:
    *           type: number
+
+   *       - in: query
+   *         name: now
+   *         description: all currently running programs
+   *         schema:
+   *           type: boolean
    *
    *       - in: query
+   *         name: upNext
+   *         description: All up next programs
+   *         schema:
+   *           type: boolean
+   *
+   *       - in: query
+   *         name: justEnded
+   *         description: The last episodes that were just ended 
+   *         schema:
+   *           type: boolean
+   *
+   *       - in: query
+   *         name: forDay
+   *         description: given a timestamp in millis
+   *         schema:
+   *           type: number
+   *
+   *       - in: query
+   *         name: futureForDay
+   *         description: given a timestamp in millis
+   *         schema:
+   *           type: number
+   *
+   *    *
+   *       - in: query
    *         name: page
-   *         description: Page number - (defaults to 20)
+   *         description: Page number - (defaults to 1)
    *         schema:
    *           type: number
    *
    *       - in: query
    *         name: perPage
-   *         description: Items per page - starts from 1 (defaults to 1)
+   *         description: Items per page (defaults to 2o)
    *         schema:
    *           type: number
    *
@@ -421,7 +455,7 @@ module.exports.setup = (app) => {
    */
   app.get("/epg", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
-    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.setHeader("Cache-Control", "public, max-age=300");
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
@@ -439,6 +473,7 @@ module.exports.setup = (app) => {
       upNext: req.query.upNext,
       justEnded: req.query.justEnded,
       forDay: req.query.forDay,
+      futureForDay: req.query.futureForDay
     };
 
     const { items, nextPage } = mockDb.getPrograms({
@@ -497,7 +532,7 @@ module.exports.setup = (app) => {
    */
   app.get("/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
-    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.setHeader("Cache-Control", "public, max-age=300");
     const { items } = mockDb.getCollectionByName({
       name: req.params.collectionName,
     });
@@ -541,7 +576,7 @@ module.exports.setup = (app) => {
    */
   app.get("/user/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
-    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.setHeader("Cache-Control", "public, max-age=300");
     let context = {};
     try {
       context = JSON.parse(base64url.decode(req.query.ctx));
