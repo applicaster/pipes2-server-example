@@ -181,6 +181,11 @@ module.exports.getCollectionByName = ({ name }) => {
       items: db
         .get("media")
         .filter((item) => item.type === "episode" || item.type === "series")
+        .map((item) => {
+          item.cta = "Start Watching";
+          item.label = "Featured";
+          return item;
+        })
         .shuffle()
         .take(1),
     },

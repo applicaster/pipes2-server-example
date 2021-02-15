@@ -28,6 +28,8 @@ const entryRenderers = {
       episodeNumber,
       airTimestamp,
       isLive,
+      cta,
+      label,
     } = episode;
     return {
       id,
@@ -41,6 +43,8 @@ const entryRenderers = {
         type: "video/hls",
       },
       extensions: {
+        cta,
+        label,
         genre,
         duration: durationInSeconds,
         seriesId,
@@ -67,7 +71,16 @@ const entryRenderers = {
   },
 
   series: (series) => {
-    const { id, title, genre, channel, summary, startsOnTimestamp } = series;
+    const {
+      id,
+      title,
+      genre,
+      channel,
+      summary,
+      startsOnTimestamp,
+      cta,
+      label,
+    } = series;
     const startsOn =
       startsOnTimestamp &&
       `Starts On ${DateTime.fromMillis(Number(startsOnTimestamp)).toFormat(
@@ -83,6 +96,8 @@ const entryRenderers = {
           : SCREEN_TYPES.EXAMPLE_SERIES,
       },
       extensions: {
+        cta,
+        label,
         genre,
         channel,
         startsOn,
@@ -95,22 +110,30 @@ const entryRenderers = {
     };
   },
   channel: (channel) => {
-    const { id } = channel;
+    const { id, cta, label } = channel;
     return {
       id,
       title: id,
       type: {
         value: SCREEN_TYPES.EXAMPLE_CHANNEL,
       },
+      extensions: {
+        cta,
+        label,
+      },
     };
   },
   season: (season) => {
-    const { id } = season;
+    const { id, cta, label } = season;
     return {
       id,
       title: id,
       type: {
         value: SCREEN_TYPES.SEASON_CHANNEL,
+      },
+      extensions: {
+        cta,
+        label,
       },
     };
   },
@@ -472,7 +495,6 @@ module.exports.setup = (app) => {
       }),
     });
   });
-
 
   /**
    * @swagger
