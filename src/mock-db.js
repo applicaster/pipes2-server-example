@@ -185,6 +185,17 @@ module.exports.getCollectionByName = ({ name }) => {
       ],
     };
   }
+
+  if (name === "channels") {
+    return {
+      items: [
+        { id: "channel-1", title: "Channel 1", type: "channel" },
+        { id: "channel-2", title: "Channel 2", type: "channel" },
+        { id: "channel-3", title: "Channel 3", type: "channel" },
+        { id: "channel-4", title: "Channel 4", type: "channel" },
+      ],
+    };
+  }
   const collections = {
     homeFeatured: {
       items: db
