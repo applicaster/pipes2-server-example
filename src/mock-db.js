@@ -176,6 +176,15 @@ module.exports.getPrograms = ({
 };
 
 module.exports.getCollectionByName = ({ name }) => {
+  if (name === "genres") {
+    return {
+      items: [
+        { id: "genre-1", title: "Genre 1", type: "genre" },
+        { id: "genre-2", title: "Genre 2", type: "genre" },
+        { id: "genre-3", title: "Genre 3", type: "genre" },
+      ],
+    };
+  }
   const collections = {
     homeFeatured: {
       items: db
@@ -204,10 +213,6 @@ module.exports.getCollectionByName = ({ name }) => {
         .filter((item) => item.type === "series" && item.genre === "genre-2")
         .shuffle()
         .take(6),
-    },
-
-    genres: {
-      items: [{ id: "genre-1", title: "Genre 1" }],
     },
   };
   return { items: collections[name].items.value() };

@@ -11,6 +11,7 @@ const SCREEN_TYPES = {
   EXAMPLE_SERIES: "example-series",
   EXAMPLE_COMING_SOON_SERIES: "example-coming-soon-series",
   EXAMPLE_CHANNEL: "example-channel",
+  EXAMPLE_GENRE: "example-genre",
 };
 
 const entryRenderers = {
@@ -116,6 +117,20 @@ const entryRenderers = {
       title: id,
       type: {
         value: SCREEN_TYPES.EXAMPLE_CHANNEL,
+      },
+      extensions: {
+        cta,
+        label,
+      },
+    };
+  },
+  genre: (genre) => {
+    const { id, cta, label } = genre;
+    return {
+      id,
+      title: id,
+      type: {
+        value: SCREEN_TYPES.EXAMPLE_GENRE,
       },
       extensions: {
         cta,
