@@ -17,7 +17,7 @@ const SCREEN_TYPES = {
 };
 
 const entryRenderers = {
-  episode: (episode) => {
+  episode: (episode, timeZoneOffset = "UTC") => {
     const {
       id,
       title,
@@ -57,9 +57,9 @@ const entryRenderers = {
         relativeBroadcastDate:
           airTimestamp &&
           DateTime.fromMillis(Number(airTimestamp)).toRelative(),
-        broadcastDate: DateTime.fromMillis(Number(airTimestamp)).toFormat(
-          "LLL dd, h:mma"
-        ),
+        broadcastDate: DateTime.fromMillis(Number(airTimestamp))
+          .setZone(timeZoneOffset)
+          .toFormat("LLL dd, h:mma"),
         isLive,
         analyticsCustomProperties: {
           seriesId,
@@ -154,6 +154,18 @@ const entryRenderers = {
       },
     };
   },
+};
+
+const parseContext = (ctx, logError = true) => {
+  try {
+    return JSON.parse(base64url.decode(ctx));
+  } catch (error) {
+    // Choose if you want to log ctx errors
+    if (logError) {
+      console.log(error);
+    }
+    return {};
+  }
 };
 
 module.exports.setup = (app) => {
@@ -311,13 +323,13 @@ module.exports.setup = (app) => {
    *
    *
    *     parameters:
-   * 
+   *
    *       - in: query
    *         name: startToday
    *         description: If set to true - start the week today and if left out starts at the beginning of the week (Monday)
    *         schema:
    *           type: boolean
-   * 
+   *
    *       - in: query
    *         name: feedTitle
    *         description: Override the feed title
@@ -332,13 +344,16 @@ module.exports.setup = (app) => {
   app.get("/epg/days", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    const { timeZoneOffset } = parseContext(req.query.ctx, false);
     res.json({
       id: absoluteReqPath(req),
       title: req.query.feedTitle || "EPG",
       entry: _.times(7).map((index) => {
         const day = DateTime.local()
+          .setZone(timeZoneOffset || "UTC")
           .startOf(req.query.startToday === "true" ? "day" : "week")
           .plus({ days: index });
+
         return {
           id: day.toMillis(),
           title: day.toFormat("cccc"),
@@ -465,6 +480,7 @@ module.exports.setup = (app) => {
   app.get("/epg", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    const { timeZoneOffset } = parseContext(req.query.ctx, false);
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
@@ -486,9 +502,9 @@ module.exports.setup = (app) => {
     };
 
     const { items, nextPage } = mockDb.getPrograms({
+      timeZoneOffset: timeZoneOffset || "UTC",
       filters,
       epgFilters,
-
       maxPage: req.query.maxPage,
       perPage: req.query.perPage,
       page: req.query.page,
@@ -509,7 +525,7 @@ module.exports.setup = (app) => {
       },
       next: next && next.toString(),
       entry: items.map((item) => {
-        return entryRenderers[item.type](item);
+        return entryRenderers[item.type](item, timeZoneOffset || "UTC");
       }),
     });
   });
@@ -586,12 +602,7 @@ module.exports.setup = (app) => {
   app.get("/user/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
-    let context = {};
-    try {
-      context = JSON.parse(base64url.decode(req.query.ctx));
-    } catch (error) {
-      // This is for mocking purposes - as the example app is not holding user tokens
-    }
+    const context = parseContext(req.query.ctx, false);
 
     const { items } = mockDb.getUserCollectionByName({
       name: req.params.collectionName,

@@ -86,7 +86,7 @@ const calculateLimit = (limit) =>
   limit && Number(limit) < maxResults ? Number(limit) : maxResults;
 
 const now = DateTime.local();
-const startOfWeek = now.startOf("week");
+const startOfWeek = (zone = "UTC") => now.setZone(zone).startOf("week");
 
 const calculateSorts = (sorts) => {
   return sorts.reduce(
@@ -147,7 +147,7 @@ module.exports.getMediaItems = ({
     items: baseQuery
       .map((item) => {
         if (item.startsOn) {
-          item.startsOnTimestamp = startOfWeek.plus(item.startsOn);
+          item.startsOnTimestamp = startOfWeek().plus(item.startsOn);
         }
         return item;
       })
@@ -158,6 +158,7 @@ module.exports.getMediaItems = ({
 };
 
 module.exports.getPrograms = ({
+  timeZoneOffset,
   filters,
   epgFilters,
   maxPage,
@@ -168,7 +169,7 @@ module.exports.getPrograms = ({
     .get("programs")
     .filter(filters)
     .map((program) => {
-      program.airTimestamp = startOfWeek.plus(program.airTime);
+      program.airTimestamp = startOfWeek(timeZoneOffset).plus(program.airTime);
       return program;
     })
     .epgUtils(epgFilters);
