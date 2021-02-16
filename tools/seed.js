@@ -16,7 +16,7 @@ const episodePrefix = "episode";
 const genres = ["genre-1", "genre-2", "genre-3"];
 const channels = ["channel-1", "channel-2", "channel-3", "channel-4"];
 const sampleHls =
-  "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
+  "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
 
 const series = _.times(totalSeries).map((index) => {
   const counter = index + 1;
