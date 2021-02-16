@@ -5,7 +5,6 @@ const { DateTime } = require("luxon");
 const URI = require("urijs");
 
 const mockDb = require("./mock-db");
-const { query } = require("express");
 
 const SCREEN_TYPES = {
   EXAMPLE_EPISODE: "example-episode",
