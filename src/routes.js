@@ -329,12 +329,19 @@ module.exports.setup = (app) => {
    *         description: If set to true - start the week today and if left out starts at the beginning of the week (Monday)
    *         schema:
    *           type: boolean
+   * 
+   *       - in: query
+   *         name: ctx
+   *         description: Supports timeZoneOffset context key according to https://docs.applicaster.com/integrations/available-context-keys 
+   *         schema:
+   *           type: string
    *
    *       - in: query
    *         name: feedTitle
    *         description: Override the feed title
    *         schema:
    *           type: string
+   * 
    *
    *     responses:
    *       200:
@@ -383,6 +390,12 @@ module.exports.setup = (app) => {
    *       - in: query
    *         name: feedTitle
    *         description: Override the feed title
+   *         schema:
+   *           type: string
+   * 
+   *       - in: query
+   *         name: ctx
+   *         description: Supports timeZoneOffset context key according to https://docs.applicaster.com/integrations/available-context-keys 
    *         schema:
    *           type: string
    *
