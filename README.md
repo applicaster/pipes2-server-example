@@ -12,7 +12,11 @@ All API calls are document using the Open API standard:
 
 ## Run locally
 
+
+
 `$ npm install`
+`$ npm run build` - this will seed the mock db of the project
+
 `$ npm run dev`
 
 ## Covered Content entities

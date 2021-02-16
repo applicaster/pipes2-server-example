@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
-    "seed": "rm ./db.json && node ./tools/seed.js"
+    "seed": "rm ./db.json && node ./tools/seed.js",
+    "build": "npm run seed"
   },
   "author": "",
   "license": "ISC",
