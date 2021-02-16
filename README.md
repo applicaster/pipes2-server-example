@@ -19,6 +19,10 @@ All API calls are document using the Open API standard:
 
 `$ npm run dev`
 
+## Deployment
+
+Deployment is done automatically by Heroku when merged to `master`
+
 ## Covered Content entities
 
 **Series** - A set of regularly presented television episodes each of which is complete in itself. Series' episodes can be grouped into seasons
@@ -32,3 +36,5 @@ is going to run in the future.
 **Channel** - Holds live feed of episodes. A series belongs to a channel.
 
 **Genre** - A series is categorized by a channel.
+
+
