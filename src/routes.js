@@ -309,7 +309,15 @@ module.exports.setup = (app) => {
    *     description: |
    *        List of the current week days to populate the EPG tabs
    *
+   *
    *     parameters:
+   * 
+   *       - in: query
+   *         name: startToday
+   *         description: If set to true - start the week today and if left out starts at the beginning of the week (Monday)
+   *         schema:
+   *           type: boolean
+   * 
    *       - in: query
    *         name: feedTitle
    *         description: Override the feed title
