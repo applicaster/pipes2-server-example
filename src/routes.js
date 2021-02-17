@@ -1,4 +1,4 @@
-const { absoluteReqPath, renderDummyMediaGroup } = require("./utils");
+const { absoluteReqPath, renderDummyMediaGroup, renderChannelMediaGroupById } = require("./utils");
 const _ = require("lodash");
 const base64url = require("base64url");
 const { DateTime } = require("luxon");
@@ -123,6 +123,7 @@ const entryRenderers = {
         cta,
         label,
       },
+      ...renderChannelMediaGroupById(id)
     };
   },
   genre: (genre) => {

@@ -29,6 +29,27 @@ const renderDummyMediaGroup = {
   ],
 };
 
+const renderChannelMediaGroupById = (id) => {
+  return {
+    media_group: [
+      {
+        type: "image",
+        media_item: [
+          {
+            src: path.join(absoluteReqBasePath, `images/${id}.png`),
+            key: "v1",
+          },
+          {
+            src: path.join(absoluteReqBasePath, `images/${id}-V2.png`),
+            key: "v2",
+          },
+        ],
+      },
+    ],
+  };
+};
+
 module.exports.absoluteReqPath = absoluteReqPath;
 module.exports.absoluteReqBasePath = absoluteReqBasePath;
 module.exports.renderDummyMediaGroup = renderDummyMediaGroup;
+module.exports.renderChannelMediaGroupById = renderChannelMediaGroupById;
