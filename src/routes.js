@@ -263,6 +263,7 @@ module.exports.setup = (app) => {
   app.get("/media", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
@@ -350,6 +351,7 @@ module.exports.setup = (app) => {
   app.get("/epg/days", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const { timeZoneOffset } = parseContext(req.query.ctx, false);
     res.json({
       id: absoluteReqPath(req),
@@ -492,6 +494,7 @@ module.exports.setup = (app) => {
   app.get("/epg", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const { timeZoneOffset } = parseContext(req.query.ctx, false);
     const filters = _.reduce(
       req.query,
@@ -572,6 +575,7 @@ module.exports.setup = (app) => {
   app.get("/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const { items } = mockDb.getCollectionByName({
       name: req.params.collectionName,
     });
@@ -616,6 +620,7 @@ module.exports.setup = (app) => {
   app.get("/user/collections/:collectionName", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const context = parseContext(req.query.ctx, false);
 
     const { items } = mockDb.getUserCollectionByName({
