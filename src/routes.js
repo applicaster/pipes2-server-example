@@ -1,4 +1,8 @@
-const { absoluteReqPath, renderDummyMediaGroup, renderChannelMediaGroupById } = require("./utils");
+const {
+  absoluteReqPath,
+  renderDummyMediaGroup,
+  renderChannelMediaGroupById,
+} = require("./utils");
 const _ = require("lodash");
 const base64url = require("base64url");
 const { DateTime } = require("luxon");
@@ -123,7 +127,7 @@ const entryRenderers = {
         cta,
         label,
       },
-      ...renderChannelMediaGroupById(id)
+      ...renderChannelMediaGroupById(id),
     };
   },
   genre: (genre) => {
@@ -330,10 +334,10 @@ module.exports.setup = (app) => {
    *         description: If set to true - start the week today and if left out starts at the beginning of the week (Monday)
    *         schema:
    *           type: boolean
-   * 
+   *
    *       - in: query
    *         name: ctx
-   *         description: Supports timeZoneOffset context key according to https://docs.applicaster.com/integrations/available-context-keys 
+   *         description: Supports timeZoneOffset context key according to https://docs.applicaster.com/integrations/available-context-keys
    *         schema:
    *           type: string
    *
@@ -342,7 +346,7 @@ module.exports.setup = (app) => {
    *         description: Override the feed title
    *         schema:
    *           type: string
-   * 
+   *
    *
    *     responses:
    *       200:
@@ -363,9 +367,21 @@ module.exports.setup = (app) => {
           .startOf(req.query.startToday === "true" ? "day" : "week")
           .plus({ days: index });
 
+        let title = day.toFormat("cccc");
+        if (req.query.startToday === "true" && index === 0) {
+          title = "Today";
+        }
+
+        if (req.query.startToday === "true" && index === 1) {
+          title = "Tomorrow";
+        }
+
         return {
           id: day.toMillis(),
-          title: day.toFormat("cccc"),
+          title,
+          type: {
+            value: "epg-day",
+          },
         };
       }),
     });
