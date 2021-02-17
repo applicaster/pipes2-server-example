@@ -25,16 +25,16 @@ Deployment is done automatically by Heroku when merged to `master`
 
 ## Covered Content entities
 
-**Series** - A set of regularly presented television episodes each of which is complete in itself. Series' episodes can be grouped into seasons
+**show** - A set of regularly presented television episodes each of which is complete in itself. show' episodes can be grouped into seasons
 
-**Episode** - A part of series. Can be presented as VOD, Live or in the future.
+**Episode** - A part of show. Can be presented as VOD, Live or in the future.
 
 **Program** - An item in an EPG can be, program, movie, special event and can
 refer to an item that was already broadcasted, that is currently on air or that
 is going to run in the future.
 
-**Channel** - Holds live feed of episodes. A series belongs to a channel.
+**Channel** - Holds live feed of episodes. A show belongs to a channel.
 
-**Genre** - A series is categorized by a channel.
+**Genre** - A show is categorized by a channel.
 
 

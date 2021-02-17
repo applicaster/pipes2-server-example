@@ -6,11 +6,11 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db.json");
 const db = low(adapter);
 
-const totalSeries = 10;
+const totalShows = 10;
 const totalSeasons = 4;
 const episodesPerSeason = 12;
 
-const seriesPrefix = "series";
+const showPrefix = "show";
 const seasonPrefix = "season";
 const episodePrefix = "episode";
 const genres = ["genre-1", "genre-2", "genre-3"];
@@ -18,72 +18,67 @@ const channels = ["channel-1", "channel-2", "channel-3", "channel-4"];
 const sampleHls =
   "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
 
-const series = _.times(totalSeries).map((index) => {
+const show = _.times(totalShows).map((index) => {
   const counter = index + 1;
   return {
-    id: `${seriesPrefix}-${counter}`,
-    title: `Series ${counter}`,
+    id: `${showPrefix}-${counter}`,
+    title: `show ${counter}`,
     genre: genres[index % genres.length],
     channel: channels[index % channels.length],
-    type: "series",
+    type: "show",
   };
 });
 
-// A Promoted future series
-const comingSoonSeries = [
+// A Promoted future show
+const comingSoonShow = [
   {
-    id: `${seriesPrefix}-${totalSeries + 1}`,
-    title: `Series ${totalSeries + 1}`,
+    id: `${showPrefix}-${totalShows + 1}`,
+    title: `Show ${totalShows + 1}`,
     genre: genres[0],
     channel: channels[0],
-    type: "series",
+    type: "show",
     comingSoon: true,
     startsOn: { days: 8, hours: 20 },
   },
 ];
 
-const createSeriesSeasons = (series) =>
+const createShowSeasons = (show) =>
   _.times(totalSeasons).map((index) => {
-    const seriesId = series.id;
+    const showId = show.id;
     const counter = index + 1;
 
     return {
-      id: `${seriesId}--${seasonPrefix}-${counter}`,
-      title: `Season ${counter} (${seriesId})`,
+      id: `${showId}--${seasonPrefix}-${counter}`,
+      title: `Season ${counter} (${showId})`,
       seasonNumber: counter,
       type: "season",
-      seriesId,
+      showId,
     };
   });
 
-const seasons = series.reduce((acc, series) => {
-  return [...acc, ...createSeriesSeasons(series)];
+const seasons = show.reduce((acc, show) => {
+  return [...acc, ...createShowSeasons(show)];
 }, []);
 
 const createSeasonsEpisodes = (season) =>
   _.times(episodesPerSeason).map((index) => {
     const counter = index + 1;
-    const SeasonSeries = series.find((item) => item.id === season.seriesId);
+    const SeasonShow = show.find((item) => item.id === season.showId);
 
     return {
       id: `${season.id}--${episodePrefix}-${counter}`,
       type: "episode",
-      title: `E${counter}S${season.seasonNumber} (${season.seriesId})`,
-      summary: `E${counter}S${season.seasonNumber} Summary`,
+      title: `Episode Title`,
+      summary: `S${season.seasonNumber}:E${counter} (${season.showId}) Summary`,
       durationInSeconds: 60 * 60,
       seasonNumber: season.seasonNumber,
       episodeNumber: counter,
-      seriesId: season.seriesId,
-      genre: SeasonSeries.genre,
-      channel: SeasonSeries.channel,
+      showId: season.showId,
+      genre: SeasonShow.genre,
+      channel: SeasonShow.channel,
       streamURL: sampleHls,
     };
   });
-
-const addAirTime = (item, index) => {
-  item.airTime = { day: 0, hour: 0, minutes };
-  return item;
-};
 
 const episodes = seasons.reduce((acc, season) => {
   return [...acc, ...createSeasonsEpisodes(season)];
@@ -107,8 +102,8 @@ const programs = _.times(weekHours * channels.length).map((index) => {
 
 db.defaults({
   media: _.concat(
-    series,
-    comingSoonSeries,
+    show,
+    comingSoonShow,
     seasons,
     episodes,
     channels.map((channelId) => ({ id: channelId, type: "channel" }))

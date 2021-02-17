@@ -232,7 +232,7 @@ module.exports.getCollectionByName = ({ name }) => {
     homeFeatured: {
       items: db
         .get("media")
-        .filter((item) => item.type === "episode" || item.type === "series")
+        .filter((item) => item.type === "episode" || item.type === "show")
         .map((item) => {
           item.cta = "Start Watching";
           item.label = "Featured";
@@ -245,7 +245,7 @@ module.exports.getCollectionByName = ({ name }) => {
     featuredGenre1: {
       items: db
         .get("media")
-        .filter((item) => item.type === "series" && item.genre === "genre-1")
+        .filter((item) => item.type === "show" && item.genre === "genre-1")
         .shuffle()
         .take(6),
     },
@@ -253,7 +253,7 @@ module.exports.getCollectionByName = ({ name }) => {
     featuredGenre2: {
       items: db
         .get("media")
-        .filter((item) => item.type === "series" && item.genre === "genre-2")
+        .filter((item) => item.type === "show" && item.genre === "genre-2")
         .shuffle()
         .take(6),
     },

@@ -12,8 +12,8 @@ const mockDb = require("./mock-db");
 
 const SCREEN_TYPES = {
   EXAMPLE_EPISODE: "example-episode",
-  EXAMPLE_SERIES: "example-series",
-  EXAMPLE_COMING_SOON_SERIES: "example-coming-soon-series",
+  EXAMPLE_SHOW: "example-show",
+  EXAMPLE_COMING_SOON_show: "example-coming-soon-show",
   EXAMPLE_CHANNEL: "example-channel",
   EXAMPLE_GENRE: "example-genre",
   EXAMPLE_SEASON: "example-season",
@@ -27,7 +27,7 @@ const entryRenderers = {
       genre,
       durationInSeconds,
       streamURL,
-      seriesId,
+      showId,
       channel,
       summary,
       seasonNumber,
@@ -53,7 +53,7 @@ const entryRenderers = {
         label,
         genre,
         duration: durationInSeconds,
-        seriesId,
+        showId,
         channel,
         seasonNumber,
         episodeNumber,
@@ -65,7 +65,7 @@ const entryRenderers = {
           .toFormat("LLL dd, h:mma"),
         isLive,
         analyticsCustomProperties: {
-          seriesId,
+          showId,
           genre,
           channel,
           seasonNumber,
@@ -76,7 +76,7 @@ const entryRenderers = {
     };
   },
 
-  series: (series) => {
+  show: (show) => {
     const {
       id,
       title,
@@ -86,7 +86,7 @@ const entryRenderers = {
       startsOnTimestamp,
       cta,
       label,
-    } = series;
+    } = show;
     const startsOn =
       startsOnTimestamp &&
       `Starts On ${DateTime.fromMillis(Number(startsOnTimestamp)).toFormat(
@@ -98,8 +98,8 @@ const entryRenderers = {
       summary,
       type: {
         value: startsOn
-          ? SCREEN_TYPES.EXAMPLE_COMING_SOON_SERIES
-          : SCREEN_TYPES.EXAMPLE_SERIES,
+          ? SCREEN_TYPES.EXAMPLE_COMING_SOON_show
+          : SCREEN_TYPES.EXAMPLE_SHOW,
       },
       extensions: {
         cta,
@@ -182,10 +182,10 @@ module.exports.setup = (app) => {
    *
    *        Examples:
    *
-   *          - Get all series: [/media?byType=series](/media?byType=series)
-   *          - Get series by Id: [/media?byType=series&byId=series-1](/media?byType=series&byId=series-1)
-   *          - Get all series with genre-1: [/media?byType=series&byGenre=genre-1](/media?byType=series&byGenre=genre-1)
-   *          - Get all episodes of series-1 & season number 3 on descending order: [/media?byType=episode&bySeriesId=series-1&bySeasonNumber=3&sortBy=episodeNumber:desc](/media?byType=episode&bySeriesId=series-1&bySeasonNumber=3&sortBy=episodeNumber:desc)
+   *          - Get all show: [/media?byType=show](/media?byType=show)
+   *          - Get show by Id: [/media?byType=show&byId=show-1](/media?byType=show&byId=show-1)
+   *          - Get all show with genre-1: [/media?byType=show&byGenre=genre-1](/media?byType=show&byGenre=genre-1)
+   *          - Get all episodes of show-1 & season number 3 on descending order: [/media?byType=episode&byshowId=show-1&bySeasonNumber=3&sortBy=episodeNumber:desc](/media?byType=episode&byshowId=show-1&bySeasonNumber=3&sortBy=episodeNumber:desc)
    *          - Search for episodes that contain the text `E2S1`: [/media?byType=episode&q=E2S1](/media?byType=episode&q=E2S1)
    *
    *
@@ -200,7 +200,7 @@ module.exports.setup = (app) => {
    *         name: byType
    *         schema:
    *           type: string
-   *           enum: [series, season, episode, channel]
+   *           enum: [show, season, episode, channel]
    *
    *       - in: query
    *         name: bySeasonNumber
@@ -427,7 +427,7 @@ module.exports.setup = (app) => {
    *         name: byType
    *         schema:
    *           type: string
-   *           enum: [series, season, episode, channel]
+   *           enum: [show, season, episode, channel]
    *
    *       - in: query
    *         name: bySeasonNumber
