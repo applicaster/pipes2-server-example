@@ -232,7 +232,7 @@ module.exports.getCollectionByName = ({ name }) => {
     homeFeatured: {
       items: db
         .get("media")
-        .filter((item) => item.type === "episode" || item.type === "show")
+        .filter((item) => item.type === "show")
         .map((item) => {
           item.cta = "Start Watching";
           item.label = "Featured";
