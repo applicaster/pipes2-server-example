@@ -506,6 +506,8 @@ module.exports.setup = (app) => {
     );
 
     const epgFilters = {
+      from: req.query.from,
+      to: req.query.to,
       now: req.query.now,
       upNext: req.query.upNext,
       justEnded: req.query.justEnded,

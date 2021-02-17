@@ -7,7 +7,18 @@ const db = low(adapter);
 const maxResults = 100;
 const { DateTime } = require("luxon");
 
-const epgUtils = (programs, epgFilters) => {
+const calcTimestamp = (input, timeZoneOffset) => {
+  if (Number(input)) return Number(input);
+  const now = DateTime.local();
+  if (input === "now") return now;
+  if (input === "startOfDay") return now.setZone(timeZoneOffset).startOf("day");
+  if (input === "endOfDay") return now.setZone(timeZoneOffset).endOf("day");
+  if (input === "tonight")
+    return now.setZone(timeZoneOffset).startOf("day").plus({ hours: 20 });
+};
+
+const epgUtils = (programs, epgFilters, timeZoneOffset) => {
+  // add isLive property to all items that are currently running
   const modifiedPrograms = programs.map((program) => {
     if (
       program.airTimestamp <= now &&
@@ -17,6 +28,16 @@ const epgUtils = (programs, epgFilters) => {
     }
     return program;
   });
+
+  if (epgFilters.from && epgFilters.to) {
+    const from = calcTimestamp(epgFilters.from, timeZoneOffset);
+    const to = calcTimestamp(epgFilters.to);
+    return modifiedPrograms.filter((program) => {
+      return from <= program.airTimestamp && to >= program.airTimestamp;
+    });
+  }
+
+  // This will be deprecated soon
 
   if (epgFilters.now) {
     return modifiedPrograms.filter((program) => program.isLive);
@@ -48,15 +69,6 @@ const epgUtils = (programs, epgFilters) => {
 
   if (epgFilters.futureForDay) {
     return modifiedPrograms.filter((program) => {
-      console.log(
-        "local",
-        DateTime.local().toMillis(),
-        "program",
-        program.airTimestamp.toMillis(),
-        program.airTimestamp.toMillis() > DateTime.local().toMillis(),
-        program.airTimestamp.ordinal,
-        DateTime.fromMillis(Number(epgFilters.futureForDay)).ordinal
-      );
       return (
         program.airTimestamp.ordinal ==
           DateTime.fromMillis(Number(epgFilters.futureForDay)).ordinal &&
@@ -172,7 +184,7 @@ module.exports.getPrograms = ({
       program.airTimestamp = startOfWeek(timeZoneOffset).plus(program.airTime);
       return program;
     })
-    .epgUtils(epgFilters);
+    .epgUtils(epgFilters, timeZoneOffset);
 
   const total = baseQuery.size().value();
   const currentPage = _.defaultTo(page, 1);
