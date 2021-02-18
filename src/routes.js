@@ -471,13 +471,13 @@ module.exports.setup = (app) => {
 
    *       - in: query
    *         name: from
-   *         description: from timestamp or reserved words (`now`, `tonight`)
+   *         description: from timestamp or reserved words (`now`, `tonight`, `endOfToday`)
    *         schema:
    *           type: string
    * 
    *       - in: query
    *         name: to
-   *         description: to timestamp or reserved words  (`now`, `tonight`)
+   *         description: to timestamp or reserved words  (`now`, `tonight`, `endOfToday`)
    *         schema:
    *           type: string
    *

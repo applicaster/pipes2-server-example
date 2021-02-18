@@ -13,6 +13,8 @@ const calcTimestamp = (input, timeZoneOffset) => {
   if (input === "now") return now;
   if (input === "tonight")
     return now.setZone(timeZoneOffset).startOf("day").plus({ hours: 20 });
+  if (input === "endOfToday")
+    return now.setZone(timeZoneOffset).startOf("day").plus({ hours: 24 });
 };
 
 const epgUtils = (programs, epgFilters, timeZoneOffset) => {
