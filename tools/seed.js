@@ -22,7 +22,7 @@ const show = _.times(totalShows).map((index) => {
   const counter = index + 1;
   return {
     id: `${showPrefix}-${counter}`,
-    title: `show ${counter}`,
+    title: `Show ${counter} Title`,
     genre: genres[index % genres.length],
     channel: channels[index % channels.length],
     type: "show",
