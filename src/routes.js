@@ -382,6 +382,9 @@ module.exports.setup = (app) => {
           type: {
             value: "epg-day",
           },
+          extensions: {
+            channelId: req.query.channelId,
+          },
         };
       }),
     });
@@ -396,8 +399,6 @@ module.exports.setup = (app) => {
    *
    *       Examples:
    *
-   *        - Get all programs that are currently running [/epg?now=true](/epg?now=true)
-   *        - Get all programs that are currently running on a specific channel [/epg?now=true&byChannel=channel-1](/epg?now=true&byChannel=channel-1)
    *        - Get all up next programs [/epg?upNext=true](/epg?upNext=true)
    *        - Get all just ended programs [/epg?justEnded=true](/epg?justEnded=true)
    *        - Get all programs for a given day  [/epg?forDay=<REPLACE_WITH_TIMESTAMP>](/epg?forDay=<REPLACE_WITH_TIMESTAMP>)
@@ -454,8 +455,20 @@ module.exports.setup = (app) => {
    *           type: number
 
    *       - in: query
-   *         name: now
-   *         description: all currently running programs
+   *         name: from
+   *         description: from timestamp or reserved words (`now`, `tonight`)
+   *         schema:
+   *           type: string
+   * 
+   *       - in: query
+   *         name: to
+   *         description: to timestamp or reserved words  (`now`, `tonight`)
+   *         schema:
+   *           type: string
+   *
+   *       - in: query
+   *         name: isLive
+   *         description: All currently running programs
    *         schema:
    *           type: boolean
    *
@@ -528,7 +541,7 @@ module.exports.setup = (app) => {
     const epgFilters = {
       from: req.query.from,
       to: req.query.to,
-      now: req.query.now,
+      isLive: req.query.isLive,
       upNext: req.query.upNext,
       justEnded: req.query.justEnded,
       forDay: req.query.forDay,

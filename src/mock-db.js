@@ -11,8 +11,6 @@ const calcTimestamp = (input, timeZoneOffset) => {
   if (Number(input)) return Number(input);
   const now = DateTime.local();
   if (input === "now") return now;
-  if (input === "startOfDay") return now.setZone(timeZoneOffset).startOf("day");
-  if (input === "endOfDay") return now.setZone(timeZoneOffset).endOf("day");
   if (input === "tonight")
     return now.setZone(timeZoneOffset).startOf("day").plus({ hours: 20 });
 };
@@ -37,9 +35,7 @@ const epgUtils = (programs, epgFilters, timeZoneOffset) => {
     });
   }
 
-  // This will be deprecated soon
-
-  if (epgFilters.now) {
+  if (epgFilters.isLive) {
     return modifiedPrograms.filter((program) => program.isLive);
   }
 
