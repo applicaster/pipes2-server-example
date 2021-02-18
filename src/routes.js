@@ -26,6 +26,9 @@ const entryRenderers = {
     return {
       id,
       title,
+      type: {
+        value: SCREEN_TYPES.EXAMPLE_MOVIE,
+      },
       summary,
       extensions: {
         genre,
