@@ -512,7 +512,7 @@ module.exports.setup = (app) => {
    *           type: number
    * 
    *       - in: query
-   *         name: futureForToday
+   *         name: nowAndOnwardsForToday
    *         description: like `futureForDay` but for today
    *         schema:
    *           type: boolean
@@ -567,7 +567,7 @@ module.exports.setup = (app) => {
       justEnded: req.query.justEnded,
       forDay: req.query.forDay,
       futureForDay: req.query.futureForDay,
-      futureForToday: req.query.futureForToday
+      nowAndOnwardsForToday: req.query.nowAndOnwardsForToday
     };
 
     const { items, nextPage } = mockDb.getPrograms({

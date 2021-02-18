@@ -73,12 +73,12 @@ const epgUtils = (programs, epgFilters, timeZoneOffset) => {
     });
   }
 
-  if (epgFilters.futureForToday) {
+  if (epgFilters.nowAndOnwardsForToday) {
     return modifiedPrograms.filter((program) => {
       return (
-        program.airTimestamp.ordinal ==
-          DateTime.local().ordinal &&
-        program.airTimestamp.toMillis() >= DateTime.local().toMillis()
+        program.airTimestamp.ordinal == DateTime.local().ordinal &&
+        program.airTimestamp.toMillis() + program.durationInSeconds * 1000 >=
+          DateTime.local().toMillis()
       );
     });
   }
