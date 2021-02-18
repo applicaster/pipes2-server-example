@@ -73,6 +73,16 @@ const epgUtils = (programs, epgFilters, timeZoneOffset) => {
     });
   }
 
+  if (epgFilters.futureForToday) {
+    return modifiedPrograms.filter((program) => {
+      return (
+        program.airTimestamp.ordinal ==
+          DateTime.local().ordinal &&
+        program.airTimestamp.toMillis() >= DateTime.local().toMillis()
+      );
+    });
+  }
+
   return modifiedPrograms;
 };
 

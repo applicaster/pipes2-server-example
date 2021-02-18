@@ -510,6 +510,12 @@ module.exports.setup = (app) => {
    *         description: given a timestamp in millis
    *         schema:
    *           type: number
+   * 
+   *       - in: query
+   *         name: futureForToday
+   *         description: like `futureForDay` but for today
+   *         schema:
+   *           type: boolean
    *
    *    
    *       - in: query
@@ -561,6 +567,7 @@ module.exports.setup = (app) => {
       justEnded: req.query.justEnded,
       forDay: req.query.forDay,
       futureForDay: req.query.futureForDay,
+      futureForToday: req.query.futureForToday
     };
 
     const { items, nextPage } = mockDb.getPrograms({
