@@ -2,77 +2,257 @@
   "media": [
     {
       "id": "show-1",
-      "title": "show 1",
+      "title": "Show 1 Title",
       "genre": "genre-1",
       "channel": "channel-1",
       "type": "show"
     },
     {
       "id": "show-2",
-      "title": "show 2",
+      "title": "Show 2 Title",
       "genre": "genre-2",
       "channel": "channel-2",
       "type": "show"
     },
     {
       "id": "show-3",
-      "title": "show 3",
+      "title": "Show 3 Title",
       "genre": "genre-3",
       "channel": "channel-3",
       "type": "show"
     },
     {
       "id": "show-4",
-      "title": "show 4",
+      "title": "Show 4 Title",
       "genre": "genre-1",
       "channel": "channel-4",
       "type": "show"
     },
     {
       "id": "show-5",
-      "title": "show 5",
+      "title": "Show 5 Title",
       "genre": "genre-2",
       "channel": "channel-1",
       "type": "show"
     },
     {
       "id": "show-6",
-      "title": "show 6",
+      "title": "Show 6 Title",
       "genre": "genre-3",
       "channel": "channel-2",
       "type": "show"
     },
     {
       "id": "show-7",
-      "title": "show 7",
+      "title": "Show 7 Title",
       "genre": "genre-1",
       "channel": "channel-3",
       "type": "show"
     },
     {
       "id": "show-8",
-      "title": "show 8",
+      "title": "Show 8 Title",
       "genre": "genre-2",
       "channel": "channel-4",
       "type": "show"
     },
     {
       "id": "show-9",
-      "title": "show 9",
+      "title": "Show 9 Title",
       "genre": "genre-3",
       "channel": "channel-1",
       "type": "show"
     },
     {
       "id": "show-10",
-      "title": "show 10",
+      "title": "Show 10 Title",
       "genre": "genre-1",
       "channel": "channel-2",
       "type": "show"
     },
     {
+      "id": "movie-1",
+      "title": "Movie 1 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-2",
+      "title": "Movie 2 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-3",
+      "title": "Movie 3 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-4",
+      "title": "Movie 4 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-5",
+      "title": "Movie 5 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-6",
+      "title": "Movie 6 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-7",
+      "title": "Movie 7 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-8",
+      "title": "Movie 8 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-9",
+      "title": "Movie 9 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-10",
+      "title": "Movie 10 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-11",
+      "title": "Movie 11 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-12",
+      "title": "Movie 12 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-13",
+      "title": "Movie 13 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-14",
+      "title": "Movie 14 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-15",
+      "title": "Movie 15 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-16",
+      "title": "Movie 16 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-17",
+      "title": "Movie 17 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-18",
+      "title": "Movie 18 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-19",
+      "title": "Movie 19 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-20",
+      "title": "Movie 20 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-21",
+      "title": "Movie 21 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-22",
+      "title": "Movie 22 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-23",
+      "title": "Movie 23 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-24",
+      "title": "Movie 24 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-25",
+      "title": "Movie 25 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-26",
+      "title": "Movie 26 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-27",
+      "title": "Movie 27 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
+      "id": "movie-28",
+      "title": "Movie 28 Title",
+      "genre": "genre-1",
+      "type": "movie"
+    },
+    {
+      "id": "movie-29",
+      "title": "Movie 29 Title",
+      "genre": "genre-2",
+      "type": "movie"
+    },
+    {
+      "id": "movie-30",
+      "title": "Movie 30 Title",
+      "genre": "genre-3",
+      "type": "movie"
+    },
+    {
       "id": "show-11",
-      "title": "show 11",
+      "title": "Show 11",
       "genre": "genre-1",
       "channel": "channel-1",
       "type": "show",

@@ -7,10 +7,12 @@ const adapter = new FileSync("db.json");
 const db = low(adapter);
 
 const totalShows = 10;
+const totalMovies = 30;
 const totalSeasons = 4;
 const episodesPerSeason = 12;
 
 const showPrefix = "show";
+const moviePrefix = "movie";
 const seasonPrefix = "season";
 const episodePrefix = "episode";
 const genres = ["genre-1", "genre-2", "genre-3"];
@@ -18,7 +20,7 @@ const channels = ["channel-1", "channel-2", "channel-3", "channel-4"];
 const sampleHls =
   "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
 
-const show = _.times(totalShows).map((index) => {
+const shows = _.times(totalShows).map((index) => {
   const counter = index + 1;
   return {
     id: `${showPrefix}-${counter}`,
@@ -26,6 +28,16 @@ const show = _.times(totalShows).map((index) => {
     genre: genres[index % genres.length],
     channel: channels[index % channels.length],
     type: "show",
+  };
+});
+
+const movies = _.times(totalMovies).map((index) => {
+  const counter = index + 1;
+  return {
+    id: `${moviePrefix}-${counter}`,
+    title: `Movie ${counter} Title`,
+    genre: genres[index % genres.length],
+    type: "movie",
   };
 });
 
@@ -56,14 +68,14 @@ const createShowSeasons = (show) =>
     };
   });
 
-const seasons = show.reduce((acc, show) => {
+const seasons = shows.reduce((acc, show) => {
   return [...acc, ...createShowSeasons(show)];
 }, []);
 
 const createSeasonsEpisodes = (season) =>
   _.times(episodesPerSeason).map((index) => {
     const counter = index + 1;
-    const SeasonShow = show.find((item) => item.id === season.showId);
+    const SeasonShow = shows.find((item) => item.id === season.showId);
 
     return {
       id: `${season.id}--${episodePrefix}-${counter}`,
@@ -102,7 +114,8 @@ const programs = _.times(weekHours * channels.length).map((index) => {
 
 db.defaults({
   media: _.concat(
-    show,
+    shows,
+    movies,
     comingSoonShow,
     seasons,
     episodes,

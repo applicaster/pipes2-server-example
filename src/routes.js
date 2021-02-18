@@ -17,9 +17,22 @@ const SCREEN_TYPES = {
   EXAMPLE_CHANNEL: "example-channel",
   EXAMPLE_GENRE: "example-genre",
   EXAMPLE_SEASON: "example-season",
+  EXAMPLE_MOVIE: "example-movie",
 };
 
 const entryRenderers = {
+  movie: (movie) => {
+    const { title, id, summary, genre } = movie;
+    return {
+      id,
+      title,
+      summary,
+      extensions: {
+        genre,
+      },
+      ...renderDummyMediaGroup,
+    };
+  },
   episode: (episode, timeZoneOffset = "UTC") => {
     const {
       id,
@@ -302,7 +315,6 @@ module.exports.setup = (app) => {
     let next;
     if (nextPage) {
       next = new URI(absoluteReqPath(req));
-      console.log({ nextPage });
       next.setQuery("page", nextPage);
     }
 
