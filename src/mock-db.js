@@ -274,6 +274,14 @@ module.exports.getCollectionByName = ({ name }) => {
         .take(6),
     },
 
+    featuredMovies: {
+      items: db
+        .get("media")
+        .filter((item) => item.type === "movie")
+        .shuffle()
+        .take(6),
+    },
+
     popularShows: {
       items: db
         .get("media")
