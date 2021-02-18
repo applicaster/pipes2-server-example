@@ -253,6 +253,22 @@ module.exports.getCollectionByName = ({ name }) => {
         .shuffle()
         .take(6),
     },
+
+    popularMovies: {
+      items: db
+        .get("media")
+        .filter((item) => item.type === "movie")
+        .shuffle()
+        .take(6),
+    },
+
+    popularShows: {
+      items: db
+        .get("media")
+        .filter((item) => item.type === "show")
+        .shuffle()
+        .take(6),
+    },
   };
   return { items: collections[name].items.value() };
 };
