@@ -20,6 +20,27 @@ const SCREEN_TYPES = {
   EXAMPLE_MOVIE: "example-movie",
 };
 
+const getFiltersFromRequestQuery = (query) => {
+  return _.reduce(
+    query,
+    function (result, value, key) {
+      if (key.startsWith("by")) {
+        let castedValue = value;
+        if (value === "true") {
+          castedValue = true;
+        }
+        if (_.includes(["bySeasonNumber", "byEpisodeNumber"], key)) {
+          castedValue = Number(value);
+        }
+
+        result[_.camelCase(key.substring(2))] = castedValue;
+      }
+      return result;
+    },
+    {}
+  );
+};
+
 const entryRenderers = {
   movie: (movie) => {
     const { title, id, summary, genre } = movie;
@@ -285,25 +306,7 @@ module.exports.setup = (app) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
     res.setHeader("Access-Control-Allow-Origin", "*");
-    const filters = _.reduce(
-      req.query,
-      function (result, value, key) {
-        if (key.startsWith("by")) {
-          let castedValue = value;
-          if (value === "true") {
-            castedValue = true;
-          }
-          if (_.includes(["bySeasonNumber", "byEpisodeNumber"], key)) {
-            castedValue = Number(value);
-          }
-
-          result[_.camelCase(key.substring(2))] = castedValue;
-        }
-        return result;
-      },
-      {}
-    );
-
+    const filters = getFiltersFromRequestQuery(req.query);
     const sorts = req.query.sortBy ? req.query.sortBy.split(",") : [];
 
     const { items, nextPage } = mockDb.getMediaItems({
@@ -547,18 +550,7 @@ module.exports.setup = (app) => {
     res.setHeader("Cache-Control", "public, max-age=300");
     res.setHeader("Access-Control-Allow-Origin", "*");
     const { timeZoneOffset } = parseContext(req.query.ctx, false);
-    // TODO - getFiltersFromRequestQuery(req.query)
-    const filters = _.reduce(
-      req.query,
-      function (result, value, key) {
-        if (key.startsWith("by")) {
-          result[_.camelCase(key.substring(2))] =
-            value === "true" ? true : value;
-        }
-        return result;
-      },
-      {}
-    );
+    const filters = getFiltersFromRequestQuery(req.query);
 
     const epgFilters = {
       from: req.query.from,
@@ -568,7 +560,7 @@ module.exports.setup = (app) => {
       justEnded: req.query.justEnded,
       forDay: req.query.forDay,
       futureForDay: req.query.futureForDay,
-      nowAndOnwardsForToday: req.query.nowAndOnwardsForToday
+      nowAndOnwardsForToday: req.query.nowAndOnwardsForToday,
     };
 
     const { items, nextPage } = mockDb.getPrograms({
