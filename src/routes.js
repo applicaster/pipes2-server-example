@@ -547,6 +547,7 @@ module.exports.setup = (app) => {
     res.setHeader("Cache-Control", "public, max-age=300");
     res.setHeader("Access-Control-Allow-Origin", "*");
     const { timeZoneOffset } = parseContext(req.query.ctx, false);
+    // TODO - getFiltersFromRequestQuery(req.query)
     const filters = _.reduce(
       req.query,
       function (result, value, key) {
