@@ -580,7 +580,7 @@ module.exports.setup = (app) => {
     }
 
     res.json({
-      id: absoluteReqPath(req),
+      id: req.query.byChannel ? req.query.byChannel : absoluteReqPath(req),
       title: req.query.feedTitle,
       type: {
         value: "example-channel",
