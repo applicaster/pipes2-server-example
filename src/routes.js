@@ -583,7 +583,7 @@ module.exports.setup = (app) => {
       id: absoluteReqPath(req),
       title: req.query.feedTitle,
       type: {
-        value: "feed",
+        value: "example-channel",
       },
       next: next && next.toString(),
       entry: items.map((item) => {
