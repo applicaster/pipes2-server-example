@@ -97,7 +97,7 @@ const episodes = seasons.reduce((acc, season) => {
   return [...acc, ...createSeasonsEpisodes(season)];
 }, []);
 
-const weekHours = 7 * 24;
+const weekHours = 7 * 24 * 2; // 2 is to make sure we have enough future day from current day
 const programs = _.times(weekHours * channels.length).map((index) => {
   const channel = channels[index % channels.length];
   counter = index + 1;
