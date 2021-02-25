@@ -27,7 +27,7 @@ const shows = _.times(totalShows).map((index) => {
     title: `Show ${counter} Title`,
     genre: genres[index % genres.length],
     channel: channels[index % channels.length],
-    summary: `This is the summary of show ${counter}. Here will be a short description of the show.`,
+    summary: `This is the summary of show ${counter}. Here will be a short description of the show. You can configure the number of shown lines in the cell style.`,
     type: "show",
   };
 });
