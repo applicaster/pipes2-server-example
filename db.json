@@ -5,6 +5,7 @@
       "title": "Show 1 Title",
       "genre": "genre-1",
       "channel": "channel-1",
+      "summary": "This is Show 1 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -12,6 +13,7 @@
       "title": "Show 2 Title",
       "genre": "genre-2",
       "channel": "channel-2",
+      "summary": "This is Show 2 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -19,6 +21,7 @@
       "title": "Show 3 Title",
       "genre": "genre-3",
       "channel": "channel-3",
+      "summary": "This is Show 3 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -26,6 +29,7 @@
       "title": "Show 4 Title",
       "genre": "genre-1",
       "channel": "channel-4",
+      "summary": "This is Show 4 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -33,6 +37,7 @@
       "title": "Show 5 Title",
       "genre": "genre-2",
       "channel": "channel-1",
+      "summary": "This is Show 5 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -40,6 +45,7 @@
       "title": "Show 6 Title",
       "genre": "genre-3",
       "channel": "channel-2",
+      "summary": "This is Show 6 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -47,6 +53,7 @@
       "title": "Show 7 Title",
       "genre": "genre-1",
       "channel": "channel-3",
+      "summary": "This is Show 7 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -54,6 +61,7 @@
       "title": "Show 8 Title",
       "genre": "genre-2",
       "channel": "channel-4",
+      "summary": "This is Show 8 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -61,6 +69,7 @@
       "title": "Show 9 Title",
       "genre": "genre-3",
       "channel": "channel-1",
+      "summary": "This is Show 9 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
@@ -68,6 +77,7 @@
       "title": "Show 10 Title",
       "genre": "genre-1",
       "channel": "channel-2",
+      "summary": "This is Show 10 summary. Here will be a short description of show.",
       "type": "show"
     },
     {
