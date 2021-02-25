@@ -398,7 +398,7 @@ module.exports.setup = (app) => {
           id: day.toMillis(),
           title,
           type: {
-            value: "epg-day",
+            value: index === 0 ? "epg-today" : "epg-day",
           },
           extensions: {
             channelId: req.query.channelId,
