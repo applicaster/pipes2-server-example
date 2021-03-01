@@ -401,7 +401,7 @@ module.exports.setup = (app) => {
             value: index === 0 ? "epg-today" : "epg-day",
           },
           extensions: {
-            channelId: req.query.channelId,
+            channel: req.query.channelId,
           },
         };
       }),
