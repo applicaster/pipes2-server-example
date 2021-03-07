@@ -6,7 +6,7 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db.json");
 const db = low(adapter);
 
-const totalShows = 10;
+const totalShows = 30;
 const totalMovies = 30;
 const totalSeasons = 4;
 const episodesPerSeason = 12;
@@ -15,7 +15,18 @@ const showPrefix = "show";
 const moviePrefix = "movie";
 const seasonPrefix = "season";
 const episodePrefix = "episode";
-const genres = ["genre-1", "genre-2", "genre-3"];
+const genres = [
+  "genre-1",
+  "genre-2",
+  "genre-3",
+  "genre-4",
+  "genre-5",
+  "genre-6",
+  "genre-7",
+  "genre-8",
+  "genre-9",
+  "genre-10",
+];
 const channels = ["channel-1", "channel-2", "channel-3", "channel-4"];
 const sampleHls =
   "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
