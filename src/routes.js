@@ -571,7 +571,7 @@ module.exports.setup = (app) => {
       perPage: req.query.perPage,
       page: req.query.page,
     });
-
+    
     let next;
     if (nextPage) {
       next = new URI(absoluteReqPath(req));

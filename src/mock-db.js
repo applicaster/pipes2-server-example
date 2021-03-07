@@ -18,6 +18,7 @@ const calcTimestamp = (input, timeZoneOffset) => {
 };
 
 const epgUtils = (programs, epgFilters, timeZoneOffset) => {
+  const now = DateTime.local();
   // add isLive property to all items that are currently running
   const modifiedPrograms = programs.map((program) => {
     if (
