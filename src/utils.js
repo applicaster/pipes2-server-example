@@ -18,15 +18,15 @@ const renderDummyMediaGroup = (item) => {
         media_item: [
           {
             // size 1242x699
-            src: `${absoluteReqBasePath}images/full-16x9.png`,
+            src: `${absoluteReqBasePath}images/full-16x9.png?${item.id}`,
             key: "full-16x9",
           },
           {
-            src: `${absoluteReqBasePath}images/half-2x3.png"`,
+            src: `${absoluteReqBasePath}images/half-2x3.png?${item.id}`,
             key: "half-2x3",
           },
           {
-            src: `${absoluteReqBasePath}images/third-1x1.png`,
+            src: `${absoluteReqBasePath}images/third-1x1.png?${item.id}`,
             key: "third-1x1",
           },
           ...channelImages.media_group[0].media_item,
