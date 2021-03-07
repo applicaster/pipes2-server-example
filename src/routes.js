@@ -55,7 +55,7 @@ const entryRenderers = {
       extensions: {
         genre,
       },
-      ...renderDummyMediaGroup,
+      ...renderDummyMediaGroup(movie),
     };
   },
   episode: (episode, timeZoneOffset = "UTC") => {
@@ -120,7 +120,7 @@ const entryRenderers = {
           episodeNumber,
         },
       },
-      ...renderDummyMediaGroup,
+      ...renderDummyMediaGroup(episode),
     };
   },
 
@@ -160,7 +160,7 @@ const entryRenderers = {
           genre,
         },
       },
-      ...renderDummyMediaGroup,
+      ...renderDummyMediaGroup(show),
     };
   },
   channel: (channel) => {

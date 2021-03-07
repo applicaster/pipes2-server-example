@@ -6,28 +6,35 @@ const absoluteReqPath = (req) => {
   return req.protocol + "://" + req.get("host") + req.originalUrl;
 };
 
-const renderDummyMediaGroup = {
-  media_group: [
-    {
-      absoluteReqBasePath,
-      type: "image",
-      media_item: [
-        {
-          // size 1242x699
-          src: `${absoluteReqBasePath}images/full-16x9.png`,
-          key: "full-16x9",
-        },
-        {
-          src: `${absoluteReqBasePath}images/half-2x3.png"`,
-          key: "half-2x3",
-        },
-        {
-          src: `${absoluteReqBasePath}images/third-1x1.png`,
-          key: "third-1x1",
-        },
-      ],
-    },
-  ],
+const renderDummyMediaGroup = (item) => {
+  console.log(item);
+  let channelImages = { media_group: [] };
+  if (item.channel) {
+    channelImages = renderChannelMediaGroupById(item.channel);
+  }
+  return {
+    media_group: [
+      {
+        type: "image",
+        media_item: [
+          {
+            // size 1242x699
+            src: `${absoluteReqBasePath}images/full-16x9.png`,
+            key: "full-16x9",
+          },
+          {
+            src: `${absoluteReqBasePath}images/half-2x3.png"`,
+            key: "half-2x3",
+          },
+          {
+            src: `${absoluteReqBasePath}images/third-1x1.png`,
+            key: "third-1x1",
+          },
+        ],
+      },
+      channelImages.media_group,
+    ],
+  };
 };
 
 const renderChannelMediaGroupById = (id) => {
