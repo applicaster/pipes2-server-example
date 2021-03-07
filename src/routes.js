@@ -74,6 +74,14 @@ const entryRenderers = {
       cta,
       label,
     } = episode;
+
+    const fromHour = DateTime.fromMillis(Number(airTimestamp))
+      .setZone(timeZoneOffset)
+      .toFormat("HH:mm");
+    const toHour = DateTime.fromMillis(Number(airTimestamp))
+      .plus({ seconds: durationInSeconds })
+      .setZone(timeZoneOffset)
+      .toFormat("HH:mm");
     return {
       id,
       title,
@@ -100,6 +108,7 @@ const entryRenderers = {
         broadcastDate: DateTime.fromMillis(Number(airTimestamp))
           .setZone(timeZoneOffset)
           .toFormat("LLL dd, h:mma"),
+        broadcastTimeSlot: `${fromHour}-${toHour}`,
         isLive,
         analyticsCustomProperties: {
           showId,
@@ -571,7 +580,7 @@ module.exports.setup = (app) => {
       perPage: req.query.perPage,
       page: req.query.page,
     });
-    
+
     let next;
     if (nextPage) {
       next = new URI(absoluteReqPath(req));
