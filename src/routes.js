@@ -602,14 +602,14 @@ module.exports.setup = (app) => {
           item,
           timeZoneOffset || "UTC"
         );
-        return {
-          ...entryItem,
-          type: {
-            value: entryItem.extensions.isLive
-              ? entryItem.type.value
-              : SCREEN_TYPES.FUTURE_PROGRAM,
-          },
-        };
+        const isLive = entryItem.extensions.isLive;
+
+        if (!isLive) {
+          // Remove video from future items and change type to FUTURE_PROGRAM
+          entryItem.type = { value: SCREEN_TYPES.FUTURE_PROGRAM };
+          delete entryItem.content;
+        }
+        return entryItem; 
       }),
     });
   });
