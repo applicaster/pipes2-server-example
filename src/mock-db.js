@@ -259,6 +259,8 @@ module.exports.getCollectionByName = ({ name }) => {
     },
 
     featuredGenre1: {
+      id: 'genre-1',
+      type: 'example-genre',
       items: db
         .get("media")
         .filter((item) => item.type === "show" && item.genre === "genre-1")
@@ -267,6 +269,8 @@ module.exports.getCollectionByName = ({ name }) => {
     },
 
     featuredGenre2: {
+      id: 'genre-2',
+      type: 'example-genre',
       items: db
         .get("media")
         .filter((item) => item.type === "show" && item.genre === "genre-2")
@@ -275,6 +279,7 @@ module.exports.getCollectionByName = ({ name }) => {
     },
 
     popularMovies: {
+      type: 'feed',
       items: db
         .get("media")
         .filter((item) => item.type === "movie")
@@ -283,6 +288,7 @@ module.exports.getCollectionByName = ({ name }) => {
     },
 
     featuredMovies: {
+      type: 'feed',
       items: db
         .get("media")
         .filter((item) => item.type === "movie")
@@ -291,6 +297,7 @@ module.exports.getCollectionByName = ({ name }) => {
     },
 
     popularShows: {
+      type: 'feed',
       items: db
         .get("media")
         .filter((item) => item.type === "show")
@@ -298,7 +305,11 @@ module.exports.getCollectionByName = ({ name }) => {
         .take(6),
     },
   };
-  return { items: collections[name].items.value() };
+  return {
+    items: collections[name].items.value(),
+    type: collections[name].type,
+    id: collections[name].id
+  };
 };
 
 module.exports.getUserCollectionByName = ({ name, userToken }) => {

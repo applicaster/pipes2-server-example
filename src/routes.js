@@ -609,7 +609,7 @@ module.exports.setup = (app) => {
           entryItem.type = { value: SCREEN_TYPES.FUTURE_PROGRAM };
           delete entryItem.content;
         }
-        return entryItem; 
+        return entryItem;
       }),
     });
   });
@@ -643,15 +643,15 @@ module.exports.setup = (app) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
     res.setHeader("Access-Control-Allow-Origin", "*");
-    const { items } = mockDb.getCollectionByName({
+    const { items, type, id } = mockDb.getCollectionByName({
       name: req.params.collectionName,
     });
 
     res.json({
-      id: absoluteReqPath(req),
+      id: id || absoluteReqPath(req),
       title: req.query.feedTitle || req.params.collectionName,
       type: {
-        value: "feed",
+        value: type,
       },
       entry: items.map((item) => {
         return entryRenderers[item.type](item);
