@@ -7,8 +7,7 @@ const absoluteReqPath = (req) => {
 };
 
 const renderDummyMediaGroup = (item) => {
-  console.log(item);
-  let channelImages = { media_group: [] };
+  let channelImages = { media_group: [{ media_item: [] }] };
   if (item.channel) {
     channelImages = renderChannelMediaGroupById(item.channel);
   }
@@ -30,9 +29,9 @@ const renderDummyMediaGroup = (item) => {
             src: `${absoluteReqBasePath}images/third-1x1.png`,
             key: "third-1x1",
           },
+          ...channelImages.media_group[0].media_item,
         ],
       },
-      channelImages.media_group,
     ],
   };
 };
