@@ -102,10 +102,9 @@ const programs = _.times(weekHours * channels.length).map((index) => {
   const channel = channels[index % channels.length];
   counter = index + 1;
   const hoursFromStartOfTheWeek = Math.floor(counter / 4 - 0.1);
+
   return {
-    ...episodes.filter((episode) => episode.channel === channel)[
-      (counter % channels.length) % counter
-    ],
+    ..._.shuffle(episodes.filter((episode) => episode.channel === channel))[0],
     airTime: {
       days: Math.floor(hoursFromStartOfTheWeek / 24),
       hours: hoursFromStartOfTheWeek % 24,
