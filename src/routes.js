@@ -18,6 +18,7 @@ const SCREEN_TYPES = {
   EXAMPLE_GENRE: "example-genre",
   EXAMPLE_SEASON: "example-season",
   EXAMPLE_MOVIE: "example-movie",
+  FUTURE_PROGRAM: "example-future-program",
 };
 
 const getFiltersFromRequestQuery = (query) => {
@@ -82,6 +83,7 @@ const entryRenderers = {
       .plus({ seconds: durationInSeconds })
       .setZone(timeZoneOffset)
       .toFormat("HH:mm");
+
     return {
       id,
       title,
@@ -596,7 +598,18 @@ module.exports.setup = (app) => {
       },
       next: next && next.toString(),
       entry: items.map((item) => {
-        return entryRenderers[item.type](item, timeZoneOffset || "UTC");
+        const entryItem = entryRenderers[item.type](
+          item,
+          timeZoneOffset || "UTC"
+        );
+        return {
+          ...entryItem,
+          type: {
+            value: entryItem.extensions.isLive
+              ? entryItem.type.value
+              : SCREEN_TYPES.FUTURE_PROGRAM,
+          },
+        };
       }),
     });
   });
