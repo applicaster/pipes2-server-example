@@ -223,6 +223,13 @@ module.exports.getCollectionByName = ({ name }) => {
         { id: "genre-1", title: "Genre 1", type: "genre" },
         { id: "genre-2", title: "Genre 2", type: "genre" },
         { id: "genre-3", title: "Genre 3", type: "genre" },
+        { id: "genre-4", title: "Genre 4", type: "genre" },
+        { id: "genre-5", title: "Genre 5", type: "genre" },
+        { id: "genre-6", title: "Genre 6", type: "genre" },
+        { id: "genre-7", title: "Genre 7", type: "genre" },
+        { id: "genre-8", title: "Genre 8", type: "genre" },
+        { id: "genre-9", title: "Genre 9", type: "genre" },
+        { id: "genre-10", title: "Genre 10", type: "genre" },
       ],
     };
   }
