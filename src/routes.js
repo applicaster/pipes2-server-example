@@ -308,6 +308,18 @@ module.exports.setup = (app) => {
    *         description: Max page number - if you want to remove pagination set the max page to the current page number
    *         schema:
    *           type: number
+   * 
+   *       - in: query
+   *         name: overrideType
+   *         description: Allow to override the screen type to all item entries
+   *         schema:
+   *           type: string
+   * 
+   *       - in: query
+   *         name: overrideCta
+   *         description: Allow to override the extensions.cta (Call To Action)  to all item entries
+   *         schema:
+   *           type: string
    *
    *     responses:
    *       200:
@@ -343,9 +355,22 @@ module.exports.setup = (app) => {
         value: "feed",
       },
       next: next && next.toString(),
-      entry: items.map((item) => {
-        return entryRenderers[item.type](item);
-      }),
+      entry: items
+        .map((item) => {
+          return entryRenderers[item.type](item);
+        })
+        .map((item) => {
+          //Overrides
+          // Override Type
+          if (req.query.overrideType) {
+            item.type.value = req.query.overrideType;
+          }
+          // Override Call To Action
+          if (req.query.overrideCta) {
+            item.extensions.cta = req.query.overrideCta;
+          }
+          return item;
+        }),
     });
   });
 
