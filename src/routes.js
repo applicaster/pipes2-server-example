@@ -15,6 +15,7 @@ const SCREEN_TYPES = {
   EXAMPLE_SHOW: "example-show",
   EXAMPLE_COMING_SOON_show: "example-coming-soon-show",
   EXAMPLE_CHANNEL: "example-channel",
+  EXAMPLE_EPG: "example-epg",
   EXAMPLE_GENRE: "example-genre",
   EXAMPLE_SEASON: "example-season",
   EXAMPLE_MOVIE: "example-movie",
@@ -594,7 +595,7 @@ module.exports.setup = (app) => {
       id: req.query.byChannel ? req.query.byChannel : absoluteReqPath(req),
       title: req.query.feedTitle,
       type: {
-        value: "example-channel",
+        value: SCREEN_TYPES.EXAMPLE_EPG,
       },
       next: next && next.toString(),
       entry: items.map((item) => {
