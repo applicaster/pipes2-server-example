@@ -50,7 +50,7 @@ const movies = _.times(totalMovies).map((index) => {
     title: `Movie ${counter} Title`,
     genre: genres[index % genres.length],
     type: "movie",
-    summary: `This is the summary of show ${counter}. Here will be a short description of the show. You can configure the number of shown lines in the cell style.`,
+    summary: `This is the summary of movie ${counter}. Here will be a short description of the show. You can configure the number of shown lines in the cell style.`,
   };
 });
 
