@@ -85,6 +85,8 @@ const entryRenderers = {
       .setZone(timeZoneOffset)
       .toFormat("HH:mm");
 
+
+
     return {
       id,
       title,
@@ -113,6 +115,8 @@ const entryRenderers = {
           .toFormat("LLL dd, h:mma"),
         broadcastTimeSlot: `${fromHour}-${toHour}`,
         isLive,
+        hqme: true, // make item downloadable
+        hqmeExpirationDate: DateTime.local().plus({ hours: 1 }).toMillis(),
         analyticsCustomProperties: {
           showId,
           genre,
