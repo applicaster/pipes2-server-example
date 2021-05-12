@@ -734,4 +734,38 @@ module.exports.setup = (app) => {
       entry: items,
     });
   });
+
+
+  // Test Context Keys endpoints
+  app.get("/context-keys-test", (req, res) => {
+    const { ctx, ...other } = req.query;
+    const headers = req.headers
+    let contextKeys = []
+    if (ctx) {
+      const parsedContextKeys = parseContext(ctx);
+      contextKeys = [...contextKeys, ...Object.keys(parsedContextKeys).map((key) => ({ key, value: parsedContextKeys[key], type: 'ctx' }))]
+    }
+    if (other) {
+      contextKeys = [...contextKeys, ...Object.keys(other).map((key) => ({ key, value: other[key], type: 'query' }))]
+    }
+    if (headers) {
+      contextKeys = [...contextKeys, ...Object.keys(headers).map((key) => ({ key, value: headers[key], type: 'header' }))]
+    }
+
+
+
+    res.json({
+      id: 'context-keys-test-feed',
+      title: 'Context Keys Feed',
+      type: {
+        value: 'feed'
+      },
+      entry: contextKeys.map(({ type, key, value }) => {
+        return {
+          id: `${type}--${key}--${value}`,
+          title: `${type}: ${key} - ${value}`
+        }
+      })
+    })
+  });
 };
