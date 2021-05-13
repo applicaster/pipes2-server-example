@@ -763,7 +763,10 @@ module.exports.setup = (app) => {
       entry: contextKeys.map(({ type, key, value }) => {
         return {
           id: `${type}--${key}--${value}`,
-          title: `${type}: ${key} - ${value}`
+          title: `${type}: ${key} - ${value}`,
+          type: {
+            value: 'feed'
+          }
         }
       })
     })
