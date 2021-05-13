@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const path = require("path");
@@ -8,6 +9,7 @@ const { absoluteReqBasePath } = require("./utils");
 
 const app = express();
 app.enable("trust proxy");
+app.use(cors())
 const port = process.env.PORT || 3000;
 
 const options = {
