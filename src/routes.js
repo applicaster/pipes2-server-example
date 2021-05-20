@@ -85,8 +85,6 @@ const entryRenderers = {
       .setZone(timeZoneOffset)
       .toFormat("HH:mm");
 
-
-
     return {
       id,
       title,
@@ -312,13 +310,13 @@ module.exports.setup = (app) => {
    *         description: Max page number - if you want to remove pagination set the max page to the current page number
    *         schema:
    *           type: number
-   * 
+   *
    *       - in: query
    *         name: overrideType
    *         description: Allow to override the screen type to all item entries
    *         schema:
    *           type: string
-   * 
+   *
    *       - in: query
    *         name: overrideCta
    *         description: Allow to override the extensions.cta (Call To Action)  to all item entries
@@ -735,40 +733,80 @@ module.exports.setup = (app) => {
     });
   });
 
-
   // Test Context Keys endpoints
   app.get("/context-keys-test", (req, res) => {
     const { ctx, ...other } = req.query;
-    const headers = req.headers
-    let contextKeys = []
+    const headers = req.headers;
+    let contextKeys = [];
     if (ctx) {
       const parsedContextKeys = parseContext(ctx);
-      contextKeys = [...contextKeys, ...Object.keys(parsedContextKeys).map((key) => ({ key, value: parsedContextKeys[key], type: 'ctx' }))]
+      contextKeys = [
+        ...contextKeys,
+        ...Object.keys(parsedContextKeys).map((key) => ({
+          key,
+          value: parsedContextKeys[key],
+          type: "ctx",
+        })),
+      ];
     }
     if (other) {
-      contextKeys = [...contextKeys, ...Object.keys(other).map((key) => ({ key, value: other[key], type: 'query' }))]
+      contextKeys = [
+        ...contextKeys,
+        ...Object.keys(other).map((key) => ({
+          key,
+          value: other[key],
+          type: "query",
+        })),
+      ];
     }
     if (headers) {
-      contextKeys = [...contextKeys, ...Object.keys(headers).map((key) => ({ key, value: headers[key], type: 'header' }))]
+      contextKeys = [
+        ...contextKeys,
+        ...Object.keys(headers).map((key) => ({
+          key,
+          value: headers[key],
+          type: "header",
+        })),
+      ];
     }
 
-
-
     res.json({
-      id: 'context-keys-test-feed',
-      title: 'Context Keys Feed',
+      id: "context-keys-test-feed",
+      title: "Context Keys Feed",
       type: {
-        value: 'feed'
+        value: "feed",
       },
       entry: contextKeys.map(({ type, key, value }) => {
         return {
           id: `${type}--${key}--${value}`,
           title: `${type}: ${key} - ${value}`,
           type: {
-            value: 'feed'
-          }
-        }
-      })
-    })
+            value: "feed",
+          },
+        };
+      }),
+    });
+  });
+
+  // This endpoint is meant to provide several test items
+  // for the download features. It will return m3u8, mp4, etc...
+  // accepts an optional "type" query param to get either
+  // mp4 or m3u8 streams
+  // i.e. /downloads-test?type=mp4
+  // all other values will return all entries
+  app.get("/downloads-test", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
+    const { type } = req.query;
+    const entries = require("./downloadEntries");
+
+    res.json({
+      id: "download-test-feed",
+      title: "Downloadable Items",
+      type: { value: "feed" },
+      entry: entries[type] || entries.all,
+    });
   });
 };
