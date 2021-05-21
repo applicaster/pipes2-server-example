@@ -41,6 +41,12 @@ const SintelMp4 = createEntry({
   src: "https://test-videos.co.uk/vids/sintel/mp4/av1/1080/Sintel_1080_10s_5MB.mp4",
 });
 
+const BigMp4 = createEntry({
+  title: "BIG buck bunny mp4",
+  summary: "this file is as big as the rabbit",
+  src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_30MB.mp4",
+});
+
 const tearsOfSteelM3u8 = createEntry({
   title: "Tears of Steel - m3u8",
   summary: "don't know what this is",
@@ -70,11 +76,12 @@ module.exports = {
     bigBuckBunnyMp4,
     JellyFishMp4,
     SintelMp4,
+    BigMp4,
     tearsOfSteelM3u8,
     bigbuckbunnym3u8,
     sintelm3u8,
     BlipBlopm3u8,
   ],
-  mp4: [bigBuckBunnyMp4, JellyFishMp4, SintelMp4],
+  mp4: [bigBuckBunnyMp4, JellyFishMp4, SintelMp4, bigBuckBunnyMp4],
   m3u8: [tearsOfSteelM3u8, bigbuckbunnym3u8, sintelm3u8, BlipBlopm3u8],
 };
