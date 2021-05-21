@@ -26,19 +26,25 @@ const createEntry = ({ title, summary, src }) => ({
 const bigBuckBunnyMp4 = createEntry({
   title: "Big Buck Bunny - mp4",
   summary: "This is the big Buck Bunny, mp4 version",
-  src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h265/1080/Big_Buck_Bunny_1080_10s_5MB.mp4",
+  src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_5MB.mp4",
 });
 
 const JellyFishMp4 = createEntry({
   title: "Jelly Fish - mp4",
   summary: "A jelly fish is not a fish. I repeat, a jelly fish is not a fish",
-  src: "https://test-videos.co.uk/vids/jellyfish/mp4/h265/1080/Jellyfish_1080_10s_5MB.mp4",
+  src: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/1080/Jellyfish_1080_10s_5MB.mp4",
 });
 
 const SintelMp4 = createEntry({
   title: "Sintel - mp4",
   summary: "A girl has no name, but she has a gargoyle",
   src: "https://test-videos.co.uk/vids/sintel/mp4/av1/1080/Sintel_1080_10s_5MB.mp4",
+});
+
+const BigMp4 = createEntry({
+  title: "BIG buck bunny mp4",
+  summary: "this file is as big as the rabbit",
+  src: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_30MB.mp4",
 });
 
 const tearsOfSteelM3u8 = createEntry({
@@ -70,11 +76,12 @@ module.exports = {
     bigBuckBunnyMp4,
     JellyFishMp4,
     SintelMp4,
+    BigMp4,
     tearsOfSteelM3u8,
     bigbuckbunnym3u8,
     sintelm3u8,
     BlipBlopm3u8,
   ],
-  mp4: [bigBuckBunnyMp4, JellyFishMp4, SintelMp4],
+  mp4: [bigBuckBunnyMp4, JellyFishMp4, SintelMp4, bigBuckBunnyMp4],
   m3u8: [tearsOfSteelM3u8, bigbuckbunnym3u8, sintelm3u8, BlipBlopm3u8],
 };
