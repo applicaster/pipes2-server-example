@@ -833,7 +833,7 @@ module.exports.setup = (app) => {
     const feedEntries = entries[type] || entries.all;
 
     const entry = testPreload
-      ? createEntriesWithoutStream(feedEntries, req)
+      ? createEntriesWithoutStream(feedEntries)
       : feedEntries;
 
     res.json({
