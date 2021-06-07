@@ -1,3 +1,4 @@
+const { uniqueId } = require("lodash");
 const path = require("path");
 
 const absoluteReqBasePath = process.env.BASE_URL || "http://localhost:3000/";
@@ -56,7 +57,34 @@ const renderChannelMediaGroupById = (id) => {
   };
 };
 
+const wrapEntryInFeed = (entry) => {
+  return {
+    id: uniqueId(),
+    type: { value: "feed" },
+    entry: [entry],
+  };
+};
+
+const createEntriesWithoutStream = (entries) => {
+  return entries.reduce((all, entry) => {
+    const entryWithoutStream = Object.assign({}, entry);
+
+    delete entryWithoutStream.content;
+
+    entryWithoutStream.link = {
+      rel: "self",
+      href: `${absoluteReqBasePath}stream/${entry.id}`,
+    };
+
+    all.push(entryWithoutStream);
+
+    return all;
+  }, []);
+};
+
 module.exports.absoluteReqPath = absoluteReqPath;
 module.exports.absoluteReqBasePath = absoluteReqBasePath;
 module.exports.renderDummyMediaGroup = renderDummyMediaGroup;
 module.exports.renderChannelMediaGroupById = renderChannelMediaGroupById;
+module.exports.wrapEntryInFeed = wrapEntryInFeed;
+module.exports.createEntriesWithoutStream = createEntriesWithoutStream;

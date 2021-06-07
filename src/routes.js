@@ -2,6 +2,8 @@ const {
   absoluteReqPath,
   renderDummyMediaGroup,
   renderChannelMediaGroupById,
+  wrapEntryInFeed,
+  createEntriesWithoutStream,
 } = require("./utils");
 const _ = require("lodash");
 const base64url = require("base64url");
@@ -794,19 +796,79 @@ module.exports.setup = (app) => {
   // mp4 or m3u8 streams
   // i.e. /downloads-test?type=mp4
   // all other values will return all entries
+  /**
+   * @swagger
+   * /downloads-test:
+   *   get:
+   *     description: |
+   *        returns a feed of downloadable items
+   *
+   *     parameters:
+   *       - in: query
+   *         name: type
+   *         description: (optional) type of the streams returned
+   *         schema:
+   *           type: "string"
+   *           enum: [mp4, m3u8]
+   *       - in: query
+   *         name: testPreload
+   *         description: set to true to return a link.href property and no content.src
+   *         schema:
+   *           type: boolean
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
   app.get("/downloads-test", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.setHeader("Cache-Control", "public, max-age=300");
     res.setHeader("Access-Control-Allow-Origin", "*");
 
-    const { type } = req.query;
+    const { type, testPreload } = req.query;
     const entries = require("./downloadEntries");
+
+    const feedEntries = entries[type] || entries.all;
+
+    const entry = testPreload
+      ? createEntriesWithoutStream(feedEntries, req)
+      : feedEntries;
 
     res.json({
       id: "download-test-feed",
       title: "Downloadable Items",
       type: { value: "feed" },
-      entry: entries[type] || entries.all,
+      entry,
     });
+  });
+
+  // This endpoint will return an entry's stream
+  /**
+   * @swagger
+   * /stream/:entry_id:
+   *   get:
+   *     description: |
+   *        returns an entry with a stream for a given id
+   *
+   *     parameters:
+   *       - in: path
+   *         name: entry_id
+   *         description: id of the entry to return
+   *         schema:
+   *           type: "string"
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
+  app.get("/stream/:entry_id", (req, res) => {
+    const { entry_id } = req.params;
+    const entries = require("./downloadEntries");
+
+    const entry = entries.all.find((e) => e.id === entry_id) || {};
+
+    res.json(wrapEntryInFeed(entry));
   });
 };
