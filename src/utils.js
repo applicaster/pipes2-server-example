@@ -82,9 +82,22 @@ const createEntriesWithoutStream = (entries) => {
   }, []);
 };
 
+const responseForOutcome = (outcome) => {
+  return (
+    {
+      unauthorized: 403,
+      error: 500,
+      notFound: 404,
+      unprocessableEntity: 422,
+      success: 200,
+    }[outcome] || 200
+  );
+};
+
 module.exports.absoluteReqPath = absoluteReqPath;
 module.exports.absoluteReqBasePath = absoluteReqBasePath;
 module.exports.renderDummyMediaGroup = renderDummyMediaGroup;
 module.exports.renderChannelMediaGroupById = renderChannelMediaGroupById;
 module.exports.wrapEntryInFeed = wrapEntryInFeed;
 module.exports.createEntriesWithoutStream = createEntriesWithoutStream;
+module.exports.responseForOutcome = responseForOutcome;

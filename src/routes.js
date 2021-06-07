@@ -4,6 +4,7 @@ const {
   renderChannelMediaGroupById,
   wrapEntryInFeed,
   createEntriesWithoutStream,
+  responseForOutcome,
 } = require("./utils");
 const _ = require("lodash");
 const base64url = require("base64url");
@@ -870,5 +871,63 @@ module.exports.setup = (app) => {
     const entry = entries.all.find((e) => e.id === entry_id) || {};
 
     res.json(wrapEntryInFeed(entry));
+  });
+
+  // This endpoint will return an entry's stream
+  /**
+   * @swagger
+   * /sign/:entry_id:
+   *   get:
+   *     description: |
+   *        simulates the response from a signing service
+   *
+   *     parameters:
+   *       - in: path
+   *         name: entry_id
+   *         description: id of the entry to return
+   *         schema:
+   *           type: "string"
+   *       - in: query
+   *         name: outcome
+   *         description: (optional) will trigger a specific response
+   *         scheme:
+   *           type: "string"
+   *           enum: [success, unauthorized, error, unprocessableEntity]
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
+  app.get("/sign/:entry_id", (req, res) => {
+    const { entry_id } = req.params;
+    const entries = require("./downloadEntries");
+
+    const { outcome } = req.query;
+
+    const entry = entries.all.find((e) => e.id === entry_id);
+
+    if (!entry) {
+      res.status(404);
+    }
+
+    const status = responseForOutcome(outcome);
+
+    res.status(status);
+
+    if (status === 200) {
+      res.setHeader("content-type", "application/vnd.api+json");
+      res.json({
+        data: {
+          type: "video",
+          id: 1,
+          attributes: {
+            stream_src: entry.content.src,
+          },
+        },
+      });
+    }
+
+    res.json({ error: new Error(outcome).message });
   });
 };
