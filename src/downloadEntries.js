@@ -7,7 +7,7 @@ const createId = (string) => {
   return string.replace(/\s/g, "-").concat(`-${increment}`);
 };
 
-const createEntry = ({ title, summary, src }) => ({
+const createEntry = ({ title, summary, src, hqme = true }) => ({
   id: createId(title),
   title,
   summary,
@@ -20,6 +20,9 @@ const createEntry = ({ title, summary, src }) => ({
   }),
   content: {
     src,
+  },
+  extensions: {
+    hqme,
   },
 });
 
@@ -71,6 +74,13 @@ const BlipBlopm3u8 = createEntry({
   src: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
 });
 
+const undownloadableEntry = createEntry({
+  hqme: false,
+  title: "Can't download",
+  summary: "This is a video, but it cannot be downloaded",
+  src: "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+});
+
 module.exports = {
   all: [
     bigBuckBunnyMp4,
@@ -81,7 +91,20 @@ module.exports = {
     bigbuckbunnym3u8,
     sintelm3u8,
     BlipBlopm3u8,
+    undownloadableEntry,
   ],
-  mp4: [bigBuckBunnyMp4, JellyFishMp4, SintelMp4, bigBuckBunnyMp4],
-  m3u8: [tearsOfSteelM3u8, bigbuckbunnym3u8, sintelm3u8, BlipBlopm3u8],
+  mp4: [
+    bigBuckBunnyMp4,
+    JellyFishMp4,
+    SintelMp4,
+    bigBuckBunnyMp4,
+    undownloadableEntry,
+  ],
+  m3u8: [
+    tearsOfSteelM3u8,
+    bigbuckbunnym3u8,
+    sintelm3u8,
+    BlipBlopm3u8,
+    undownloadableEntry,
+  ],
 };
