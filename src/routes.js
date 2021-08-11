@@ -959,7 +959,7 @@ module.exports.setup = (app) => {
 
   })
 
-  app.get("/cloud-events", async (req, res) => {
+  app.get("/resume-watching", async (req, res) => {
     const { userId } = req.query;
     db.read();
     const events = db.get('events')
