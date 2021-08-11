@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "base64url": "^3.0.1",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fuse.js": "^6.4.6",
@@ -21,7 +22,7 @@
     "swagger-jsdoc": "^6.0.1",
     "swagger-ui-dist": "^3.40.0",
     "swagger-ui-express": "^4.1.6",
-    "urijs": "^1.19.6"
+    "urijs": "^1.19.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
