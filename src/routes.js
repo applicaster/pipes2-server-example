@@ -984,4 +984,36 @@ module.exports.setup = (app) => {
       }))
     })
   })
+
+  app.get("/resume-watching-full", async (req, res) => {
+    const { userId } = req.query;
+    db.read();
+    const events = db.get('events')
+      .filter((event) => {
+        try {
+          return event.data.userIdentifier === userId
+        } catch (error) {
+          return false
+        }
+      }).orderBy(['time'], ['desc'])
+      .uniqBy('data.videoId')
+      .take(30);
+
+    const { items, nextPage } = mockDb.getMediaItems({
+      filters: {},
+      sorts: [],
+      perPage: 5000
+    });
+
+    const eventIds = events.map((event) => ({ id: event.data.videoId })).value();
+
+    res.json(
+      {
+        entry: _.intersectionBy(items, eventIds, 'id').map((item) => {
+          return entryRenderers[item.type](item);
+        }),
+      }
+    )
+
+  })
 };
