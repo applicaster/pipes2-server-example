@@ -10,8 +10,19 @@ const _ = require("lodash");
 const base64url = require("base64url");
 const { DateTime } = require("luxon");
 const URI = require("urijs");
-
+const bodyParser = require('body-parser')
+const jsonParser = bodyParser.json()
 const mockDb = require("./mock-db");
+
+
+
+const low = require("lowdb");
+const FileSync = require('lowdb/adapters/FileSync')
+
+const adapter = new FileSync("resume-watching.json", { defaultValue: { events: [] }, });
+const db = low(adapter)
+
+
 
 const SCREEN_TYPES = {
   EXAMPLE_EPISODE: "example-episode",
@@ -930,4 +941,81 @@ module.exports.setup = (app) => {
 
     res.json({ error: new Error(outcome).message });
   });
+
+
+  app.post("/cloud-events", jsonParser, async (req, res) => {
+    try {
+      if (req.body.type === 'com.applicaster.video.stopped.v1') {
+        db.read();
+        await db.get('events').push(req.body).write()
+
+        res.status(201).end();
+      }
+    } catch (error) {
+      console.log(error);
+
+      res.status(500).end();
+    }
+
+  })
+
+  app.get("/resume-watching", async (req, res) => {
+    const { userId } = req.query;
+    db.read();
+    const events = db.get('events')
+      .filter((event) => {
+        try {
+          return event.data.userIdentifier === userId
+        } catch (error) {
+          return false
+        }
+      }).orderBy(['time'], ['desc'])
+      .uniqBy('data.videoId')
+      .take(30);
+
+    res.json({
+      entry: events.map(event => ({
+        id: event.data.videoId,
+        extensions: {
+          resumeLastUpdate: event.time,
+          resumeTime: event.data.secondsFromStart,
+          progress: event.data.progress
+        }
+      }))
+    })
+  })
+
+  app.get("/resume-watching-full", async (req, res) => {
+    const { userId } = req.query;
+    db.read();
+    const events = db.get('events')
+      .filter((event) => {
+        try {
+          return event.data.userIdentifier === userId
+        } catch (error) {
+          return false
+        }
+      }).orderBy(['time'], ['desc'])
+      .uniqBy('data.videoId')
+      .take(30);
+
+    const { items, nextPage } = mockDb.getMediaItems({
+      filters: {},
+      sorts: [],
+      perPage: 5000
+    });
+
+    const eventIds = events.map((event) => ({ id: event.data.videoId })).value();
+
+    res.json(
+      {
+        id: "resume-watching-full",
+        type: { value: 'feed' },
+        entry: _.intersectionBy(items, eventIds, 'id').map((item) => {
+          return entryRenderers[item.type](item);
+        }),
+      }
+    )
+
+  })
 };
