@@ -13,6 +13,7 @@ const URI = require("urijs");
 const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 const mockDb = require("./mock-db");
+const { miscFeeds } = require('./misc-feeds')
 
 
 
@@ -1017,5 +1018,9 @@ module.exports.setup = (app) => {
       }
     )
 
+  })
+
+  app.get("/misc/:feedName", async (req, res) => {
+    res.json(miscFeeds[req.params.feedName]())
   })
 };
