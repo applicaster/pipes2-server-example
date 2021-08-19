@@ -1009,6 +1009,8 @@ module.exports.setup = (app) => {
 
     res.json(
       {
+        id: "resume-watching-full",
+        type: { value: 'feed' },
         entry: _.intersectionBy(items, eventIds, 'id').map((item) => {
           return entryRenderers[item.type](item);
         }),
