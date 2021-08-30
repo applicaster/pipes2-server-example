@@ -980,7 +980,8 @@ module.exports.setup = (app) => {
         extensions: {
           resumeLastUpdate: event.time,
           resumeTime: event.data.secondsFromStart,
-          progress: event.data.progress
+          progress: event.data.progress,
+          resumeCompleted: event.data.status === 'COMPLETED' ? true : undefined
         }
       }))
     })
