@@ -1028,7 +1028,7 @@ module.exports.setup = (app) => {
   // This endpoint will return a feed with live streams
   /**
    * @swagger
-   * /live
+   * /live:
    *   get:
    *     description: |
    *        returns a stream of live items
