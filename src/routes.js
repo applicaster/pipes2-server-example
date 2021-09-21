@@ -18,6 +18,7 @@ const { miscFeeds } = require("./misc-feeds");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const getLiveFeed = require("./live");
+const e = require("cors");
 
 const adapter = new FileSync("resume-watching.json", {
   defaultValue: { events: [] },
@@ -1060,5 +1061,52 @@ module.exports.setup = (app) => {
     const { live_extension, type = undefined } = req.query;
 
     res.json(getLiveFeed({ liveFlag: live_extension, type }));
+  });
+
+  // This endpoint will return a feed with entries set up to test the play next feature
+  /**
+   * @swagger
+   * /play-next:
+   *   get:
+   *     description: |
+   *        returns a feed of vod items set up with play_next extension
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
+  app.get("/play-next", async (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
+    const entries = require("./downloadEntries");
+
+    const { id } = req.query;
+    const host = req.headers.host;
+    const scheme = req.secure ? "https" : "http";
+
+    const feedEntries = entries.m3u8.map((entry, index) => {
+      const nextEntryIndex = index === entries.m3u8.length - 1 ? 0 : index + 1;
+      const nextId = entries.m3u8[nextEntryIndex].id;
+
+      entry.extensions.play_next_feed_url = `${scheme}://${host}/play-next?id=${nextId}`;
+
+      return entry;
+    });
+
+    const entry = id
+      ? feedEntries.filter((_entry) => id === _entry.id)
+      : feedEntries;
+
+    res.json({
+      id: "play-next-feed",
+      title: "Streams with Play next",
+      summary:
+        "The streams in this feed are configured to use the play next feature",
+      type: { value: "feed" },
+      entry,
+    });
   });
 };
