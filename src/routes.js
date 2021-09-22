@@ -1087,9 +1087,16 @@ module.exports.setup = (app) => {
     const host = req.headers.host;
     const scheme = req.secure ? "https" : "http";
 
-    const feedEntries = entries.m3u8.map((entry, index) => {
-      const nextEntryIndex = index === entries.m3u8.length - 1 ? 0 : index + 1;
-      const nextId = entries.m3u8[nextEntryIndex].id;
+    const BROKEN_STREAM_TITLE = "Tears of Steel - m3u8";
+
+    const playNextEntries = entries.m3u8.filter(
+      (entry) => entry.title !== BROKEN_STREAM_TITLE
+    );
+
+    const feedEntries = playNextEntries.map((entry, index) => {
+      const nextEntryIndex =
+        index === playNextEntries.length - 1 ? 0 : index + 1;
+      const nextId = playNextEntries[nextEntryIndex].id;
 
       entry.extensions.play_next_feed_url = `${scheme}://${host}/play-next?id=${nextId}`;
 
