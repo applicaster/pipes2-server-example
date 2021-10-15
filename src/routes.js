@@ -998,9 +998,9 @@ module.exports.setup = (app) => {
         } catch (error) {
           return false;
         }
-      })
-      .orderBy(["time"], ["desc"])
-      .uniqBy("data.videoId")
+      }).orderBy(['time'], ['desc'])
+      .uniqBy('data.videoId')
+      .filter(({ data }) => data.status !== 'COMPLETED')
       .take(30);
 
     const { items, nextPage } = mockDb.getMediaItems({
