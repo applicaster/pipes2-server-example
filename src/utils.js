@@ -94,6 +94,15 @@ const responseForOutcome = (outcome) => {
   );
 };
 
+const createIdFactory = () => {
+  let increment = 0;
+
+  return (string) => {
+    increment++;
+    return string.replace(/\s/g, "-").concat(`-${increment}`);
+  };
+};
+
 module.exports.absoluteReqPath = absoluteReqPath;
 module.exports.absoluteReqBasePath = absoluteReqBasePath;
 module.exports.renderDummyMediaGroup = renderDummyMediaGroup;
@@ -101,3 +110,4 @@ module.exports.renderChannelMediaGroupById = renderChannelMediaGroupById;
 module.exports.wrapEntryInFeed = wrapEntryInFeed;
 module.exports.createEntriesWithoutStream = createEntriesWithoutStream;
 module.exports.responseForOutcome = responseForOutcome;
+module.exports.createIdFactory = createIdFactory;

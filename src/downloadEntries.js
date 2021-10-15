@@ -1,11 +1,6 @@
-let increment = 0;
+const { renderDummyMediaGroup, createIdFactory } = require("./utils");
 
-const { renderDummyMediaGroup } = require("./utils");
-
-const createId = (string) => {
-  increment++;
-  return string.replace(/\s/g, "-").concat(`-${increment}`);
-};
+const createId = createIdFactory();
 
 const createEntry = ({ title, summary, src, hqme = true }) => ({
   id: createId(title),

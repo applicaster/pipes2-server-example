@@ -10,20 +10,20 @@ const _ = require("lodash");
 const base64url = require("base64url");
 const { DateTime } = require("luxon");
 const URI = require("urijs");
-const bodyParser = require('body-parser')
-const jsonParser = bodyParser.json()
+const bodyParser = require("body-parser");
+const jsonParser = bodyParser.json();
 const mockDb = require("./mock-db");
-const { miscFeeds } = require('./misc-feeds')
-
-
+const { miscFeeds } = require("./misc-feeds");
 
 const low = require("lowdb");
-const FileSync = require('lowdb/adapters/FileSync')
+const FileSync = require("lowdb/adapters/FileSync");
+const getLiveFeed = require("./live");
+const e = require("cors");
 
-const adapter = new FileSync("resume-watching.json", { defaultValue: { events: [] }, });
-const db = low(adapter)
-
-
+const adapter = new FileSync("resume-watching.json", {
+  defaultValue: { events: [] },
+});
+const db = low(adapter);
 
 const SCREEN_TYPES = {
   EXAMPLE_EPISODE: "example-episode",
@@ -943,12 +943,11 @@ module.exports.setup = (app) => {
     res.json({ error: new Error(outcome).message });
   });
 
-
   app.post("/cloud-events", jsonParser, async (req, res) => {
     try {
-      if (req.body.type === 'com.applicaster.video.stopped.v1') {
+      if (req.body.type === "com.applicaster.video.stopped.v1") {
         db.read();
-        await db.get('events').push(req.body).write()
+        await db.get("events").push(req.body).write();
 
         res.status(201).end();
       }
@@ -957,45 +956,47 @@ module.exports.setup = (app) => {
 
       res.status(500).end();
     }
-
-  })
+  });
 
   app.get("/resume-watching", async (req, res) => {
     const { userId } = req.query;
     db.read();
-    const events = db.get('events')
+    const events = db
+      .get("events")
       .filter((event) => {
         try {
-          return event.data.userIdentifier === userId
+          return event.data.userIdentifier === userId;
         } catch (error) {
-          return false
+          return false;
         }
-      }).orderBy(['time'], ['desc'])
-      .uniqBy('data.videoId')
+      })
+      .orderBy(["time"], ["desc"])
+      .uniqBy("data.videoId")
       .take(30);
 
     res.json({
-      entry: events.map(event => ({
+      entry: events.map((event) => ({
         id: event.data.videoId,
         extensions: {
           resumeLastUpdate: event.time,
           resumeTime: event.data.secondsFromStart,
           progress: event.data.progress,
-          resumeCompleted: event.data.status === 'COMPLETED' ? true : undefined
-        }
-      }))
-    })
-  })
+          resumeCompleted: event.data.status === "COMPLETED" ? true : undefined,
+        },
+      })),
+    });
+  });
 
   app.get("/resume-watching-full", async (req, res) => {
     const { userId } = req.query;
     db.read();
-    const events = db.get('events')
+    const events = db
+      .get("events")
       .filter((event) => {
         try {
-          return event.data.userIdentifier === userId
+          return event.data.userIdentifier === userId;
         } catch (error) {
-          return false
+          return false;
         }
       }).orderBy(['time'], ['desc'])
       .uniqBy('data.videoId')
@@ -1005,24 +1006,114 @@ module.exports.setup = (app) => {
     const { items, nextPage } = mockDb.getMediaItems({
       filters: {},
       sorts: [],
-      perPage: 5000
+      perPage: 5000,
     });
 
-    const eventIds = events.map((event) => ({ id: event.data.videoId })).value();
+    const eventIds = events
+      .map((event) => ({ id: event.data.videoId }))
+      .value();
 
-    res.json(
-      {
-        id: "resume-watching-full",
-        type: { value: 'feed' },
-        entry: _.intersectionBy(items, eventIds, 'id').map((item) => {
-          return entryRenderers[item.type](item);
-        }),
-      }
-    )
-
-  })
+    res.json({
+      id: "resume-watching-full",
+      type: { value: "feed" },
+      entry: _.intersectionBy(items, eventIds, "id").map((item) => {
+        return entryRenderers[item.type](item);
+      }),
+    });
+  });
 
   app.get("/misc/:feedName", async (req, res) => {
-    res.json(miscFeeds[req.params.feedName]())
-  })
+    res.json(miscFeeds[req.params.feedName]());
+  });
+
+  // This endpoint will return a feed with live streams
+  /**
+   * @swagger
+   * /live:
+   *   get:
+   *     description: |
+   *        returns a stream of live items
+   *
+   *     parameters:
+   *       - in: query
+   *         name: live_extension
+   *         description: |
+   *            adds live: true to the entries extensions
+   *         schema:
+   *           type: "number"
+   *       - in: query
+   *         name: type
+   *         description: |
+   *            sets the type for the entries. default is "video"
+   *         schema:
+   *           type: "string"
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
+  app.get("/live", async (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
+    const { live_extension, type = undefined } = req.query;
+
+    res.json(getLiveFeed({ liveFlag: live_extension, type }));
+  });
+
+  // This endpoint will return a feed with entries set up to test the play next feature
+  /**
+   * @swagger
+   * /play-next:
+   *   get:
+   *     description: |
+   *        returns a feed of vod items set up with play_next extension
+   *
+   *     responses:
+   *       200:
+   *         description: Success
+   *
+   */
+  app.get("/play-next", async (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.setHeader("Cache-Control", "public, max-age=300");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
+    const entries = require("./downloadEntries");
+
+    const { id } = req.query;
+    const host = req.headers.host;
+    const scheme = req.secure ? "https" : "http";
+
+    const BROKEN_STREAM_TITLE = "Tears of Steel - m3u8";
+
+    const playNextEntries = entries.m3u8.filter(
+      (entry) => entry.title !== BROKEN_STREAM_TITLE
+    );
+
+    const feedEntries = playNextEntries.map((entry, index) => {
+      const nextEntryIndex =
+        index === playNextEntries.length - 1 ? 0 : index + 1;
+      const nextId = playNextEntries[nextEntryIndex].id;
+
+      entry.extensions.play_next_feed_url = `${scheme}://${host}/play-next?id=${nextId}`;
+
+      return entry;
+    });
+
+    const entry = id
+      ? feedEntries.filter((_entry) => id === _entry.id)
+      : feedEntries;
+
+    res.json({
+      id: "play-next-feed",
+      title: "Streams with Play next",
+      summary:
+        "The streams in this feed are configured to use the play next feature",
+      type: { value: "feed" },
+      entry,
+    });
+  });
 };
