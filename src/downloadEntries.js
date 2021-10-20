@@ -7,7 +7,7 @@ const createEntry = ({ title, summary, src, hqme = true }) => ({
   title,
   summary,
   type: { value: "video" },
-  media_group: renderDummyMediaGroup({
+  ...renderDummyMediaGroup({
     id: createId(title),
     title,
     summary,
