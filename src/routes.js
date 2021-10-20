@@ -998,9 +998,10 @@ module.exports.setup = (app) => {
         } catch (error) {
           return false;
         }
-      }).orderBy(['time'], ['desc'])
-      .uniqBy('data.videoId')
-      .filter(({ data }) => data.status !== 'COMPLETED')
+      })
+      .orderBy(["time"], ["desc"])
+      .uniqBy("data.videoId")
+      .filter(({ data }) => data.status !== "COMPLETED")
       .take(30);
 
     const { items, nextPage } = mockDb.getMediaItems({
@@ -1097,6 +1098,15 @@ module.exports.setup = (app) => {
       const nextEntryIndex =
         index === playNextEntries.length - 1 ? 0 : index + 1;
       const nextId = playNextEntries[nextEntryIndex].id;
+
+      if (entry.id === "Big-Buck-Bunny-stream-11") {
+        entry.media_group[0].media_item[0].src = `${scheme}://${host}/images/squid.jpg`;
+      } else if (entry.id === "Sintel-stream-13") {
+        entry.media_group[0].media_item[0].src = `${scheme}://${host}/images/squad.jpg`;
+      } else {
+        // broken image by design
+        entry.media_group[0].media_item[0].src = "";
+      }
 
       entry.extensions.play_next_feed_url = `${scheme}://${host}/play-next?id=${nextId}`;
 
