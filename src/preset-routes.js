@@ -258,7 +258,7 @@ module.exports.setup = (app) => {
               "type": "link"
             },
             "extensions": {
-              "button": "More Info",
+              "button": "Start Watching",
               "channel": "channel-1",
               "cta": "Start Watching",
               "detailButton": "Watch Now",
@@ -266,7 +266,7 @@ module.exports.setup = (app) => {
               "genre": "Action & Adventure",
               "label": "Featured",
               "meta": "Action & Adventure · 2021 · PG-13 · 2h 43m",
-              "short-summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+              "short-summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style."
             },
             "id": "cb0355d4-1642-4892-a170-16ef41d6cc45",
             "link": {
@@ -284,7 +284,7 @@ module.exports.setup = (app) => {
                 "type": "image"
               }
             ],
-            "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style.",
             "title": "Hero Title",
             "type": {
               "value": "video"
