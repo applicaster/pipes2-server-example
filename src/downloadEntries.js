@@ -18,7 +18,8 @@ const createEntry = ({ title, summary, src, hqme = true }) => ({
     type: "video"
   },
   extensions: {
-    hqme
+    hqme,
+    color: src.includes("m3u8") ? "#FE1448" : "#04CF99"
   }
 });
 
