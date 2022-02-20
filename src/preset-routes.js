@@ -266,7 +266,7 @@ module.exports.setup = (app) => {
               "genre": "Action & Adventure",
               "label": "Featured",
               "meta": "Action & Adventure · 2021 · PG-13 · 2h 43m",
-              "short-summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style."
+              "short-summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style"
             },
             "id": "cb0355d4-1642-4892-a170-16ef41d6cc45",
             "link": {
@@ -284,7 +284,7 @@ module.exports.setup = (app) => {
                 "type": "image"
               }
             ],
-            "summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style.",
+            "summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style",
             "title": "Hero Title",
             "type": {
               "value": "video"
