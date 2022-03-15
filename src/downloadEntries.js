@@ -2,7 +2,13 @@ const { renderDummyMediaGroup, createIdFactory } = require("./utils");
 
 const createId = createIdFactory();
 
-const createEntry = ({ title, summary, src, hqme = true }) => ({
+const createEntry = ({
+  title,
+  summary,
+  src,
+  hqme = true,
+  initial_player_state = "inline"
+}) => ({
   id: createId(title),
   title,
   summary,
@@ -19,7 +25,8 @@ const createEntry = ({ title, summary, src, hqme = true }) => ({
   },
   extensions: {
     hqme,
-    color: src.includes("m3u8") ? "#FE1448" : "#04CF99"
+    color: src.includes("m3u8") ? "#FE1448" : "#04CF99",
+    initial_player_state
   }
 });
 
@@ -32,13 +39,15 @@ const bigBuckBunnyMp4 = createEntry({
 const JellyFishMp4 = createEntry({
   title: "Jelly Fish - mp4",
   summary: "A jelly fish is not a fish. I repeat, a jelly fish is not a fish",
-  src: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/1080/Jellyfish_1080_10s_5MB.mp4"
+  src: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/1080/Jellyfish_1080_10s_5MB.mp4",
+  initial_player_state: "fullscreen"
 });
 
 const SintelMp4 = createEntry({
   title: "Sintel - mp4",
   summary: "A girl has no name, but she has a gargoyle",
-  src: "https://test-videos.co.uk/vids/sintel/mp4/av1/1080/Sintel_1080_10s_5MB.mp4"
+  src: "https://test-videos.co.uk/vids/sintel/mp4/av1/1080/Sintel_1080_10s_5MB.mp4",
+  initial_player_state: "fullscreen"
 });
 
 const BigMp4 = createEntry({
