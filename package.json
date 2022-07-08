@@ -19,10 +19,12 @@
     "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
     "luxon": "^1.25.0",
+    "ramda": "^0.28.0",
     "swagger-jsdoc": "^6.0.1",
     "swagger-ui-dist": "^3.40.0",
     "swagger-ui-express": "^4.1.6",
-    "urijs": "^1.19.7"
+    "urijs": "^1.19.7",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
