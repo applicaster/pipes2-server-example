@@ -3,8 +3,7 @@ const fs = require("fs");
 const R = require("ramda");
 const md5 = require("md5");
 
-const capitalize = R.converge(R.concat, [R.compose(R.toUpper, R.head), R.tail]);
-const toTitleCase = R.compose(R.join(" "), R.map(capitalize), R.split(" "));
+const toTitleCase = R.replace(/(^.|(?<=\s).)/g, R.toUpper);
 const channelFolder = path.resolve(__dirname, "../../public/images/channels");
 const images = fs.readdirSync(channelFolder);
 
