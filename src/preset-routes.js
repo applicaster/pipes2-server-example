@@ -8,7 +8,7 @@ module.exports.setup = (app) => {
         "entry": [
           {
             "content": {
-              "src": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "src": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "extensions": {
@@ -20,7 +20,7 @@ module.exports.setup = (app) => {
             },
             "id": "0c46a14e-64bc-4718-b9f1-e25185305e2c",
             "link": {
-              "href": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "href": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "media_group": [
@@ -54,7 +54,7 @@ module.exports.setup = (app) => {
           },
           {
             "content": {
-              "src": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "src": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "extensions": {
@@ -66,7 +66,7 @@ module.exports.setup = (app) => {
             },
             "id": "165eb159-02ff-4431-83ec-9b32041fab49",
             "link": {
-              "href": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "href": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "media_group": [
@@ -100,7 +100,7 @@ module.exports.setup = (app) => {
           },
           {
             "content": {
-              "src": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "src": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "extensions": {
@@ -112,7 +112,7 @@ module.exports.setup = (app) => {
             },
             "id": "4c77303f-7d65-43c6-b320-2dbd2ef21aa5",
             "link": {
-              "href": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "href": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "media_group": [
@@ -146,7 +146,7 @@ module.exports.setup = (app) => {
           },
           {
             "content": {
-              "src": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "src": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "extensions": {
@@ -158,7 +158,7 @@ module.exports.setup = (app) => {
             },
             "id": "6da52985-57dd-40d3-970c-cec268e068ad",
             "link": {
-              "href": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "href": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "media_group": [
@@ -192,7 +192,7 @@ module.exports.setup = (app) => {
           },
           {
             "content": {
-              "src": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "src": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "extensions": {
@@ -204,7 +204,7 @@ module.exports.setup = (app) => {
             },
             "id": "0869f6bb-cc9b-430b-b61b-98c3887a4f74",
             "link": {
-              "href": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "href": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "media_group": [
@@ -254,7 +254,7 @@ module.exports.setup = (app) => {
         "entry": [
           {
             "content": {
-              "src": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "src": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "extensions": {
@@ -270,7 +270,7 @@ module.exports.setup = (app) => {
             },
             "id": "cb0355d4-1642-4892-a170-16ef41d6cc45",
             "link": {
-              "href": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+              "href": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8",
               "type": "link"
             },
             "media_group": [

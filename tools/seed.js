@@ -29,7 +29,7 @@ const genres = [
 ];
 const channels = ["channel-1", "channel-2", "channel-3", "channel-4"];
 const sampleHls =
-  "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
+  "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8";
 
 const shows = _.times(totalShows).map((index) => {
   const counter = index + 1;
