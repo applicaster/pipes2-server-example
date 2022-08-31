@@ -104,17 +104,22 @@ module.exports.setup = (app) => {
 
     const channel = R.find(R.propEq("id", channelId), channelData);
 
-    const programs = await createProgramData({
-      timezone,
-      startTime,
-      channelId
-    });
+    try {
+      const programs = await createProgramData({
+        timezone,
+        startTime,
+        channelId
+      });
 
-    const feed = programFeed(programs, {
-      channel: channel?.title || "unknown"
-    });
+      const feed = programFeed(programs, {
+        channel: channel?.title || "unknown"
+      });
 
-    res.json(feed);
+      res.json(feed);
+    } catch (e) {
+      console.error(e);
+      res.status(500).send(e.message);
+    }
   });
 
   /**
