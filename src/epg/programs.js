@@ -6,7 +6,23 @@ const axios = require("axios");
 const { channels: channelData } = require("./channels");
 const { getFromCache, addToCache } = require("./programCache");
 
+const defaultProgramImageUrl = "https://via.placeholder.com/640x360";
+
+async function getProgramImage() {
+  try {
+    const { request } = await axios.get("https://picsum.photos/640/360", {
+      timeout: 1000
+    });
+
+    return request.res.responseUrl;
+  } catch (e) {
+    console.warn(e.message);
+    return defaultProgramImageUrl;
+  }
+}
+
 async function randomPrograms({ date } = {}) {
+  console.log("building random programs", { date });
   const baseProgramUnitDuration = 30; // minutes
 
   const startOfDay = date.startOf("hour");
@@ -28,13 +44,13 @@ async function randomPrograms({ date } = {}) {
         ? timeLeftInTheDay
         : baseProgramUnitDuration * programSize;
 
-    const { request } = await axios.get("https://picsum.photos/640/320");
+    const img = await getProgramImage();
 
     const endTime = currentTime.plus({ minutes: programDuration });
     const program = {
       start_time: currentTime,
       end_time: endTime,
-      img: request.res.responseUrl
+      img
     };
 
     programs.push(program);
@@ -54,7 +70,6 @@ async function createProgramData({
   startTime: date
 }) {
   const cachedPrograms = getFromCache({ channelId, date });
-
   const programs = cachedPrograms || (await randomPrograms({ timezone, date }));
 
   if (!cachedPrograms) {
