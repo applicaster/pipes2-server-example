@@ -7,41 +7,50 @@ const screenData = {
       overrides: {},
       ui_components: [
         {
-          component_id: "3f558234-ad14-452c-91b0-b0363731c535",
+          component_id: "3c3bc898-c7a7-4734-a2a4-cf3871f396ae",
           overrides: {
-            position: 0,
+            position: 1,
             styles: {
               group_background_color: "rgba(125,125,124,0.5)"
             }
           }
         },
         {
-          component_id: "33137c97-6564-4958-b6b1-62120d22fc7c",
+          component_id: "80c58125-2ff5-4475-9346-4ca9161a6578",
           overrides: {
             styles: {
               group_margin_top: "50",
               group_background_color: "red"
             },
-            position: 1
+            position: 2
           }
         },
         {
-          component_id: "358497f7-6e98-4293-8a29-18d797dccf9d",
+          component_id: "c29aade1-135f-4ad4-baef-5ee5802c8d51",
           overrides: {
-            position: 2,
+            position: 3,
             styles: {
               group_background_color: "green"
             }
           }
         },
         {
-          component_id: "8dac0499-598f-4ea7-a320-3e31bdb9ab85",
+          component_id: "94b71fbc-63cb-48ce-9bda-d0270ec3cc27",
           overrides: {
             localizations: {
+              fr: {
+                title_override: "YAY !"
+              },
               en: {
                 title_override: "YAY !"
               }
             }
+          }
+        },
+        {
+          component_id: "428a889f-9880-47a4-9ea7-d8023495548b",
+          overrides: {
+            position: 0
           }
         }
       ]
