@@ -7,6 +7,7 @@ const routes = require("./routes");
 const edgeCasesRoutes = require("./edge-cases-routes");
 const presetRoutes = require("./preset-routes");
 const epgRoutes = require("./epg");
+const dynamicScreen = require("./dynamic-screen");
 const { absoluteReqBasePath } = require("./utils");
 
 const app = express();
@@ -40,6 +41,7 @@ edgeCasesRoutes.setup(app);
 routes.setup(app);
 presetRoutes.setup(app);
 epgRoutes.setup(app);
+dynamicScreen.setup(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
