@@ -516,4 +516,5 @@ module.exports.miscFeeds = {
   searchMessage,
   searchBoxFeed,
   browseBy,
+  presetsDataSource
 };
