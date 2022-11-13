@@ -65,7 +65,7 @@ const tearsOfSteelM3u8 = createEntry({
 const bigbuckbunnym3u8 = createEntry({
   title: "Big Buck Bunny stream",
   summary: "m3u8 version of big buck bunny - a rabbit goes berserk",
-  src: "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8"
+  src: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
 });
 
 const sintelm3u8 = createEntry({
@@ -84,7 +84,7 @@ const undownloadableEntry = createEntry({
   hqme: false,
   title: "Can't download",
   summary: "This is a video, but it cannot be downloaded",
-  src: "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8"
+  src: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
 });
 
 module.exports = {
