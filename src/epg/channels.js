@@ -13,104 +13,117 @@ const channelsData = [
     img: "images/channels/abc-us.png",
     genre: "General",
     description: "This is ABC",
-    featured: false
+    featured: false,
   },
   {
     title: "Arte",
     img: "images/channels/arte-de.png",
     genre: "Documentary",
     description: "Franco-German documentary channel",
-    feature: false
+    feature: false,
   },
   {
     title: "BBC 1",
     img: "images/channels/bbc-one-uk.png",
     genre: "News",
     description: "BRITAANIAAAAA",
-    featured: false
+    featured: false,
   },
   {
     title: "C-Span",
     img: "images/channels/c-span-1-us.png",
     genre: "official",
     description: "This is C-Span",
-    featured: false
+    featured: false,
   },
   {
     title: "Canal+",
     img: "images/channels/canal-plus-fr.png",
     genre: "General",
     description: "France's first paid TV channel",
-    featured: false
+    featured: false,
   },
   {
     title: "CBN",
     img: "images/channels/cbn-us.png",
     genre: "General",
     description: "This is CBN",
-    featured: false
+    featured: false,
   },
   {
     title: "Channel 4",
     img: "images/channels/channel-4-uk.png",
     genre: "General",
     description: "UK's channel 4",
-    featured: false
+    featured: false,
   },
   {
     title: "Clip My Horse",
     img: "images/channels/clip-my-horse-tv-de.png",
     genre: "Sports",
     description: "Horses",
-    featured: false
+    featured: false,
   },
   {
     title: "Discovery UK",
     img: "images/channels/discovery-channel-uk.png",
     genre: "Documentary",
     description: "This is Discovery Channel UK",
-    featured: false
+    featured: false,
   },
   {
     title: "Discovery US",
     img: "images/channels/discovery-channel-us.png",
     genre: "Documentary",
     description: "This is Discovery Channel US",
-    featured: false
+    featured: false,
   },
   {
     title: "Disney Channel DE",
     img: "images/channels/disney-channel-de.png",
     genre: "Kids",
     description: "This is Disney Channel DE",
-    featured: false
+    featured: false,
   },
   {
     title: "Disney Channel US",
     img: "images/channels/disney-channel-us.png",
     genre: "Kids",
     description: "This is Disney Channel US",
-    featured: false
-  }
+    featured: false,
+  },
 ];
 
 const getChannelGenre = (img) =>
   R.find(R.propEq("img", `images/channels/${img}`), channelsData);
 
-const channels = images.map((img) => {
-  const channelParts = R.compose(R.split("-"), R.replace(".png", ""))(img);
-  const country = R.compose(R.toUpper, R.last)(channelParts);
-  const channel = R.compose(toTitleCase, R.join(" "), R.init)(channelParts);
+const getChannels = (suffix) =>
+  images.map((img) => {
+    const channelParts = R.compose(R.split("-"), R.replace(".png", ""))(img);
+    const country = R.compose(R.toUpper, R.last)(channelParts);
+    const channel = R.compose(
+      R.join(""),
+      R.append(suffix),
+      toTitleCase,
+      R.join(" "),
+      R.init
+    )(channelParts);
 
-  return {
-    id: md5(channel),
-    title: channel,
-    img: `images/channels/${img}`,
-    description: `This is ${channel} ${country}`,
-    featured: false,
-    genre: getChannelGenre(img)?.genre || "General"
-  };
-});
+    return {
+      id: md5(channel),
+      title: channel,
+      img: `images/channels/${img}`,
+      description: `This is ${channel} ${country}`,
+      featured: false,
+      genre: getChannelGenre(img)?.genre || "General",
+    };
+  });
+
+const NUMBER_OF_CHANNEL_CHUNKS = 100; // by 50 channels each
+
+const channels = R.flatten(
+  R.times((index) => getChannels(`_${index + 1}`), NUMBER_OF_CHANNEL_CHUNKS)
+);
 
 const CHANNEL_COUNT = 10;
 
@@ -125,13 +138,13 @@ function channelEntry(props) {
     description,
     featured,
     genre,
-    id
+    id,
   } = props;
 
   return {
     id,
     type: {
-      value: type
+      value: type,
     },
     title,
     summary: description,
@@ -141,16 +154,16 @@ function channelEntry(props) {
         media_item: [
           {
             src: `${scheme}://${host}/${img}`,
-            key: imageKey
-          }
-        ]
-      }
+            key: imageKey,
+          },
+        ],
+      },
     ],
     extensions: {
       genre,
       featured,
-      channel_id: id
-    }
+      channel_id: id,
+    },
   };
 }
 
@@ -159,9 +172,9 @@ function channelFeed(channels, options) {
   return {
     id: "channels",
     type: {
-      value: type
+      value: type,
     },
-    entry: channels
+    entry: channels,
   };
 }
 
