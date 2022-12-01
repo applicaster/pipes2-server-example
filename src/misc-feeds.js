@@ -511,10 +511,64 @@ const presetsDataSource = () => ({
   type: { value: "feed" },
 });
 
+const showSeasonsPreset = () => (
+  {
+    "entry": [
+      {
+        "extensions": {},
+        "id": "season-1",
+        "title": "Season 1",
+        "type": {
+          "value": "season_generic"
+        }
+      },
+      {
+        "extensions": {},
+        "id": "season-2",
+        "title": "Season 2 ",
+        "type": {
+          "value": "season_generic"
+        }
+      },
+      {
+        "extensions": {},
+        "id": "season-3",
+        "title": "Season 3",
+        "type": {
+          "value": "season_generic"
+        }
+      },
+      {
+        "extensions": {},
+        "id": "season-4",
+        "title": "Season 4",
+        "type": {
+          "value": "season_generic"
+        }
+      },
+      {
+        "extensions": {},
+        "id": "season-5",
+        "title": "Season 5",
+        "type": {
+          "value": "season_generic"
+        }
+      }
+    ],
+    "extensions": {},
+    "id": "show",
+    "title": "Show Screen TV",
+    "type": {
+      "value": "feed"
+    }
+  }
+)
+
 module.exports.miscFeeds = {
   helpAndSupport,
   searchMessage,
   searchBoxFeed,
   browseBy,
-  presetsDataSource
+  presetsDataSource,
+  showSeasonsPreset
 };
