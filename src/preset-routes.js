@@ -284,8 +284,8 @@ module.exports.setup = (app) => {
                 "type": "image"
               }
             ],
-            "summary": "Here will be a short description of the item. You can configure the number of shown lines in the cell style.",
-            "title": "Hero Title",
+            "summary": "Here will be a short description of the item. You can control the number of shown lines.",
+            "title": "Content Title",
             "type": {
               "value": "video"
             }
