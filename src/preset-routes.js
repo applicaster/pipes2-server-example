@@ -379,6 +379,63 @@ module.exports.setup = (app) => {
       }
     )
   });
+  app.get("/preset-tv-show-screen-tabs", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ca1ccb81-9177-4d83-bdfe-9001832dc846",
+            "title": "Season 1 ",
+            "type": {
+              "value": "season"
+            }
+          },
+          {
+            "extensions": {
+              
+            },
+            "id": "adbb957c-fd8a-4974-8337-e4e92a3380b9",
+            "title": "Season 2",
+            "type": {
+              "value": "season"
+            }
+          },
+          {
+            "extensions": {
+              
+            },
+            "id": "ddc7a9e3-5ee3-481b-a7a3-2297b0bf8c62",
+            "title": "season 3",
+            "type": {
+              "value": "season"
+            }
+          },
+          {
+            "extensions": {
+              
+            },
+            "id": "6aa46789-d1d3-4eac-9789-67407abaa7ee",
+            "title": "Season 4",
+            "type": {
+              "value": "season"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "f5454c9e-9844-445d-81ad-df959f06d25f",
+        "title": "Show Screen Preset TV - tabs (origin)\t",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
   app.get("/movie-screen-preset-hero", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json(
@@ -540,7 +597,7 @@ module.exports.setup = (app) => {
                 "type": "image"
               }
             ],
-            "summary": "Here will be a short description of the movie. You can configure the number of shown lines in the cell style.",
+            "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style. ",
             "title": "The Name of the Movie",
             "type": {
               "value": "video"
@@ -573,7 +630,7 @@ module.exports.setup = (app) => {
               
             },
             "id": "a7c4c2a4-8c9f-42e4-85e4-dc24239b54f3",
-            "summary": "In the city of Veridian, Detective Sarah Collins investigates a series of mysterious disappearances, uncovering a hidden world of supernatural beings. With her partner Jake Anderson and a group of allies, Sarah must solve cryptic riddles, confront her own demons, and protect the city from unknown threats. \"Shadows of Veridian\" is a thrilling supernatural movie that keeps audiences guessing until the electrifying finale.",
+            "summary": "Here will be a overview of the movie. You can configure the number of displayed lines in the cell style. Ensure your text remains intact.",
             "title": "Overview",
             "type": {
               "value": "video"
@@ -581,9 +638,9 @@ module.exports.setup = (app) => {
           },
           {
             "extensions": {
-              "cast": "Cast: Sarah Collins, Mark Davis, Emily Adams, Michael Johnson, Rachel Lee, Jake Anderson, Paul Ramirez, Evelyn Monroe",
-              "director": "Director: Michelle Lewis",
-              "writer": "Writers: Samantha Thompson, aniel Anderson"
+              "cast": "Cast: John McClane, Katniss Everdeen, Tony Stark, Ellen Ripley, Buffy Sammers, Jack Ryan, Jessica Rabbit,John Wick.",
+              "director": "Director: Sarah Connor.",
+              "writer": "Writers: Hermione Granger, Scarlett O'Hara."
             },
             "id": "13fae94f-2fd0-4584-a4c8-442b7d8d58c6",
             "title": "Credits",
@@ -597,6 +654,501 @@ module.exports.setup = (app) => {
         },
         "id": "f8644455-74ff-4fa8-b88f-2ff11a1685a5",
         "title": "Movie details preset (origin)",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-screen-preset-hero", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "genre": "Action",
+              "trailer": "Trailer"
+            },
+            "id": "0bfac603-eb56-4c82-8bb8-8050a17c2f74",
+            "link": {
+              "href": "",
+              "type": "link"
+            },
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/188449410282/16X9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style. ",
+            "title": "The Name of the Show ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "extensions": {
+              "meta": "15 · 2 Seasons · 2023"
+            },
+            "id": "d0968397-2365-4841-b8f6-dcb0ed42c491",
+            "summary": "Here will be a overview of the movie. You can configure the number of displayed lines in the cell style. Ensure your text remains intact.",
+            "title": "meta",
+            "type": {
+              "value": "video"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "2a91028c-7e6b-4815-98f3-cf824b8ea9cb",
+        "title": "Show Screen Preset  - Hero (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-preset-tabs", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "Season 1 ",
+            "type": {
+              "value": "season"
+            }
+          },
+          {
+            "extensions": {
+              
+            },
+            "id": "7f4ef666-03a8-40ba-97f3-bcdad0a549ca",
+            "title": "Season 2 ",
+            "type": {
+              "value": "season"
+            }
+          },
+          {
+            "extensions": {
+              
+            },
+            "id": "f40ef17a-1487-43f5-9e38-b40b1165058b",
+            "title": "Details ",
+            "type": {
+              "value": "details"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-screen-preset-season1", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "Season 1 ",
+            "type": {
+              "value": "season"
+            }
+          },
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-screen-preset-season2", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "Season 2 ",
+            "type": {
+              "value": "season"
+            }
+          },
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-screen-preset-season3", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "Season 3 ",
+            "type": {
+              "value": "season"
+            }
+          },
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-screen-preset-season4", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "Season 4 ",
+            "type": {
+              "value": "season"
+            }
+          },
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/show-screen-preset-season5", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "Season 5 ",
+            "type": {
+              "value": "season"
+            }
+          },
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+    app.get("/show-screen-preset-all-episodes", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
+            "title": "All Episodes ",
+            "type": {
+              "value": "season"
+            }
+          },
+        ],
+        "extensions": {
+          
+        },
+        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
+        "title": "Show Preset - Tabs (origin) ",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/settings-preset", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d67dc1d-3b85-45ba-8456-70651b66b8c1",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/545217491161/Shape1-Selected.png"
+                  },
+                  {
+                    "key": "",
+                    "src": ""
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "title": "Setting Item 1 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "b6aa61a3-92ff-46db-b366-29f4075e63a5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/735361224653/Shape2-Selected.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": ""
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "title": "Setting Item 2",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "55b97df1-b888-4225-a774-cefcdfe9808c",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/128542791695/Shape3-Selected.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": ""
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "title": "Setting Item 3",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "3e7f85a2-0677-4ff7-8241-f6ea83aa8761",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/475934493119/Shape4-Selected.png"
+                  },
+                  {
+                    "key": "icon",
+                    "src": ""
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "title": "Setting Item 4",
+            "type": {
+              "value": "video"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "f826a6a7-6279-46ee-9743-c81a139f9312",
+        "title": "Setting (origin)",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+  app.get("/search-preset", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "extensions": {
+              
+            },
+            "id": "76f06448-e0ad-4f17-80df-e48c94bacd29",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/447417739557/search-icon.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "title": "Find something to watch",
+            "type": {
+              "value": "search"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "79586ff8-8771-4cac-a987-824c55c77bf5",
+        "title": "search box (origin)",
         "type": {
           "value": "feed"
         }
