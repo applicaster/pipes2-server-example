@@ -1176,7 +1176,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-1-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-1-V2.png",
                     "key": "image_base"
                   }
                 ]
@@ -1200,7 +1200,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-2-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-2-V2.png",
                     "key": "image_base"
                   }
                 ]
@@ -1224,7 +1224,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-3-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-3-V2.png",
                     "key": "image_base"
                   }
                 ]
@@ -1248,7 +1248,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-4-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-4-V2.png",
                     "key": "image_base"
                   }
                 ]
@@ -1272,7 +1272,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-5.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-5.png",
                     "key": "image_base"
                   }
                 ]
@@ -1296,7 +1296,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-6.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-6.png",
                     "key": "image_base"
                   }
                 ]
@@ -1320,7 +1320,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-7.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-7.png",
                     "key": "image_base"
                   }
                 ]
@@ -1344,7 +1344,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/channel-8.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-8.png",
                     "key": "image_base"
                   }
                 ]
