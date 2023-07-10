@@ -529,21 +529,315 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 1 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 1",
         "type": {
           "value": "feed"
         }
@@ -556,21 +850,315 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 2 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 2",
         "type": {
           "value": "feed"
         }
@@ -583,21 +1171,315 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 3 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 3",
         "type": {
           "value": "feed"
         }
@@ -610,21 +1492,315 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 4 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 4",
         "type": {
           "value": "feed"
         }
@@ -637,21 +1813,315 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 5 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 5",
         "type": {
           "value": "feed"
         }
@@ -664,48 +2134,636 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 6 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 6",
         "type": {
           "value": "feed"
         }
       }
     )
   });
-  app.get("/show-screen-preset-season-5", (req, res) => {
+  app.get("/show-screen-preset-season-7", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json(
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "Season 7 ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - Season 7",
         "type": {
           "value": "feed"
         }
@@ -718,21 +2776,315 @@ module.exports.setup = (app) => {
       {
         "entry": [
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               
             },
-            "id": "ecc7d712-dd3f-4996-ae53-ac909e9abbf5",
-            "title": "All Episodes ",
+            "id": "41355cfe-309a-4cd5-aca3-b10733d70f21",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/24727110720/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 1. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 1 ",
             "type": {
-              "value": "season"
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "42cf4294-6bdb-4505-bcd0-04f9ba902954",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/958884040152/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 2. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 2 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "374eb004-c23b-467b-8199-947951661e75",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/989746219620/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 3. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 3 ",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "604bf7ed-4123-449c-8027-7e58a77b9fe5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/217087059999/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 4. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 4",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "31863e89-70f6-4e23-989c-9ab943eb8aa6",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/30791974194/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 5. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 5",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "6d68c26a-ad44-489e-9253-a801c54e27c9",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/914079291026/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 6. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 6",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "0739f53d-c66f-46db-9f4f-238c12465680",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/968332779602/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 7. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 7",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              
+            },
+            "id": "ee102940-f32e-4448-9b0b-d7c63a35bb12",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/612521827766/episode_16_9.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "Here will be a short description of episode 8. You can configure the number of shown lines in the cell style.",
+            "title": "Episode 8",
+            "type": {
+              "value": "video"
             }
           }
         ],
         "extensions": {
           
         },
-        "id": "8baf3a3d-32be-4780-b8fc-22de9bf24ccd",
-        "title": "Show Preset - Tabs (origin) ",
+        "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
+        "title": "Show Screen - All Episodes",
         "type": {
           "value": "feed"
         }
@@ -1246,7 +3598,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-5.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/Channel-5.png",
                     "key": "image_base"
                   }
                 ]
@@ -1270,7 +3622,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-6.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/Channel-6.png",
                     "key": "image_base"
                   }
                 ]
@@ -1294,7 +3646,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-7.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/Channel-7.png",
                     "key": "image_base"
                   }
                 ]
@@ -1318,7 +3670,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-8.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/Channel-8.png",
                     "key": "image_base"
                   }
                 ]
