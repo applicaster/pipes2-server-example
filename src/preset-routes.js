@@ -837,7 +837,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 1",
+        "title": "Season 1",
         "type": {
           "value": "feed"
         }
@@ -1158,7 +1158,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 2",
+        "title": "Season 2",
         "type": {
           "value": "feed"
         }
@@ -1479,7 +1479,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 3",
+        "title": "Season 3",
         "type": {
           "value": "feed"
         }
@@ -1800,7 +1800,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 4",
+        "title": "Season 4",
         "type": {
           "value": "feed"
         }
@@ -2121,7 +2121,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 5",
+        "title": "Season 5",
         "type": {
           "value": "feed"
         }
@@ -2442,7 +2442,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 6",
+        "title": "Season 6",
         "type": {
           "value": "feed"
         }
@@ -2763,7 +2763,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - Season 7",
+        "title": "Season 7",
         "type": {
           "value": "feed"
         }
@@ -3084,7 +3084,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "6da02cc9-80cf-4c6f-b396-599a62ac45d6",
-        "title": "Show Screen - All Episodes",
+        "title": "All Episodes",
         "type": {
           "value": "feed"
         }
@@ -3356,7 +3356,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "f826a6a7-6279-46ee-9743-c81a139f9312",
-        "title": "Setting (origin)",
+        "title": "Settings",
         "type": {
           "value": "feed"
         }
