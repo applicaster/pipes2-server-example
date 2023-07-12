@@ -3370,8 +3370,8 @@ module.exports.setup = (app) => {
         "entry": [
           {
             "content": {
-              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-              "type": "video/hls"
+              "src": "",
+              "type": "application/octet"
             },
             "extensions": {
               "genre": "Action",
@@ -3408,6 +3408,10 @@ module.exports.setup = (app) => {
             }
           },
           {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
             "extensions": {
               "bg-color": "rgba(254,20,72,1)",
               "bg-color-focus": "rgba(190,14,43,1)"
@@ -3419,11 +3423,19 @@ module.exports.setup = (app) => {
             }
           },
           {
+            "content": {
+              "src": "https://test-videos.co.uk/vids/jellyfish/mp4/h264/1080/Jellyfish_1080_10s_5MB.mp4",
+              "type": "video/mp4"
+            },
             "extensions": {
               "bg-color": "rgba(46,46,46,1)",
               "bg-color-focus": "rgba(30,30,30,1)"
             },
             "id": "90675003-6120-41ea-b858-f0702ba05bcd",
+            "link": {
+              "href": "",
+              "type": "link"
+            },
             "title": "Watch Trailer",
             "type": {
               "value": "video"
@@ -3434,7 +3446,7 @@ module.exports.setup = (app) => {
           
         },
         "id": "e2855347-e93b-4b65-81ac-adc114e92e19",
-        "title": "Movie hero + buttons (origin)",
+        "title": "Movie hero + buttons",
         "type": {
           "value": "feed"
         }
@@ -3502,7 +3514,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-1-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/Channel-1.png",
                     "key": "image_base"
                   }
                 ]
@@ -3526,7 +3538,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-2-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/Channel-2.png",
                     "key": "image_base"
                   }
                 ]
@@ -3550,7 +3562,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-3-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/Channel-3.png",
                     "key": "image_base"
                   }
                 ]
@@ -3574,7 +3586,7 @@ module.exports.setup = (app) => {
                 "type": "image",
                 "media_item": [
                   {
-                    "src": "https://pipes2-server-example.herokuapp.com/images/channel-4-V2.png",
+                    "src": "https://pipes2-server-example.herokuapp.com/images/channels/Channel-4.png",
                     "key": "image_base"
                   }
                 ]
