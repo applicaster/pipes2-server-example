@@ -247,6 +247,722 @@ module.exports.setup = (app) => {
     );
   });
 
+  app.get("/preset-gallery-1", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+    {
+      "entry": [
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "1e707bb4-1d1e-42c4-9f95-cc2cc2b8d4f1",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
+          "title": "Content Title 1",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "0ae1c2dd-bd34-4899-b839-e95ac3aeb420",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
+          "title": "Content Title 2",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "ac20535f-1391-4d48-823a-188487d2ef17",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
+          "title": "Content Title 3",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "28f043d2-fae0-4206-8366-5563d82f2b4a",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
+          "title": "Content Title 4",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "a33ebe73-753c-4034-9146-546e44a7ee6c",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
+          "title": "Content Title 5",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "654a2782-ae74-4e7c-90f2-cb8d587266a4",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
+          "title": "Content Title 6",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "4f346cca-f474-426d-b84c-80f05598bc60",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
+          "title": "Content Title 7",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "76449f52-1580-4db5-ae94-074bbe49dd3a",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
+          "title": "Content Title 8",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "bdbc8860-7a3d-48b6-85e2-c526bb7eb19b",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
+          "title": "Content Title 9",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "d559ac03-a6a9-45fb-bc94-1d31fe908a9b",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
+          "title": "Content Title 10",
+          "type": {
+            "value": "video"
+          }
+        }
+      ],
+      "extensions": {
+        
+      },
+      "id": "818efd49-1650-4ae5-9dce-ee7d1af0a958",
+      "title": "Gallery Preset 1",
+      "type": {
+        "value": "feed"
+      }
+    }
+    );
+  });
+
+  app.get("/preset-gallery-2", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+    {
+      "entry": [
+        {
+          "extensions": {
+            "synopsis": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at."
+          },
+          "id": "c52ed67a-acff-41bb-ab9a-94fe2ee0bf3c",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S3 E2: Episode Title",
+          "title": "Show Name 1",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur."
+          },
+          "id": "767b8935-50f3-4366-9846-bba073e0f84b",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S1 E4: Episode Title",
+          "title": "Show Name 2",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at."
+          },
+          "id": "47737b39-7179-4072-ba1d-dc1950ba7d71",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S3 E2: Episode Title",
+          "title": "Show Name 3",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur."
+          },
+          "id": "d002e85d-500d-4ea3-a55d-0ec98f616ac3",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S1 E4: Episode Title",
+          "title": "Show Name 4",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at."
+          },
+          "id": "af87f996-8e27-4b42-ae50-39960c473364",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S3 E2: Episode Title",
+          "title": "Show Name 5",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur."
+          },
+          "id": "5345f7de-a3ba-4946-bedb-f8985b0a6c79",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S1 E4: Episode Title",
+          "title": "Show Name 6",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at."
+          },
+          "id": "58fd9ea8-1cac-4aad-a0f2-6eaf7f421adc",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S3 E2: Episode Title",
+          "title": "Show Name 7",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur."
+          },
+          "id": "1887ceb2-d9cf-42c0-8ffa-a91213d262e3",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S1 E4: Episode Title",
+          "title": "Show Name 8",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at."
+          },
+          "id": "a764dff2-c48d-44a1-9070-ec8e9b9fc3f5",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S3 E2: Episode Title",
+          "title": "Show Name 9",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "synopsis": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur."
+          },
+          "id": "46313553-7e03-4737-b9bb-05705e6a3492",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "S1 E4: Episode Title",
+          "title": "Show Name 10",
+          "type": {
+            "value": "video"
+          }
+        }
+      ],
+      "extensions": {
+        
+      },
+      "id": "4016d243-b281-46ca-931b-3ae3fe0325e5",
+      "title": "Gallery Preset 2",
+      "type": {
+        "value": "feed"
+      }
+    }
+    );
+  });
+
   app.get("/preset-hero", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json(
