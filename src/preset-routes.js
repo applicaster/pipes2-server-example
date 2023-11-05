@@ -280,8 +280,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
-          "title": "Content Title 1",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 1",
           "type": {
             "value": "video"
           }
@@ -314,8 +314,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
-          "title": "Content Title 2",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 2",
           "type": {
             "value": "video"
           }
@@ -348,8 +348,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
-          "title": "Content Title 3",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 3",
           "type": {
             "value": "video"
           }
@@ -382,8 +382,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
-          "title": "Content Title 4",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 4",
           "type": {
             "value": "video"
           }
@@ -416,8 +416,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
-          "title": "Content Title 5",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 5",
           "type": {
             "value": "video"
           }
@@ -450,8 +450,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
-          "title": "Content Title 6",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 6",
           "type": {
             "value": "video"
           }
@@ -484,8 +484,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
-          "title": "Content Title 7",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 7",
           "type": {
             "value": "video"
           }
@@ -518,8 +518,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
-          "title": "Content Title 8",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 8",
           "type": {
             "value": "video"
           }
@@ -552,8 +552,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at. ",
-          "title": "Content Title 9",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 9",
           "type": {
             "value": "video"
           }
@@ -586,8 +586,8 @@ module.exports.setup = (app) => {
               "type": "image"
             }
           ],
-          "summary": "Donec sit amet ornare tellus. Sed bibendum tincidunt sapien vel luctus. Nunc laoreet enim nec nisl efficitur, sit amet finibus ligula consectetur.",
-          "title": "Content Title 10",
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Movie 10",
           "type": {
             "value": "video"
           }
@@ -612,7 +612,365 @@ module.exports.setup = (app) => {
       "entry": [
         {
           "extensions": {
-            "synopsis": "Nullam ullamcorper tortor ac sapien hendrerit venenatis a id mi. Aliquam placerat bibendum metus, ac venenatis tortor hendrerit at."
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "1e707bb4-1d1e-42c4-9f95-cc2cc2b8d4f1",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 1",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "0ae1c2dd-bd34-4899-b839-e95ac3aeb420",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 2",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "ac20535f-1391-4d48-823a-188487d2ef17",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 3",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "28f043d2-fae0-4206-8366-5563d82f2b4a",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 4",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "a33ebe73-753c-4034-9146-546e44a7ee6c",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 5",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "654a2782-ae74-4e7c-90f2-cb8d587266a4",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 6",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "4f346cca-f474-426d-b84c-80f05598bc60",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 7",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "76449f52-1580-4db5-ae94-074bbe49dd3a",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 8",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Action & Adventure  ·  2023"
+          },
+          "id": "bdbc8860-7a3d-48b6-85e2-c526bb7eb19b",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 9",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "meta": "Comedy  ·  2023"
+          },
+          "id": "d559ac03-a6a9-45fb-bc94-1d31fe908a9b",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": `${absoluteReqBasePath}images/full-16x9.png`
+                },
+                {
+                  "key": "thumb_1",
+                  "src": `${absoluteReqBasePath}images/gallery-image.png`
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "summary": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style.",
+          "title": "Name of the Show 10",
+          "type": {
+            "value": "video"
+          }
+        }
+      ],
+      "extensions": {
+        
+      },
+      "id": "818efd49-1650-4ae5-9dce-ee7d1af0a958",
+      "title": "Gallery Preset 2",
+      "type": {
+        "value": "feed"
+      }
+    }
+    );
+  });
+
+  app.get("/preset-gallery-3", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+    {
+      "entry": [
+        {
+          "extensions": {
+            "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
           },
           "id": "c52ed67a-acff-41bb-ab9a-94fe2ee0bf3c",
           "media_group": [
@@ -639,7 +997,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S3 E2: Episode Title",
-          "title": "Show Name 1",
+          "title": "Name of the Show 1",
           "type": {
             "value": "video"
           }
@@ -673,7 +1031,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S1 E4: Episode Title",
-          "title": "Show Name 2",
+          "title": "Name of the Show 2",
           "type": {
             "value": "video"
           }
@@ -707,7 +1065,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S3 E2: Episode Title",
-          "title": "Show Name 3",
+          "title": "Name of the Show 3",
           "type": {
             "value": "video"
           }
@@ -741,7 +1099,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S1 E4: Episode Title",
-          "title": "Show Name 4",
+          "title": "Name of the Show 4",
           "type": {
             "value": "video"
           }
@@ -775,7 +1133,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S3 E2: Episode Title",
-          "title": "Show Name 5",
+          "title": "Name of the Show 5",
           "type": {
             "value": "video"
           }
@@ -809,7 +1167,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S1 E4: Episode Title",
-          "title": "Show Name 6",
+          "title": "Name of the Show 6",
           "type": {
             "value": "video"
           }
@@ -843,7 +1201,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S3 E2: Episode Title",
-          "title": "Show Name 7",
+          "title": "Name of the Show 7",
           "type": {
             "value": "video"
           }
@@ -877,7 +1235,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S1 E4: Episode Title",
-          "title": "Show Name 8",
+          "title": "Name of the Show 8",
           "type": {
             "value": "video"
           }
@@ -911,7 +1269,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S3 E2: Episode Title",
-          "title": "Show Name 9",
+          "title": "Name of the Show 9",
           "type": {
             "value": "video"
           }
@@ -945,7 +1303,7 @@ module.exports.setup = (app) => {
             }
           ],
           "summary": "S1 E4: Episode Title",
-          "title": "Show Name 10",
+          "title": "Name of the Show 10",
           "type": {
             "value": "video"
           }
@@ -955,7 +1313,7 @@ module.exports.setup = (app) => {
         
       },
       "id": "4016d243-b281-46ca-931b-3ae3fe0325e5",
-      "title": "Gallery Preset 2",
+      "title": "Gallery Preset 3",
       "type": {
         "value": "feed"
       }
@@ -1016,6 +1374,91 @@ module.exports.setup = (app) => {
       }
     )
   });
+
+  app.get("/preset-movie-hero-roku", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "button": "Start Watching",
+              "channel": "channel-1",
+              "cta": "Start Watching",
+              "detailButton": "Watch Now",
+              "duration": 2754,
+              "genre": "Action & Adventure",
+              "hqme": "true",
+              "label": "Featured",
+              "meta": "Action & Adventure · 2021 · PG-13 · 2h 43m",
+              "short-summary": "Here will be a description of the movie or the show. You can configure the font family, font size and color."
+            },
+            "id": "8d2fb09d-6895-4ebd-891a-37e57b22f102",
+            "summary": "Here will be a description of the movie or the show. You can configure the font family, font size and color.",
+            "title": "Name of the Movie",
+            "type": {
+              "value": "video"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "bd633cd6-8bdd-40ce-8cbe-bcc5ad385d9b",
+        "title": "Movie Screen Preset - Hero",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+
+  app.get("/preset-show-hero-roku", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json(
+      {
+        "entry": [
+          {
+            "content": {
+              "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "button": "Start Watching",
+              "channel": "channel-1",
+              "cta": "Start Watching",
+              "detailButton": "Watch Now",
+              "duration": 2754,
+              "genre": "Action & Adventure",
+              "hqme": "true",
+              "label": "Featured",
+              "meta": "Action & Adventure · 2021 · PG-13 · 2h 43m",
+              "short-summary": "Here will be a description of the movie or the show. You can configure the font family, font size and color."
+            },
+            "id": "8d2fb09d-6895-4ebd-891a-37e57b22f102",
+            "summary": "Here will be a description of the movie or the show. You can configure the font family, font size and color.",
+            "title": "Name of the Show",
+            "type": {
+              "value": "video"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "bd633cd6-8bdd-40ce-8cbe-bcc5ad385d9b",
+        "title": "Show Screen Preset - Hero",
+        "type": {
+          "value": "feed"
+        }
+      }
+    )
+  });
+
   app.get("/movie-details-preset", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json(
