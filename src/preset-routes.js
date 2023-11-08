@@ -252,7 +252,10 @@ module.exports.setup = (app) => {
     res.json(
     {
       "entry": [
-        {
+        { "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
           },
@@ -285,6 +288,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -320,6 +327,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -353,6 +364,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -388,6 +403,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -421,6 +440,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -456,6 +479,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -489,6 +516,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -524,6 +555,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -557,6 +592,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -610,7 +649,10 @@ module.exports.setup = (app) => {
     res.json(
     {
       "entry": [
-        {
+        { "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
           },
@@ -643,6 +685,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -678,6 +724,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -711,6 +761,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -746,6 +800,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -779,6 +837,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -814,6 +876,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -847,6 +913,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -882,6 +952,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "meta": "Action & Adventure  ·  2023"
@@ -915,6 +989,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -969,6 +1047,10 @@ module.exports.setup = (app) => {
     {
       "entry": [
         {
+          "content": {
+            "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+            "type": "video/hls"
+          },
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
           },
@@ -1002,6 +1084,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+          "content": {
+            "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+            "type": "video/hls"
+          },
         {
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
@@ -1037,6 +1123,10 @@ module.exports.setup = (app) => {
           }
         },
         {
+          "content": {
+            "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+            "type": "video/hls"
+          },
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
           },
@@ -1070,6 +1160,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+          "content": {
+            "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+            "type": "video/hls"
+          },
         {
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
@@ -1103,6 +1197,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -1138,6 +1236,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
@@ -1171,6 +1273,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
@@ -1206,6 +1312,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
@@ -1240,6 +1350,10 @@ module.exports.setup = (app) => {
             "value": "video"
           }
         },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
+        },
         {
           "extensions": {
             "synopsis": "Here will be a short description of the show. You can configure the number of displayed lines in the cell style."
@@ -1273,6 +1387,10 @@ module.exports.setup = (app) => {
           "type": {
             "value": "video"
           }
+        },
+        "content": {
+          "src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+          "type": "video/hls"
         },
         {
           "extensions": {
