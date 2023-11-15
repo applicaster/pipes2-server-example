@@ -7,6 +7,7 @@ const routes = require("./routes");
 const edgeCasesRoutes = require("./edge-cases-routes");
 const presetRoutes = require("./preset-routes");
 const epgRoutes = require("./epg");
+const curationRoutes = require("./curation");
 const { absoluteReqBasePath } = require("./utils");
 
 const app = express();
@@ -19,18 +20,18 @@ const options = {
     openapi: "3.0.0",
     info: {
       title: "Pipes2 Example API",
-      version: "0.1.0"
+      version: "0.1.0",
     },
     servers: [
       {
-        url: absoluteReqBasePath
-      }
-    ]
+        url: absoluteReqBasePath,
+      },
+    ],
   },
   apis: [
-    path.join(__dirname, "routes.js")
+    path.join(__dirname, "routes.js"),
     // path.join(__dirname, "edge-cases-routes.js"),
-  ]
+  ],
 };
 
 const specs = swaggerJsdoc(options);
@@ -40,6 +41,7 @@ edgeCasesRoutes.setup(app);
 routes.setup(app);
 presetRoutes.setup(app);
 epgRoutes.setup(app);
+curationRoutes.setup(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
