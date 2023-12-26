@@ -244,7 +244,135 @@ module.exports.setup = (app) => {
       },
     });
   });
-
+  app.get("/preset-videos", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+    {
+      "content": {
+        "src": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+        "type": "audio"
+      },
+      "extensions": {
+        "artist": "Artist"
+      },
+      "id": "91cd86fb-70eb-4021-a693-a4114915b8ab",
+      "media_group": [
+        {
+          "media_item": [
+            {
+              "key": "image_base",
+              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/518666839512/unnamed.png"
+            },
+            {
+              "key": "thumb_1",
+              "src": null
+            },
+            {
+              "key": "thumb_2",
+              "src": null
+            },
+            {
+              "key": "thumb_3",
+              "src": null
+            }
+          ],
+          "type": "image"
+        }
+      ],
+      "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
+      "title": "Song 1",
+      "type": {
+        "value": "audio"
+      }
+    },
+    {
+      "content": {
+        "src": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+        "type": "audio"
+      },
+      "extensions": {
+        "artist": "Artist"
+      },
+      "id": "fa1bbc81-1634-498a-8ecf-62425071eaab",
+      "media_group": [
+        {
+          "media_item": [
+            {
+              "key": "image_base",
+              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/145963896924/unnamed.png"
+            },
+            {
+              "key": "thumb_1",
+              "src": null
+            },
+            {
+              "key": "thumb_2",
+              "src": null
+            },
+            {
+              "key": "thumb_3",
+              "src": null
+            }
+          ],
+          "type": "image"
+        }
+      ],
+      "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
+      "title": "Song 2",
+      "type": {
+        "value": "audio"
+      }
+    },
+    {
+      "content": {
+        "src": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+        "type": "audio"
+      },
+      "extensions": {
+        "artist": "Artist"
+      },
+      "id": "262082e9-4a49-4853-8750-ae403d8f6c0a",
+      "media_group": [
+        {
+          "media_item": [
+            {
+              "key": "image_base",
+              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306499473715/unnamed.png"
+            },
+            {
+              "key": "thumb_1",
+              "src": null
+            },
+            {
+              "key": "thumb_2",
+              "src": null
+            },
+            {
+              "key": "thumb_3",
+              "src": null
+            }
+          ],
+          "type": "image"
+        }
+      ],
+      "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
+      "title": "Song 3",
+      "type": {
+        "value": "audio"
+      }
+    }
+  ],
+  "extensions": {
+    "artist": "Artist"
+  },
+  "id": "b4dd77e7-f413-4721-bfe4-2c1b7e9cc435",
+  "title": "Title Header",
+  "type": {
+    "value": "feed",
+      },
+    });
+  });
   app.get("/preset-gallery-1", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
