@@ -245,7 +245,7 @@ module.exports.setup = (app) => {
     });
   });
 
-  app.get("/preset-videos", (req, res) => {
+  app.get("/preset-audio", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
       entry: [
