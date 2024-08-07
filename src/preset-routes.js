@@ -245,6 +245,402 @@ module.exports.setup = (app) => {
     });
   });
 
+  app.get("/movies-preset", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      
+        "entry": [
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/OlxxnbPS.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "cta": "Watch Now",
+              "meta": "2023, Documentry, 1 25h",
+              "preview_playback": "https://cdn.jwplayer.com/manifests/irUUQk6r.m3u8",
+              "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+            },
+            "id": "8a7a561a-46c8-4422-b191-4583f2eb8538",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/25839406382/DJ_16_9.png"
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/419050399152/echo-unleashed-logo.png"
+                  },
+                  {
+                    "key": "2x3",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/198199790272/Screenshot2024-05-30at9.20.53.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/687137140365/ScreenShot2024-03-04at10.56.31.png"
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "A gripping documentary. Chronicles the DJ's relentless rehearsals leading to his monumental concerts, where beats, passion, and resilience collide.",
+            "title": "Echo Unleashed",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "cta": "Watch Now",
+              "meta": "2023, Sci-Fi, 2 23h",
+              "preview_playback": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+              "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+            },
+            "id": "174fc0d0-d45e-4f5c-8735-b5d445740f1e",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/713531357910/Mars_16_9.png"
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/277569792960/desert-horizons-logo.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/571911012067/ScreenShot2024-03-04at10.58.14.png"
+                  },
+                  {
+                    "key": "2x3",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306266826341/nars2_3.png"
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. As they confront bizarre challenges and unearth long-buried secrets, the crew must find a way to escape the relentless grasp of the enigmatic desert planet.",
+            "title": "Deserted Horizons",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/JbeW2HcE.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "cta": "Watch Now",
+              "meta": "1999, Action, 1 25h",
+              "preview_playback": "https://cdn.jwplayer.com/manifests/BMSHEjT6.m3u8"
+            },
+            "id": "5f5917c2-851d-4387-819a-d68a04852c07",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/526241143176/Chase_16_9.png"
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/716753203518/brothers-in-blue-logo.png"
+                  },
+                  {
+                    "key": "2x3",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/459866612537/Chase_9_16.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/521263089470/ScreenShot2024-03-04at10.55.21.png"
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "In gritty 1970s New York, Detectives Jack Malone and Mike Turner, once inseparable, face off in a high-stakes battle that tests loyalty, justice, and the thin blue line",
+            "title": "Brothers In Blue",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/AZGsj45U.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "chapter_markers": {
+                "chapters": [
+                  {
+                    "actions": [
+                      {
+                        "options": {
+                          "title": "Skip Intro"
+                        },
+                        "type": "show_skip"
+                      }
+                    ],
+                    "end_time": "0:15",
+                    "id": "chapter_1",
+                    "start_time": "0:00",
+                    "title": "Intro"
+                  },
+                  {
+                    "actions": [
+                      {
+                        "options": {
+                          "title": "test"
+                        },
+                        "type": "show_play_next"
+                      }
+                    ],
+                    "end_time": "1:10",
+                    "id": "chapter_5",
+                    "start_time": "0:50",
+                    "title": "play next test"
+                  }
+                ]
+              },
+              "contentType": "Movie",
+              "cta": "Watch Now",
+              "duration": 163,
+              "formattedRuntime": "02:43",
+              "genre": "Action",
+              "meta": "2023, Drama, 1 25h",
+              "play_next_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json",
+              "preview_playback": "https://cdn.jwplayer.com/manifests/UfAY13hg.m3u8",
+              "rating": "15",
+              "release_date": "2022-08-03",
+              "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+            },
+            "id": "ee084397-6cdf-4cc0-9f51-df25f3ec2ae0",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/440846831104/Trip_16_9.png"
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/270248686405/threads-of-time-logo.png"
+                  },
+                  {
+                    "key": "2x3",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/379589361580/trip2_3.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/464935691600/ScreenShot2024-03-04at10.50.20.png"
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "A poignant drama tracing the evolving lives and enduring bonds of three friends over three transformative decades.",
+            "title": "Threads of Time",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/oNdJl9QJ.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "cta": "Watch Now",
+              "meta": "2023, Drama, 1 15h",
+              "preview_playback": "https://cdn.jwplayer.com/manifests/o0FuVb6H.m3u8",
+              "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+            },
+            "id": "099fbc1f-8aba-40af-a087-c87fe4ee79c8",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/126258133287/Underwater_16_9.png"
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/284470411311/ephemeral-embrace-logo.png"
+                  },
+                  {
+                    "key": "2x3",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/938039073676/underwater2_3.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/766363513268/ScreenShot2024-03-04at10.58.51.png"
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "In a poetic dance between reality and fantasy, \"Ephemeral Embrace\" explores the bittersweet love of two souls destined to be together, yet forever kept apart.",
+            "title": "Ephemeral Embrace",
+            "type": {
+              "value": "video"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "4fe70406-62d3-4220-bae3-875dc0f16e4b",
+        "title": "Movies Presets (origin) ",
+        "type": {
+          "value": "feed",
+      },
+    });
+  });
+
+  app.get("/search-filters-preset", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      
+        "entry": [
+    {
+      "extensions": {
+        "filterTag": "all"
+      },
+      "id": "460c5cd5-d205-41b0-a2dd-ca94a6194f11",
+      "title": "All",
+      "type": {
+        "value": "filter-search"
+      }
+    },
+    {
+      "extensions": {
+        "filterTag": "video"
+      },
+      "id": "44bb8ad2-5936-4e43-9ea1-06d7421e17f5",
+      "title": "Videos",
+      "type": {
+        "value": "filter-search"
+      }
+    },
+    {
+      "extensions": {
+        "filterTag": "episodes"
+      },
+      "id": "eb8033f2-6b39-4a32-accc-f30c31c42e2b",
+      "title": "Episodes",
+      "type": {
+        "value": "filter-search"
+      }
+    }
+  ],
+  "extensions": {
+    
+  },
+  "id": "814ee4a7-e893-47eb-9612-8c10b1375a98",
+  "title": "Search Filters (Preset)",
+  "type": {
+    "value": "feed",
+      },
+    });
+  });
+
+  app.get("/mobile-top-component-preset", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      
+        "entry": [
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "cta": "Start Watching",
+              "genre": "Action",
+              "meta": "2023, Sci-Fi, 2 23h",
+              "preview_playback": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+              "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+            },
+            "id": "0e8c23bf-76eb-4f21-8cae-d59bf44495a5",
+            "media_group": [
+              {
+                "media_item": [
+                  {
+                    "key": "image_base",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/66526082841/Mars_16_9.png"
+                  },
+                  {
+                    "key": "thumb_2",
+                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/668730228878/desert-horizons-logo.png"
+                  },
+                  {
+                    "key": "thumb_1",
+                    "src": null
+                  },
+                  {
+                    "key": "thumb_3",
+                    "src": null
+                  }
+                ],
+                "type": "image"
+              }
+            ],
+            "summary": "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. ",
+            "title": "Deserted Horizons",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "bg-color": "rgba(254,20,72,1)",
+              "bg-color-focus": "rgba(190,14,43,1)"
+            },
+            "id": "638711a0-db6f-47d3-b156-70ccb33363ca",
+            "title": "Play",
+            "type": {
+              "value": "video"
+            }
+          },
+          {
+            "content": {
+              "src": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+              "type": "video/hls"
+            },
+            "extensions": {
+              "bg-color": "rgba(46,46,46,1)",
+              "bg-color-focus": "rgba(30,30,30,1)"
+            },
+            "id": "a29390f9-45e8-40c7-8986-96e69a3fba95",
+            "title": "Watch Trailer",
+            "type": {
+              "value": "video"
+            }
+          }
+        ],
+        "extensions": {
+          
+        },
+        "id": "0a0651f6-dc8e-4726-85eb-158193c64317",
+        "title": "Mobile Top Component Preset",
+        "type": {
+          "value": "feed",
+      },
+    });
+  });
+
   app.get("/preset-audio", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
