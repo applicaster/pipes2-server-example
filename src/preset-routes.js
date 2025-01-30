@@ -512,6 +512,272 @@ module.exports.setup = (app) => {
     });
   });
 
+  app.get("/404-error", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+        {
+          "extensions": {
+            
+          },
+          "id": "a16469fa-e6f5-4a28-b72a-bd163827306d",
+          "title": "Back To Home",
+          "type": {
+            "value": "home"
+          }
+        }
+      ],
+      "extensions": {
+        
+      },
+      "id": "7f9197c7-4ec7-4377-a248-0a341d2dc1ae",
+      "title": "404 Back to home",
+      "type": {
+        "value": "feed",
+      },
+    });
+  });
+
+  app.get("/preference-selector-1", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+        {
+          "extensions": {
+            
+          },
+          "id": "f406c674-83a3-45ae-91ca-8d4375f02d08",
+          "summary": "Select your favorite genres from the list below",
+          "title": "Choose A Genre",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "comedy"
+          },
+          "id": "4f2069e3-449a-4385-b04c-372a53c8beca",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/39455933103/Rectangle3.png"
+                },
+                {
+                  "key": "thumb_1",
+                  "src": null
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "title": "Comedy",
+          "type": {
+            "value": "action"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "horror"
+          },
+          "id": "05193c74-197b-4bad-b4ac-619fc34a10b8",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/341562002376/Rectangle3.png"
+                },
+                {
+                  "key": "thumb_1",
+                  "src": null
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "title": "Horror",
+          "type": {
+            "value": "action"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "action"
+          },
+          "id": "43b3eb9e-9c1b-4e7a-99b1-aecba22fed58",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/160776073233/Rectangle3.png"
+                },
+                {
+                  "key": "thumb_1",
+                  "src": null
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "title": "Action",
+          "type": {
+            "value": "action"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "drama"
+          },
+          "id": "0ba2b5bd-f86f-412d-a1ee-455865025c65",
+          "media_group": [
+            {
+              "media_item": [
+                {
+                  "key": "image_base",
+                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/967792217433/Rectangle3.png"
+                },
+                {
+                  "key": "thumb_1",
+                  "src": null
+                },
+                {
+                  "key": "thumb_2",
+                  "src": null
+                },
+                {
+                  "key": "thumb_3",
+                  "src": null
+                }
+              ],
+              "type": "image"
+            }
+          ],
+          "title": "Drama",
+          "type": {
+            "value": "action"
+          }
+        }
+      ],
+      "extensions": {
+        "behavior": {
+          "current_selection": "@{ctx/user_preferences.genre}",
+          "select_mode": "multi"
+        },
+        "preference_editor_options": {
+          "key": "user_preferences.genre"
+        },
+        "role": "preference_editor"
+      },
+      "id": "e43262df-ece0-4ede-8e27-603dd35f11a0",
+      "title": "Preference Selector - Choose a Genre ",
+      "type": {
+        "value": "feed",
+      },
+    });
+  });
+
+  app.get("/preference-selector-2", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+        {
+          "extensions": {
+            
+          },
+          "id": "cd2a8967-1477-47b5-b6c3-0e524c2c8d85",
+          "summary": "Select your zone for relevant news updates",
+          "title": "News That Matters to You",
+          "type": {
+            "value": "video"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "us"
+          },
+          "id": "a7537941-ba3c-43f4-afc3-bcb7566b13b0",
+          "title": "US",
+          "type": {
+            "value": "action"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "asia"
+          },
+          "id": "add66255-9eaa-49af-90a9-148152bb80bf",
+          "title": "Asia",
+          "type": {
+            "value": "action"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "eu"
+          },
+          "id": "82709fee-1187-439a-8524-6f290d41a1a3",
+          "title": "Europe",
+          "type": {
+            "value": "action"
+          }
+        },
+        {
+          "extensions": {
+            "tag": "au"
+          },
+          "id": "4bd92b7e-3834-4d80-85b9-9e3a3cfdd4ef",
+          "title": "Australia",
+          "type": {
+            "value": "action"
+          }
+        }
+      ],
+      "extensions": {
+        "behavior": {
+          "current_selection": "@{ctx/user_preferences.region}",
+          "select_mode": "multi"
+        },
+        "preference_editor_options": {
+          "key": "user_preferences.region"
+        },
+        "role": "preference_editor"
+      },
+      "id": "4cce74b5-3839-40cb-bc5e-47470a4bd6c4",
+      "title": "Preference Selector - Region ",
+      "type": {
+        "value": "feed",
+      },
+    });
+  });
+
   app.get("/mobile-top-component-preset", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
