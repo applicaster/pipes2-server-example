@@ -245,222 +245,612 @@ module.exports.setup = (app) => {
     });
   });
 
+  app.get("/tabs-vertical", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+{
+"extensions": {},
+"id": "7f3d344f-cf31-4b89-b0ab-351e1ef15792",
+"title": "Season 1 ",
+"type": {
+"value": "season-v"
+}
+},
+{
+"extensions": {},
+"id": "512f5a48-c5a7-47bb-bf35-3e0986909586",
+"title": "Season 2",
+"type": {
+"value": "season-v"
+}
+},
+{
+"extensions": {},
+"id": "4552bc98-5542-47d3-ad88-54f7a006a8c5",
+"title": "More on the Show",
+"type": {
+"value": "more-v"
+}
+}
+],
+"extensions": {},
+"id": "2e299e03-1fa8-4569-8906-39953333bc87",
+"title": "Tabs Feed (Vertical)",
+"type": {
+"value": "feed",
+      },
+    });
+  });
+
+  app.get("/tabs-horizontal", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+{
+"extensions": {},
+"id": "7f3d344f-cf31-4b89-b0ab-351e1ef15792",
+"title": "Season 1 ",
+"type": {
+"value": "season-v"
+}
+},
+{
+"extensions": {},
+"id": "512f5a48-c5a7-47bb-bf35-3e0986909586",
+"title": "Season 2",
+"type": {
+"value": "season-v"
+}
+},
+{
+"extensions": {},
+"id": "4552bc98-5542-47d3-ad88-54f7a006a8c5",
+"title": "More on the Show",
+"type": {
+"value": "more-v"
+}
+}
+],
+"extensions": {},
+"id": "2e299e03-1fa8-4569-8906-39953333bc87",
+"title": "Tabs Feed (Horizontal)",
+"type": {
+"value": "feed",
+      },
+    });
+  });
+
+  app.get("/open-space-show-hero", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+{
+"extensions": {
+"cta": "Watch Now",
+"meta": "Drama, Mystery, Sci-Fi & Fantasy  ·  2022",
+"preview_playback": "https://cdn.jwplayer.com/manifests/lNk7jJk2.m3u8",
+"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+},
+"id": "4c7dda99-3e0b-4cc6-9222-bd301da3bc47",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/427306184865/Screenshot2025-05-12at14.08.1711.png"
+},
+{
+"key": "thumb_1",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/373222771755/openspace.png"
+},
+{
+"key": "thumb_2",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/823393851900/openspace.png"
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "A mockumentary about quirky office workers navigating ego clashes, boredom, and just trying to survive the day.",
+"title": "Open Space",
+"type": {
+"value": "video"
+}
+}
+],
+"extensions": {},
+"id": "ac762f8b-2019-4de5-81a6-e8a67f44d783",
+"title": "The Open Space (show hero)",
+"type": {
+"value": "feed",
+      },
+    });
+  });
+
+  app.get("/open-space-season", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      "entry": [
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "d92c2a1f-225f-4c6e-b454-5ccbb10e8c54",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/962211217394/Screenshot2024-07-23at14.26.111.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "The coffee machine breaks, sparking an office-wide meltdown. Stacey, the self-appointed “morale officer,” leads a cringe-worthy team chant. Meanwhile, intern Kyle accidentally sends his therapy email to the entire staff.",
+"title": "Ep 1 - Monday Morning Mayhem",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "82390add-bb7f-4376-8d1d-81ca1ec1c0ef",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/758144060331/Screenshot2025-05-12at14.08.1711.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "A prized ergonomic chair vanishes from the bullpen. Dwight-like office manager Belinda launches a dramatic investigation, complete with evidence boards. Meanwhile, sly accountant Raj enjoys perfect lumbar support in his supply closet hideout.",
+"title": "Ep 2 - The Great Chair Heist",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "0ef93c84-30ca-443f-b706-7d784f36dc96",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/456575102657/Screenshot2024-07-23at14.27.471.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "A surprise visit from corporate sends everyone into a frenzy. Tech breaks, Maya deletes the slides, and a cat photo winds up in the quarterly report. Meanwhile, ambitious analyst Jordan tries to hijack the meeting with a TED Talk on “synergizing authenticity.”",
+"title": "Ep 3 - Presentation Panic",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "5ec75bea-e96e-4cca-b991-e95b544645b2",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/34876911948/Screenshot2025-05-12at14.11.3311.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "Belinda tries to cancel Casual Friday after Jordan shows up in a velvet cape. The team pushes back with increasingly bizarre outfits in silent protest. Meanwhile, Stacey creates a “Fashion Compliance Task Force” that nobody takes seriously.",
+"title": "Ep 4 - Casual Friday Mutiny",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "80ab0be8-2d40-43d7-954e-b7aca6390ec7",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/775073257458/Screenshot2025-05-12at14.10.4011111111.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "A minor reshuffle sparks a passive-aggressive turf war over prime desk real estate. Kyle's desk mysteriously gains plants, trophies, and a framed photo of Belinda’s dog. Maya tries to broker peace through a whiteboard seating treaty—with limited success.",
+"title": "Ep 5 - Desk Wars",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "e476a375-163b-4dac-9e97-f744a09b179b",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/351203035299/Screenshot2025-05-12at14.09.07.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "Belinda stages a surprise fire drill to “test emergency readiness.” Chaos erupts as Jordan tries to rescue his standing desk and Raj refuses to leave mid-spreadsheet. In the end, they evacuate to a nearby café and accidentally hold a productive meeting.",
+"title": "Ep 6 - Fire Drill Fiasco",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+"type": "video/hls"
+},
+"extensions": {},
+"id": "e5fc9d0b-dfc8-4bae-acd0-5926c263b248",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/333577369759/Screenshot2024-07-23at14.26.111.png"
+},
+{
+"key": "thumb_1",
+"src": null
+},
+{
+"key": "thumb_2",
+"src": null
+},
+{
+"key": "thumb_3",
+"src": null
+}
+],
+"type": "image"
+}
+],
+"summary": "A new anonymous suggestion box uncovers shocking complaints, bizarre requests, and suspicious poetry. Maya and Stacey form a task force to investigate the “box bandit.” Turns out, Kyle thought it was a “creative writing prompt.”",
+"title": "Ep 7 - The Suggestion Box Incident",
+"type": {
+"value": "video"
+}
+}
+],
+"extensions": {},
+"id": "293044bb-436c-40b1-88c8-3a8cdf44142a",
+"title": "The Open Space (season)",
+"type": {
+"value": "feed",
+      },
+    });
+  });
+
   app.get("/movies-preset", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      
-        "entry": [
-    {
-      "content": {
-        "src": "https://cdn.jwplayer.com/manifests/OlxxnbPS.m3u8",
-        "type": "video/hls"
-      },
-      "extensions": {
-        "cta": "Watch Now",
-        "meta": "2023, Documentry, 1 25h",
-        "preview_playback": "https://cdn.jwplayer.com/manifests/irUUQk6r.m3u8",
-        "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-      },
-      "id": "8a7a561a-46c8-4422-b191-4583f2eb8538",
-      "media_group": [
-        {
-          "media_item": [
-            {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/25839406382/DJ_16_9.png"
-            },
-            {
-              "key": "thumb_2",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/419050399152/echo-unleashed-logo.png"
-            },
-            {
-              "key": "2x3",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/198199790272/Screenshot2024-05-30at9.20.53.png"
-            },
-            {
-              "key": "thumb_1",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/687137140365/ScreenShot2024-03-04at10.56.31.png"
-            }
-          ],
-          "type": "image"
-        }
-      ],
-      "summary": "A gripping documentary. Chronicles the DJ's relentless rehearsals leading to his monumental concerts, where beats, passion, and resilience collide.",
-      "title": "Echo Unleashed",
-      "type": {
-        "value": "video"
-      }
-    },
-    {
-      "content": {
-        "src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
-        "type": "video/hls"
-      },
-      "extensions": {
-        "cta": "Watch Now",
-        "meta": "2023, Sci-Fi, 2 23h",
-        "preview_playback": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
-        "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-      },
-      "id": "174fc0d0-d45e-4f5c-8735-b5d445740f1e",
-      "media_group": [
-        {
-          "media_item": [
-            {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/713531357910/Mars_16_9.png"
-            },
-            {
-              "key": "thumb_2",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/277569792960/desert-horizons-logo.png"
-            },
-            {
-              "key": "thumb_1",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/571911012067/ScreenShot2024-03-04at10.58.14.png"
-            },
-            {
-              "key": "2x3",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306266826341/nars2_3.png"
-            }
-          ],
-          "type": "image"
-        }
-      ],
-      "summary": "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. As they confront bizarre challenges and unearth long-buried secrets, the crew must find a way to escape the relentless grasp of the enigmatic desert planet.",
-      "title": "Deserted Horizons",
-      "type": {
-        "value": "video"
-      }
-    },
-    {
-      "content": {
-        "src": "https://cdn.jwplayer.com/manifests/JbeW2HcE.m3u8",
-        "type": "video/hls"
-      },
-      "extensions": {
-        "cta": "Watch Now",
-        "meta": "1999, Action, 1 25h",
-        "preview_playback": "https://cdn.jwplayer.com/manifests/BMSHEjT6.m3u8"
-      },
-      "id": "5f5917c2-851d-4387-819a-d68a04852c07",
-      "media_group": [
-        {
-          "media_item": [
-            {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/526241143176/Chase_16_9.png"
-            },
-            {
-              "key": "thumb_2",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/716753203518/brothers-in-blue-logo.png"
-            },
-            {
-              "key": "2x3",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/459866612537/Chase_9_16.png"
-            },
-            {
-              "key": "thumb_1",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/521263089470/ScreenShot2024-03-04at10.55.21.png"
-            }
-          ],
-          "type": "image"
-        }
-      ],
-      "summary": "In gritty 1970s New York, Detectives Jack Malone and Mike Turner, once inseparable, face off in a high-stakes battle that tests loyalty, justice, and the thin blue line",
-      "title": "Brothers In Blue",
-      "type": {
-        "value": "video"
-      }
-    },
-    {
-      "content": {
-        "src": "https://cdn.jwplayer.com/manifests/AZGsj45U.m3u8",
-        "type": "video/hls"
-      },
-      "extensions": {
-        "cta": "Watch Now",
-        "meta": "2023, Drama, 1 25h",
-        "preview_playback": "https://cdn.jwplayer.com/manifests/UfAY13hg.m3u8"
-      },
-      "id": "ee084397-6cdf-4cc0-9f51-df25f3ec2ae0",
-      "media_group": [
-        {
-          "media_item": [
-            {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/440846831104/Trip_16_9.png"
-            },
-            {
-              "key": "thumb_2",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/270248686405/threads-of-time-logo.png"
-            },
-            {
-              "key": "2x3",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/379589361580/trip2_3.png"
-            },
-            {
-              "key": "thumb_1",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/464935691600/ScreenShot2024-03-04at10.50.20.png"
-            }
-          ],
-          "type": "image"
-        }
-      ],
-      "summary": "A poignant drama tracing the evolving lives and enduring bonds of three friends over three transformative decades.",
-      "title": "Threads of Time",
-      "type": {
-        "value": "video"
-      }
-    },
-    {
-      "content": {
-        "src": "https://cdn.jwplayer.com/manifests/oNdJl9QJ.m3u8",
-        "type": "video/hls"
-      },
-      "extensions": {
-        "cta": "Watch Now",
-        "meta": "2023, Drama, 1 15h",
-        "preview_playback": "https://cdn.jwplayer.com/manifests/o0FuVb6H.m3u8",
-        "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-      },
-      "id": "099fbc1f-8aba-40af-a087-c87fe4ee79c8",
-      "media_group": [
-        {
-          "media_item": [
-            {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/126258133287/Underwater_16_9.png"
-            },
-            {
-              "key": "thumb_2",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/284470411311/ephemeral-embrace-logo.png"
-            },
-            {
-              "key": "2x3",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/938039073676/underwater2_3.png"
-            },
-            {
-              "key": "thumb_1",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/766363513268/ScreenShot2024-03-04at10.58.51.png"
-            }
-          ],
-          "type": "image"
-        }
-      ],
-      "summary": "In a poetic dance between reality and fantasy, \"Ephemeral Embrace\" explores the bittersweet love of two souls destined to be together, yet forever kept apart.",
-      "title": "Ephemeral Embrace",
-      "type": {
-        "value": "video"
-      }
-    }
-  ],
-  "extensions": {
-    
-  },
-  "id": "4fe70406-62d3-4220-bae3-875dc0f16e4b",
-  "title": "Movies Presets (origin) ",
-  "type": {
-    "value": "feed",
+      "entry": [
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/OlxxnbPS.m3u8",
+"type": "video/hls"
+},
+"extensions": {
+"cta": "Watch Now",
+"meta": "2023, Documentry, 1 25h",
+"preview_playback": "https://cdn.jwplayer.com/manifests/irUUQk6r.m3u8",
+"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+},
+"id": "8a7a561a-46c8-4422-b191-4583f2eb8538",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/25839406382/DJ_16_9.png"
+},
+{
+"key": "thumb_2",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/419050399152/echo-unleashed-logo.png"
+},
+{
+"key": "2x3",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/198199790272/Screenshot2024-05-30at9.20.53.png"
+},
+{
+"key": "thumb_1",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/687137140365/ScreenShot2024-03-04at10.56.31.png"
+}
+],
+"type": "image"
+}
+],
+"summary": "A gripping documentary. Chronicles the DJ's relentless rehearsals leading to his monumental concerts, where beats, passion, and resilience collide.",
+"title": "Echo Unleashed",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+"type": "video/hls"
+},
+"extensions": {
+"cta": "Watch Now",
+"meta": "2023, Sci-Fi, 2 23h",
+"preview_playback": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+},
+"id": "174fc0d0-d45e-4f5c-8735-b5d445740f1e",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/713531357910/Mars_16_9.png"
+},
+{
+"key": "thumb_2",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/277569792960/desert-horizons-logo.png"
+},
+{
+"key": "thumb_1",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/571911012067/ScreenShot2024-03-04at10.58.14.png"
+},
+{
+"key": "2x3",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306266826341/nars2_3.png"
+}
+],
+"type": "image"
+}
+],
+"summary": "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. As they confront bizarre challenges and unearth long-buried secrets, the crew must find a way to escape the relentless grasp of the enigmatic desert planet.",
+"title": "Deserted Horizons",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/JbeW2HcE.m3u8",
+"type": "video/hls"
+},
+"extensions": {
+"cta": "Watch Now",
+"meta": "1999, Action, 1 25h",
+"preview_playback": "https://cdn.jwplayer.com/manifests/BMSHEjT6.m3u8"
+},
+"id": "5f5917c2-851d-4387-819a-d68a04852c07",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/526241143176/Chase_16_9.png"
+},
+{
+"key": "thumb_2",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/716753203518/brothers-in-blue-logo.png"
+},
+{
+"key": "2x3",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/459866612537/Chase_9_16.png"
+},
+{
+"key": "thumb_1",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/521263089470/ScreenShot2024-03-04at10.55.21.png"
+}
+],
+"type": "image"
+}
+],
+"summary": "In gritty 1970s New York, Detectives Jack Malone and Mike Turner, once inseparable, face off in a high-stakes battle that tests loyalty, justice, and the thin blue line",
+"title": "Brothers In Blue",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/AZGsj45U.m3u8",
+"type": "video/hls"
+},
+"extensions": {
+"cta": "Watch Now",
+"meta": "2023, Drama, 1 25h",
+"preview_playback": "https://cdn.jwplayer.com/manifests/UfAY13hg.m3u8"
+},
+"id": "ee084397-6cdf-4cc0-9f51-df25f3ec2ae0",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/440846831104/Trip_16_9.png"
+},
+{
+"key": "thumb_2",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/270248686405/threads-of-time-logo.png"
+},
+{
+"key": "2x3",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/379589361580/trip2_3.png"
+},
+{
+"key": "thumb_1",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/464935691600/ScreenShot2024-03-04at10.50.20.png"
+}
+],
+"type": "image"
+}
+],
+"summary": "A poignant drama tracing the evolving lives and enduring bonds of three friends over three transformative decades.",
+"title": "Threads of Time",
+"type": {
+"value": "video"
+}
+},
+{
+"content": {
+"src": "https://cdn.jwplayer.com/manifests/oNdJl9QJ.m3u8",
+"type": "video/hls"
+},
+"extensions": {
+"cta": "Watch Now",
+"meta": "2023, Drama, 1 15h",
+"preview_playback": "https://cdn.jwplayer.com/manifests/o0FuVb6H.m3u8",
+"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
+},
+"id": "099fbc1f-8aba-40af-a087-c87fe4ee79c8",
+"media_group": [
+{
+"media_item": [
+{
+"key": "image_base",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/126258133287/Underwater_16_9.png"
+},
+{
+"key": "thumb_2",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/284470411311/ephemeral-embrace-logo.png"
+},
+{
+"key": "2x3",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/938039073676/underwater2_3.png"
+},
+{
+"key": "thumb_1",
+"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/766363513268/ScreenShot2024-03-04at10.58.51.png"
+}
+],
+"type": "image"
+}
+],
+"summary": "In a poetic dance between reality and fantasy, \"Ephemeral Embrace\" explores the bittersweet love of two souls destined to be together, yet forever kept apart.",
+"title": "Ephemeral Embrace",
+"type": {
+"value": "video"
+}
+}
+],
+"extensions": {},
+"id": "4fe70406-62d3-4220-bae3-875dc0f16e4b",
+"title": "Movies Presets (origin) ",
+"type": {
+"value": "feed",
       },
     });
   });
