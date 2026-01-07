@@ -248,37 +248,37 @@ module.exports.setup = (app) => {
   app.get("/tabs-vertical", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
-{
-"extensions": {},
-"id": "7f3d344f-cf31-4b89-b0ab-351e1ef15792",
-"title": "Season 1 ",
-"type": {
-"value": "season-v"
-}
-},
-{
-"extensions": {},
-"id": "512f5a48-c5a7-47bb-bf35-3e0986909586",
-"title": "Season 2",
-"type": {
-"value": "season-v"
-}
-},
-{
-"extensions": {},
-"id": "4552bc98-5542-47d3-ad88-54f7a006a8c5",
-"title": "More on the Show",
-"type": {
-"value": "more-v"
-}
-}
-],
-"extensions": {},
-"id": "2e299e03-1fa8-4569-8906-39953333bc87",
-"title": "Tabs Feed (Vertical)",
-"type": {
-"value": "feed",
+      entry: [
+        {
+          extensions: {},
+          id: "7f3d344f-cf31-4b89-b0ab-351e1ef15792",
+          title: "Season 1 ",
+          type: {
+            value: "season-v",
+          },
+        },
+        {
+          extensions: {},
+          id: "512f5a48-c5a7-47bb-bf35-3e0986909586",
+          title: "Season 2",
+          type: {
+            value: "season-v",
+          },
+        },
+        {
+          extensions: {},
+          id: "4552bc98-5542-47d3-ad88-54f7a006a8c5",
+          title: "More on the Show",
+          type: {
+            value: "more-v",
+          },
+        },
+      ],
+      extensions: {},
+      id: "2e299e03-1fa8-4569-8906-39953333bc87",
+      title: "Tabs Feed (Vertical)",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -286,37 +286,37 @@ module.exports.setup = (app) => {
   app.get("/tabs-horizontal", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
-{
-"extensions": {},
-"id": "7f3d344f-cf31-4b89-b0ab-351e1ef15792",
-"title": "Season 1 ",
-"type": {
-"value": "season-v"
-}
-},
-{
-"extensions": {},
-"id": "512f5a48-c5a7-47bb-bf35-3e0986909586",
-"title": "Season 2",
-"type": {
-"value": "season-v"
-}
-},
-{
-"extensions": {},
-"id": "4552bc98-5542-47d3-ad88-54f7a006a8c5",
-"title": "More on the Show",
-"type": {
-"value": "more-v"
-}
-}
-],
-"extensions": {},
-"id": "2e299e03-1fa8-4569-8906-39953333bc87",
-"title": "Tabs Feed (Horizontal)",
-"type": {
-"value": "feed",
+      entry: [
+        {
+          extensions: {},
+          id: "7f3d344f-cf31-4b89-b0ab-351e1ef15792",
+          title: "Season 1 ",
+          type: {
+            value: "season-v",
+          },
+        },
+        {
+          extensions: {},
+          id: "512f5a48-c5a7-47bb-bf35-3e0986909586",
+          title: "Season 2",
+          type: {
+            value: "season-v",
+          },
+        },
+        {
+          extensions: {},
+          id: "4552bc98-5542-47d3-ad88-54f7a006a8c5",
+          title: "More on the Show",
+          type: {
+            value: "more-v",
+          },
+        },
+      ],
+      extensions: {},
+      id: "2e299e03-1fa8-4569-8906-39953333bc87",
+      title: "Tabs Feed (Horizontal)",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -324,50 +324,53 @@ module.exports.setup = (app) => {
   app.get("/open-space-show-hero", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
-{
-"extensions": {
-"cta": "Watch Now",
-"meta": "Drama, Mystery, Sci-Fi & Fantasy  ·  2022",
-"preview_playback": "https://cdn.jwplayer.com/manifests/lNk7jJk2.m3u8",
-"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-},
-"id": "4c7dda99-3e0b-4cc6-9222-bd301da3bc47",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/427306184865/Screenshot2025-05-12at14.08.1711.png"
-},
-{
-"key": "thumb_1",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/373222771755/openspace.png"
-},
-{
-"key": "thumb_2",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/823393851900/openspace.png"
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "A mockumentary about quirky office workers navigating ego clashes, boredom, and just trying to survive the day.",
-"title": "Open Space",
-"type": {
-"value": "video"
-}
-}
-],
-"extensions": {},
-"id": "ac762f8b-2019-4de5-81a6-e8a67f44d783",
-"title": "The Open Space (show hero)",
-"type": {
-"value": "feed",
+      entry: [
+        {
+          extensions: {
+            cta: "Watch Now",
+            meta: "Drama, Mystery, Sci-Fi & Fantasy  ·  2022",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/lNk7jJk2.m3u8",
+            trailer_feed_url:
+              "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json",
+          },
+          id: "4c7dda99-3e0b-4cc6-9222-bd301da3bc47",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/427306184865/Screenshot2025-05-12at14.08.1711.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/373222771755/openspace.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/823393851900/openspace.png",
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A mockumentary about quirky office workers navigating ego clashes, boredom, and just trying to survive the day.",
+          title: "Open Space",
+          type: {
+            value: "video",
+          },
+        },
+      ],
+      extensions: {},
+      id: "ac762f8b-2019-4de5-81a6-e8a67f44d783",
+      title: "The Open Space (show hero)",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -375,265 +378,272 @@ module.exports.setup = (app) => {
   app.get("/open-space-season", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "d92c2a1f-225f-4c6e-b454-5ccbb10e8c54",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/962211217394/Screenshot2024-07-23at14.26.111.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "The coffee machine breaks, sparking an office-wide meltdown. Stacey, the self-appointed “morale officer,” leads a cringe-worthy team chant. Meanwhile, intern Kyle accidentally sends his therapy email to the entire staff.",
-"title": "Ep 1 - Monday Morning Mayhem",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "82390add-bb7f-4376-8d1d-81ca1ec1c0ef",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/758144060331/Screenshot2025-05-12at14.08.1711.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "A prized ergonomic chair vanishes from the bullpen. Dwight-like office manager Belinda launches a dramatic investigation, complete with evidence boards. Meanwhile, sly accountant Raj enjoys perfect lumbar support in his supply closet hideout.",
-"title": "Ep 2 - The Great Chair Heist",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "0ef93c84-30ca-443f-b706-7d784f36dc96",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/456575102657/Screenshot2024-07-23at14.27.471.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "A surprise visit from corporate sends everyone into a frenzy. Tech breaks, Maya deletes the slides, and a cat photo winds up in the quarterly report. Meanwhile, ambitious analyst Jordan tries to hijack the meeting with a TED Talk on “synergizing authenticity.”",
-"title": "Ep 3 - Presentation Panic",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "5ec75bea-e96e-4cca-b991-e95b544645b2",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/34876911948/Screenshot2025-05-12at14.11.3311.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "Belinda tries to cancel Casual Friday after Jordan shows up in a velvet cape. The team pushes back with increasingly bizarre outfits in silent protest. Meanwhile, Stacey creates a “Fashion Compliance Task Force” that nobody takes seriously.",
-"title": "Ep 4 - Casual Friday Mutiny",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "80ab0be8-2d40-43d7-954e-b7aca6390ec7",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/775073257458/Screenshot2025-05-12at14.10.4011111111.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "A minor reshuffle sparks a passive-aggressive turf war over prime desk real estate. Kyle's desk mysteriously gains plants, trophies, and a framed photo of Belinda’s dog. Maya tries to broker peace through a whiteboard seating treaty—with limited success.",
-"title": "Ep 5 - Desk Wars",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "e476a375-163b-4dac-9e97-f744a09b179b",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/351203035299/Screenshot2025-05-12at14.09.07.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "Belinda stages a surprise fire drill to “test emergency readiness.” Chaos erupts as Jordan tries to rescue his standing desk and Raj refuses to leave mid-spreadsheet. In the end, they evacuate to a nearby café and accidentally hold a productive meeting.",
-"title": "Ep 6 - Fire Drill Fiasco",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
-"type": "video/hls"
-},
-"extensions": {},
-"id": "e5fc9d0b-dfc8-4bae-acd0-5926c263b248",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/333577369759/Screenshot2024-07-23at14.26.111.png"
-},
-{
-"key": "thumb_1",
-"src": null
-},
-{
-"key": "thumb_2",
-"src": null
-},
-{
-"key": "thumb_3",
-"src": null
-}
-],
-"type": "image"
-}
-],
-"summary": "A new anonymous suggestion box uncovers shocking complaints, bizarre requests, and suspicious poetry. Maya and Stacey form a task force to investigate the “box bandit.” Turns out, Kyle thought it was a “creative writing prompt.”",
-"title": "Ep 7 - The Suggestion Box Incident",
-"type": {
-"value": "video"
-}
-}
-],
-"extensions": {},
-"id": "293044bb-436c-40b1-88c8-3a8cdf44142a",
-"title": "The Open Space (season)",
-"type": {
-"value": "feed",
+      entry: [
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "d92c2a1f-225f-4c6e-b454-5ccbb10e8c54",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/962211217394/Screenshot2024-07-23at14.26.111.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "The coffee machine breaks, sparking an office-wide meltdown. Stacey, the self-appointed “morale officer,” leads a cringe-worthy team chant. Meanwhile, intern Kyle accidentally sends his therapy email to the entire staff.",
+          title: "Ep 1 - Monday Morning Mayhem",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "82390add-bb7f-4376-8d1d-81ca1ec1c0ef",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/758144060331/Screenshot2025-05-12at14.08.1711.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A prized ergonomic chair vanishes from the bullpen. Dwight-like office manager Belinda launches a dramatic investigation, complete with evidence boards. Meanwhile, sly accountant Raj enjoys perfect lumbar support in his supply closet hideout.",
+          title: "Ep 2 - The Great Chair Heist",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "0ef93c84-30ca-443f-b706-7d784f36dc96",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/456575102657/Screenshot2024-07-23at14.27.471.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A surprise visit from corporate sends everyone into a frenzy. Tech breaks, Maya deletes the slides, and a cat photo winds up in the quarterly report. Meanwhile, ambitious analyst Jordan tries to hijack the meeting with a TED Talk on “synergizing authenticity.”",
+          title: "Ep 3 - Presentation Panic",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "5ec75bea-e96e-4cca-b991-e95b544645b2",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/34876911948/Screenshot2025-05-12at14.11.3311.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "Belinda tries to cancel Casual Friday after Jordan shows up in a velvet cape. The team pushes back with increasingly bizarre outfits in silent protest. Meanwhile, Stacey creates a “Fashion Compliance Task Force” that nobody takes seriously.",
+          title: "Ep 4 - Casual Friday Mutiny",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "80ab0be8-2d40-43d7-954e-b7aca6390ec7",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/775073257458/Screenshot2025-05-12at14.10.4011111111.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A minor reshuffle sparks a passive-aggressive turf war over prime desk real estate. Kyle's desk mysteriously gains plants, trophies, and a framed photo of Belinda’s dog. Maya tries to broker peace through a whiteboard seating treaty—with limited success.",
+          title: "Ep 5 - Desk Wars",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "e476a375-163b-4dac-9e97-f744a09b179b",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/351203035299/Screenshot2025-05-12at14.09.07.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "Belinda stages a surprise fire drill to “test emergency readiness.” Chaos erupts as Jordan tries to rescue his standing desk and Raj refuses to leave mid-spreadsheet. In the end, they evacuate to a nearby café and accidentally hold a productive meeting.",
+          title: "Ep 6 - Fire Drill Fiasco",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/wpAtoFnO.m3u8",
+            type: "video/hls",
+          },
+          extensions: {},
+          id: "e5fc9d0b-dfc8-4bae-acd0-5926c263b248",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/333577369759/Screenshot2024-07-23at14.26.111.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A new anonymous suggestion box uncovers shocking complaints, bizarre requests, and suspicious poetry. Maya and Stacey form a task force to investigate the “box bandit.” Turns out, Kyle thought it was a “creative writing prompt.”",
+          title: "Ep 7 - The Suggestion Box Incident",
+          type: {
+            value: "video",
+          },
+        },
+      ],
+      extensions: {},
+      id: "293044bb-436c-40b1-88c8-3a8cdf44142a",
+      title: "The Open Space (season)",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -641,216 +651,229 @@ module.exports.setup = (app) => {
   app.get("/movies-preset", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/OlxxnbPS.m3u8",
-"type": "video/hls"
-},
-"extensions": {
-"cta": "Watch Now",
-"meta": "2023, Documentry, 1 25h",
-"preview_playback": "https://cdn.jwplayer.com/manifests/irUUQk6r.m3u8",
-"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-},
-"id": "8a7a561a-46c8-4422-b191-4583f2eb8538",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/25839406382/DJ_16_9.png"
-},
-{
-"key": "thumb_2",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/419050399152/echo-unleashed-logo.png"
-},
-{
-"key": "2x3",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/198199790272/Screenshot2024-05-30at9.20.53.png"
-},
-{
-"key": "thumb_1",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/687137140365/ScreenShot2024-03-04at10.56.31.png"
-}
-],
-"type": "image"
-}
-],
-"summary": "A gripping documentary. Chronicles the DJ's relentless rehearsals leading to his monumental concerts, where beats, passion, and resilience collide.",
-"title": "Echo Unleashed",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
-"type": "video/hls"
-},
-"extensions": {
-"cta": "Watch Now",
-"meta": "2023, Sci-Fi, 2 23h",
-"preview_playback": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
-"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-},
-"id": "174fc0d0-d45e-4f5c-8735-b5d445740f1e",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/713531357910/Mars_16_9.png"
-},
-{
-"key": "thumb_2",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/277569792960/desert-horizons-logo.png"
-},
-{
-"key": "thumb_1",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/571911012067/ScreenShot2024-03-04at10.58.14.png"
-},
-{
-"key": "2x3",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306266826341/nars2_3.png"
-}
-],
-"type": "image"
-}
-],
-"summary": "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. As they confront bizarre challenges and unearth long-buried secrets, the crew must find a way to escape the relentless grasp of the enigmatic desert planet.",
-"title": "Deserted Horizons",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/JbeW2HcE.m3u8",
-"type": "video/hls"
-},
-"extensions": {
-"cta": "Watch Now",
-"meta": "1999, Action, 1 25h",
-"preview_playback": "https://cdn.jwplayer.com/manifests/BMSHEjT6.m3u8"
-},
-"id": "5f5917c2-851d-4387-819a-d68a04852c07",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/526241143176/Chase_16_9.png"
-},
-{
-"key": "thumb_2",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/716753203518/brothers-in-blue-logo.png"
-},
-{
-"key": "2x3",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/459866612537/Chase_9_16.png"
-},
-{
-"key": "thumb_1",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/521263089470/ScreenShot2024-03-04at10.55.21.png"
-}
-],
-"type": "image"
-}
-],
-"summary": "In gritty 1970s New York, Detectives Jack Malone and Mike Turner, once inseparable, face off in a high-stakes battle that tests loyalty, justice, and the thin blue line",
-"title": "Brothers In Blue",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/AZGsj45U.m3u8",
-"type": "video/hls"
-},
-"extensions": {
-"cta": "Watch Now",
-"meta": "2023, Drama, 1 25h",
-"preview_playback": "https://cdn.jwplayer.com/manifests/UfAY13hg.m3u8"
-},
-"id": "ee084397-6cdf-4cc0-9f51-df25f3ec2ae0",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/440846831104/Trip_16_9.png"
-},
-{
-"key": "thumb_2",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/270248686405/threads-of-time-logo.png"
-},
-{
-"key": "2x3",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/379589361580/trip2_3.png"
-},
-{
-"key": "thumb_1",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/464935691600/ScreenShot2024-03-04at10.50.20.png"
-}
-],
-"type": "image"
-}
-],
-"summary": "A poignant drama tracing the evolving lives and enduring bonds of three friends over three transformative decades.",
-"title": "Threads of Time",
-"type": {
-"value": "video"
-}
-},
-{
-"content": {
-"src": "https://cdn.jwplayer.com/manifests/oNdJl9QJ.m3u8",
-"type": "video/hls"
-},
-"extensions": {
-"cta": "Watch Now",
-"meta": "2023, Drama, 1 15h",
-"preview_playback": "https://cdn.jwplayer.com/manifests/o0FuVb6H.m3u8",
-"trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-},
-"id": "099fbc1f-8aba-40af-a087-c87fe4ee79c8",
-"media_group": [
-{
-"media_item": [
-{
-"key": "image_base",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/126258133287/Underwater_16_9.png"
-},
-{
-"key": "thumb_2",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/284470411311/ephemeral-embrace-logo.png"
-},
-{
-"key": "2x3",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/938039073676/underwater2_3.png"
-},
-{
-"key": "thumb_1",
-"src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/766363513268/ScreenShot2024-03-04at10.58.51.png"
-}
-],
-"type": "image"
-}
-],
-"summary": "In a poetic dance between reality and fantasy, \"Ephemeral Embrace\" explores the bittersweet love of two souls destined to be together, yet forever kept apart.",
-"title": "Ephemeral Embrace",
-"type": {
-"value": "video"
-}
-}
-],
-"extensions": {},
-"id": "4fe70406-62d3-4220-bae3-875dc0f16e4b",
-"title": "Movies Presets (origin) ",
-"type": {
-"value": "feed",
+      entry: [
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/OlxxnbPS.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            cta: "Watch Now",
+            meta: "2023, Documentry, 1 25h",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/irUUQk6r.m3u8",
+            trailer_feed_url:
+              "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json",
+          },
+          id: "8a7a561a-46c8-4422-b191-4583f2eb8538",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/25839406382/DJ_16_9.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/419050399152/echo-unleashed-logo.png",
+                },
+                {
+                  key: "2x3",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/198199790272/Screenshot2024-05-30at9.20.53.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/687137140365/ScreenShot2024-03-04at10.56.31.png",
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A gripping documentary. Chronicles the DJ's relentless rehearsals leading to his monumental concerts, where beats, passion, and resilience collide.",
+          title: "Echo Unleashed",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            cta: "Watch Now",
+            meta: "2023, Sci-Fi, 2 23h",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+            trailer_feed_url:
+              "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json",
+          },
+          id: "174fc0d0-d45e-4f5c-8735-b5d445740f1e",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/713531357910/Mars_16_9.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/277569792960/desert-horizons-logo.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/571911012067/ScreenShot2024-03-04at10.58.14.png",
+                },
+                {
+                  key: "2x3",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306266826341/nars2_3.png",
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. As they confront bizarre challenges and unearth long-buried secrets, the crew must find a way to escape the relentless grasp of the enigmatic desert planet.",
+          title: "Deserted Horizons",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/JbeW2HcE.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            cta: "Watch Now",
+            meta: "1999, Action, 1 25h",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/BMSHEjT6.m3u8",
+          },
+          id: "5f5917c2-851d-4387-819a-d68a04852c07",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/526241143176/Chase_16_9.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/716753203518/brothers-in-blue-logo.png",
+                },
+                {
+                  key: "2x3",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/459866612537/Chase_9_16.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/521263089470/ScreenShot2024-03-04at10.55.21.png",
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "In gritty 1970s New York, Detectives Jack Malone and Mike Turner, once inseparable, face off in a high-stakes battle that tests loyalty, justice, and the thin blue line",
+          title: "Brothers In Blue",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/AZGsj45U.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            cta: "Watch Now",
+            meta: "2023, Drama, 1 25h",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/UfAY13hg.m3u8",
+          },
+          id: "ee084397-6cdf-4cc0-9f51-df25f3ec2ae0",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/440846831104/Trip_16_9.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/270248686405/threads-of-time-logo.png",
+                },
+                {
+                  key: "2x3",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/379589361580/trip2_3.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/464935691600/ScreenShot2024-03-04at10.50.20.png",
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            "A poignant drama tracing the evolving lives and enduring bonds of three friends over three transformative decades.",
+          title: "Threads of Time",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/oNdJl9QJ.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            cta: "Watch Now",
+            meta: "2023, Drama, 1 15h",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/o0FuVb6H.m3u8",
+            trailer_feed_url:
+              "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json",
+          },
+          id: "099fbc1f-8aba-40af-a087-c87fe4ee79c8",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/126258133287/Underwater_16_9.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/284470411311/ephemeral-embrace-logo.png",
+                },
+                {
+                  key: "2x3",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/938039073676/underwater2_3.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/766363513268/ScreenShot2024-03-04at10.58.51.png",
+                },
+              ],
+              type: "image",
+            },
+          ],
+          summary:
+            'In a poetic dance between reality and fantasy, "Ephemeral Embrace" explores the bittersweet love of two souls destined to be together, yet forever kept apart.',
+          title: "Ephemeral Embrace",
+          type: {
+            value: "video",
+          },
+        },
+      ],
+      extensions: {},
+      id: "4fe70406-62d3-4220-bae3-875dc0f16e4b",
+      title: "Movies Presets (origin) ",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -858,46 +881,43 @@ module.exports.setup = (app) => {
   app.get("/search-filters-preset", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      
-        "entry": [
-    {
-      "extensions": {
-        "filterTag": "all"
-      },
-      "id": "460c5cd5-d205-41b0-a2dd-ca94a6194f11",
-      "title": "All",
-      "type": {
-        "value": "filter-search"
-      }
-    },
-    {
-      "extensions": {
-        "filterTag": "video"
-      },
-      "id": "44bb8ad2-5936-4e43-9ea1-06d7421e17f5",
-      "title": "Videos",
-      "type": {
-        "value": "filter-search"
-      }
-    },
-    {
-      "extensions": {
-        "filterTag": "episodes"
-      },
-      "id": "eb8033f2-6b39-4a32-accc-f30c31c42e2b",
-      "title": "Episodes",
-      "type": {
-        "value": "filter-search"
-      }
-    }
-  ],
-  "extensions": {
-    
-  },
-  "id": "814ee4a7-e893-47eb-9612-8c10b1375a98",
-  "title": "Search Filters (Preset)",
-  "type": {
-    "value": "feed",
+      entry: [
+        {
+          extensions: {
+            filterTag: "all",
+          },
+          id: "460c5cd5-d205-41b0-a2dd-ca94a6194f11",
+          title: "All",
+          type: {
+            value: "filter-search",
+          },
+        },
+        {
+          extensions: {
+            filterTag: "video",
+          },
+          id: "44bb8ad2-5936-4e43-9ea1-06d7421e17f5",
+          title: "Videos",
+          type: {
+            value: "filter-search",
+          },
+        },
+        {
+          extensions: {
+            filterTag: "episodes",
+          },
+          id: "eb8033f2-6b39-4a32-accc-f30c31c42e2b",
+          title: "Episodes",
+          type: {
+            value: "filter-search",
+          },
+        },
+      ],
+      extensions: {},
+      id: "814ee4a7-e893-47eb-9612-8c10b1375a98",
+      title: "Search Filters (Preset)",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -905,25 +925,21 @@ module.exports.setup = (app) => {
   app.get("/404-error", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
+      entry: [
         {
-          "extensions": {
-            
+          extensions: {},
+          id: "a16469fa-e6f5-4a28-b72a-bd163827306d",
+          title: "Back To Home",
+          type: {
+            value: "home",
           },
-          "id": "a16469fa-e6f5-4a28-b72a-bd163827306d",
-          "title": "Back To Home",
-          "type": {
-            "value": "home"
-          }
-        }
+        },
       ],
-      "extensions": {
-        
-      },
-      "id": "7f9197c7-4ec7-4377-a248-0a341d2dc1ae",
-      "title": "404 Back to home",
-      "type": {
-        "value": "feed",
+      extensions: {},
+      id: "7f9197c7-4ec7-4377-a248-0a341d2dc1ae",
+      title: "404 Back to home",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -931,165 +947,163 @@ module.exports.setup = (app) => {
   app.get("/preference-selector-1", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
+      entry: [
         {
-          "extensions": {
-            
+          extensions: {},
+          id: "f406c674-83a3-45ae-91ca-8d4375f02d08",
+          summary: "Select your favorite genres from the list below",
+          title: "Choose A Genre",
+          type: {
+            value: "video",
           },
-          "id": "f406c674-83a3-45ae-91ca-8d4375f02d08",
-          "summary": "Select your favorite genres from the list below",
-          "title": "Choose A Genre",
-          "type": {
-            "value": "video"
-          }
         },
         {
-          "extensions": {
-            "tag": "comedy"
+          extensions: {
+            tag: "comedy",
           },
-          "id": "4f2069e3-449a-4385-b04c-372a53c8beca",
-          "media_group": [
+          id: "4f2069e3-449a-4385-b04c-372a53c8beca",
+          media_group: [
             {
-              "media_item": [
+              media_item: [
                 {
-                  "key": "image_base",
-                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/39455933103/Rectangle3.png"
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/39455933103/Rectangle3.png",
                 },
                 {
-                  "key": "thumb_1",
-                  "src": null
+                  key: "thumb_1",
+                  src: null,
                 },
                 {
-                  "key": "thumb_2",
-                  "src": null
+                  key: "thumb_2",
+                  src: null,
                 },
                 {
-                  "key": "thumb_3",
-                  "src": null
-                }
+                  key: "thumb_3",
+                  src: null,
+                },
               ],
-              "type": "image"
-            }
+              type: "image",
+            },
           ],
-          "title": "Comedy",
-          "type": {
-            "value": "action"
-          }
+          title: "Comedy",
+          type: {
+            value: "action",
+          },
         },
         {
-          "extensions": {
-            "tag": "horror"
+          extensions: {
+            tag: "horror",
           },
-          "id": "05193c74-197b-4bad-b4ac-619fc34a10b8",
-          "media_group": [
+          id: "05193c74-197b-4bad-b4ac-619fc34a10b8",
+          media_group: [
             {
-              "media_item": [
+              media_item: [
                 {
-                  "key": "image_base",
-                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/341562002376/Rectangle3.png"
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/341562002376/Rectangle3.png",
                 },
                 {
-                  "key": "thumb_1",
-                  "src": null
+                  key: "thumb_1",
+                  src: null,
                 },
                 {
-                  "key": "thumb_2",
-                  "src": null
+                  key: "thumb_2",
+                  src: null,
                 },
                 {
-                  "key": "thumb_3",
-                  "src": null
-                }
+                  key: "thumb_3",
+                  src: null,
+                },
               ],
-              "type": "image"
-            }
+              type: "image",
+            },
           ],
-          "title": "Horror",
-          "type": {
-            "value": "action"
-          }
+          title: "Horror",
+          type: {
+            value: "action",
+          },
         },
         {
-          "extensions": {
-            "tag": "action"
+          extensions: {
+            tag: "action",
           },
-          "id": "43b3eb9e-9c1b-4e7a-99b1-aecba22fed58",
-          "media_group": [
+          id: "43b3eb9e-9c1b-4e7a-99b1-aecba22fed58",
+          media_group: [
             {
-              "media_item": [
+              media_item: [
                 {
-                  "key": "image_base",
-                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/160776073233/Rectangle3.png"
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/160776073233/Rectangle3.png",
                 },
                 {
-                  "key": "thumb_1",
-                  "src": null
+                  key: "thumb_1",
+                  src: null,
                 },
                 {
-                  "key": "thumb_2",
-                  "src": null
+                  key: "thumb_2",
+                  src: null,
                 },
                 {
-                  "key": "thumb_3",
-                  "src": null
-                }
+                  key: "thumb_3",
+                  src: null,
+                },
               ],
-              "type": "image"
-            }
+              type: "image",
+            },
           ],
-          "title": "Action",
-          "type": {
-            "value": "action"
-          }
+          title: "Action",
+          type: {
+            value: "action",
+          },
         },
         {
-          "extensions": {
-            "tag": "drama"
+          extensions: {
+            tag: "drama",
           },
-          "id": "0ba2b5bd-f86f-412d-a1ee-455865025c65",
-          "media_group": [
+          id: "0ba2b5bd-f86f-412d-a1ee-455865025c65",
+          media_group: [
             {
-              "media_item": [
+              media_item: [
                 {
-                  "key": "image_base",
-                  "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/967792217433/Rectangle3.png"
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/967792217433/Rectangle3.png",
                 },
                 {
-                  "key": "thumb_1",
-                  "src": null
+                  key: "thumb_1",
+                  src: null,
                 },
                 {
-                  "key": "thumb_2",
-                  "src": null
+                  key: "thumb_2",
+                  src: null,
                 },
                 {
-                  "key": "thumb_3",
-                  "src": null
-                }
+                  key: "thumb_3",
+                  src: null,
+                },
               ],
-              "type": "image"
-            }
+              type: "image",
+            },
           ],
-          "title": "Drama",
-          "type": {
-            "value": "action"
-          }
-        }
+          title: "Drama",
+          type: {
+            value: "action",
+          },
+        },
       ],
-      "extensions": {
-        "behavior": {
-          "current_selection": "@{ctx/user_preferences.genre}",
-          "select_mode": "multi"
+      extensions: {
+        behavior: {
+          current_selection: "@{ctx/user_preferences.genre}",
+          select_mode: "multi",
         },
-        "preference_editor_options": {
-          "key": "user_preferences.genre"
+        preference_editor_options: {
+          key: "user_preferences.genre",
         },
-        "role": "preference_editor"
+        role: "preference_editor",
       },
-      "id": "e43262df-ece0-4ede-8e27-603dd35f11a0",
-      "title": "Preference Selector - Choose a Genre ",
-      "type": {
-        "value": "feed",
+      id: "e43262df-ece0-4ede-8e27-603dd35f11a0",
+      title: "Preference Selector - Choose a Genre ",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -1097,73 +1111,71 @@ module.exports.setup = (app) => {
   app.get("/preference-selector-2", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      "entry": [
+      entry: [
         {
-          "extensions": {
-            
+          extensions: {},
+          id: "cd2a8967-1477-47b5-b6c3-0e524c2c8d85",
+          summary: "Select your zone for relevant news updates",
+          title: "News That Matters to You",
+          type: {
+            value: "video",
           },
-          "id": "cd2a8967-1477-47b5-b6c3-0e524c2c8d85",
-          "summary": "Select your zone for relevant news updates",
-          "title": "News That Matters to You",
-          "type": {
-            "value": "video"
-          }
         },
         {
-          "extensions": {
-            "tag": "us"
+          extensions: {
+            tag: "us",
           },
-          "id": "a7537941-ba3c-43f4-afc3-bcb7566b13b0",
-          "title": "US",
-          "type": {
-            "value": "action"
-          }
+          id: "a7537941-ba3c-43f4-afc3-bcb7566b13b0",
+          title: "US",
+          type: {
+            value: "action",
+          },
         },
         {
-          "extensions": {
-            "tag": "asia"
+          extensions: {
+            tag: "asia",
           },
-          "id": "add66255-9eaa-49af-90a9-148152bb80bf",
-          "title": "Asia",
-          "type": {
-            "value": "action"
-          }
+          id: "add66255-9eaa-49af-90a9-148152bb80bf",
+          title: "Asia",
+          type: {
+            value: "action",
+          },
         },
         {
-          "extensions": {
-            "tag": "eu"
+          extensions: {
+            tag: "eu",
           },
-          "id": "82709fee-1187-439a-8524-6f290d41a1a3",
-          "title": "Europe",
-          "type": {
-            "value": "action"
-          }
+          id: "82709fee-1187-439a-8524-6f290d41a1a3",
+          title: "Europe",
+          type: {
+            value: "action",
+          },
         },
         {
-          "extensions": {
-            "tag": "au"
+          extensions: {
+            tag: "au",
           },
-          "id": "4bd92b7e-3834-4d80-85b9-9e3a3cfdd4ef",
-          "title": "Australia",
-          "type": {
-            "value": "action"
-          }
-        }
+          id: "4bd92b7e-3834-4d80-85b9-9e3a3cfdd4ef",
+          title: "Australia",
+          type: {
+            value: "action",
+          },
+        },
       ],
-      "extensions": {
-        "behavior": {
-          "current_selection": "@{ctx/user_preferences.region}",
-          "select_mode": "multi"
+      extensions: {
+        behavior: {
+          current_selection: "@{ctx/user_preferences.region}",
+          select_mode: "multi",
         },
-        "preference_editor_options": {
-          "key": "user_preferences.region"
+        preference_editor_options: {
+          key: "user_preferences.region",
         },
-        "role": "preference_editor"
+        role: "preference_editor",
       },
-      "id": "4cce74b5-3839-40cb-bc5e-47470a4bd6c4",
-      "title": "Preference Selector - Region ",
-      "type": {
-        "value": "feed",
+      id: "4cce74b5-3839-40cb-bc5e-47470a4bd6c4",
+      title: "Preference Selector - Region ",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -1171,88 +1183,88 @@ module.exports.setup = (app) => {
   app.get("/mobile-top-component-preset", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
-      
-        "entry": [
-          {
-            "content": {
-              "src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
-              "type": "video/hls"
-            },
-            "extensions": {
-              "cta": "Start Watching",
-              "genre": "Action",
-              "meta": "2023, Sci-Fi, 2 23h",
-              "preview_playback": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
-              "trailer_feed_url": "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json"
-            },
-            "id": "0e8c23bf-76eb-4f21-8cae-d59bf44495a5",
-            "media_group": [
-              {
-                "media_item": [
-                  {
-                    "key": "image_base",
-                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/66526082841/Mars_16_9.png"
-                  },
-                  {
-                    "key": "thumb_2",
-                    "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/668730228878/desert-horizons-logo.png"
-                  },
-                  {
-                    "key": "thumb_1",
-                    "src": null
-                  },
-                  {
-                    "key": "thumb_3",
-                    "src": null
-                  }
-                ],
-                "type": "image"
-              }
-            ],
-            "summary": "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. ",
-            "title": "Deserted Horizons",
-            "type": {
-              "value": "video"
-            }
+      entry: [
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+            type: "video/hls",
           },
-          {
-            "content": {
-              "src": "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
-              "type": "video/hls"
-            },
-            "extensions": {
-              "bg-color": "rgba(254,20,72,1)",
-              "bg-color-focus": "rgba(190,14,43,1)"
-            },
-            "id": "638711a0-db6f-47d3-b156-70ccb33363ca",
-            "title": "Play",
-            "type": {
-              "value": "video"
-            }
+          extensions: {
+            cta: "Start Watching",
+            genre: "Action",
+            meta: "2023, Sci-Fi, 2 23h",
+            preview_playback:
+              "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+            trailer_feed_url:
+              "https://assets-production.applicaster.com/zapp/assets/accounts/617fe94bd22a630012a76496/static_feeds/feed-be21c659-072e-415d-819c-dc6d45f1de1c.json",
           },
-          {
-            "content": {
-              "src": "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
-              "type": "video/hls"
+          id: "0e8c23bf-76eb-4f21-8cae-d59bf44495a5",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/66526082841/Mars_16_9.png",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/668730228878/desert-horizons-logo.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
             },
-            "extensions": {
-              "bg-color": "rgba(46,46,46,1)",
-              "bg-color-focus": "rgba(30,30,30,1)"
-            },
-            "id": "a29390f9-45e8-40c7-8986-96e69a3fba95",
-            "title": "Watch Trailer",
-            "type": {
-              "value": "video"
-            }
-          }
-        ],
-        "extensions": {
-          
+          ],
+          summary:
+            "A space mission veers off course, stranding astronauts in a shifting desert-like dimension. ",
+          title: "Deserted Horizons",
+          type: {
+            value: "video",
+          },
         },
-        "id": "0a0651f6-dc8e-4726-85eb-158193c64317",
-        "title": "Mobile Top Component Preset",
-        "type": {
-          "value": "feed",
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/FB721H0y.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            "bg-color": "rgba(254,20,72,1)",
+            "bg-color-focus": "rgba(190,14,43,1)",
+          },
+          id: "638711a0-db6f-47d3-b156-70ccb33363ca",
+          title: "Play",
+          type: {
+            value: "video",
+          },
+        },
+        {
+          content: {
+            src: "https://cdn.jwplayer.com/manifests/vBr1LaW6.m3u8",
+            type: "video/hls",
+          },
+          extensions: {
+            "bg-color": "rgba(46,46,46,1)",
+            "bg-color-focus": "rgba(30,30,30,1)",
+          },
+          id: "a29390f9-45e8-40c7-8986-96e69a3fba95",
+          title: "Watch Trailer",
+          type: {
+            value: "video",
+          },
+        },
+      ],
+      extensions: {},
+      id: "0a0651f6-dc8e-4726-85eb-158193c64317",
+      title: "Mobile Top Component Preset",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -1261,128 +1273,131 @@ module.exports.setup = (app) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
       entry: [
-    {
-      "content": {
-        "src": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
-        "type": "audio"
-      },
-      "extensions": {
-        "artist": "Artist"
-      },
-      "id": "91cd86fb-70eb-4021-a693-a4114915b8ab",
-      "media_group": [
         {
-          "media_item": [
+          content: {
+            src: "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+            type: "audio",
+          },
+          extensions: {
+            artist: "Artist",
+          },
+          id: "91cd86fb-70eb-4021-a693-a4114915b8ab",
+          media_group: [
             {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/518666839512/unnamed.png"
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/518666839512/unnamed.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
             },
-            {
-              "key": "thumb_1",
-              "src": null
-            },
-            {
-              "key": "thumb_2",
-              "src": null
-            },
-            {
-              "key": "thumb_3",
-              "src": null
-            }
           ],
-          "type": "image"
-        }
-      ],
-      "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
-      "title": "Song 1",
-      "type": {
-        "value": "audio"
-      }
-    },
-    {
-      "content": {
-        "src": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
-        "type": "audio"
-      },
-      "extensions": {
-        "artist": "Artist"
-      },
-      "id": "fa1bbc81-1634-498a-8ecf-62425071eaab",
-      "media_group": [
+          summary:
+            "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
+          title: "Song 1",
+          type: {
+            value: "audio",
+          },
+        },
         {
-          "media_item": [
+          content: {
+            src: "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+            type: "audio",
+          },
+          extensions: {
+            artist: "Artist",
+          },
+          id: "fa1bbc81-1634-498a-8ecf-62425071eaab",
+          media_group: [
             {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/145963896924/unnamed.png"
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/145963896924/unnamed.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
             },
-            {
-              "key": "thumb_1",
-              "src": null
-            },
-            {
-              "key": "thumb_2",
-              "src": null
-            },
-            {
-              "key": "thumb_3",
-              "src": null
-            }
           ],
-          "type": "image"
-        }
-      ],
-      "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
-      "title": "Song 2",
-      "type": {
-        "value": "audio"
-      }
-    },
-    {
-      "content": {
-        "src": "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
-        "type": "audio"
-      },
-      "extensions": {
-        "artist": "Artist"
-      },
-      "id": "262082e9-4a49-4853-8750-ae403d8f6c0a",
-      "media_group": [
+          summary:
+            "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
+          title: "Song 2",
+          type: {
+            value: "audio",
+          },
+        },
         {
-          "media_item": [
+          content: {
+            src: "https://onlinetestcase.com/wp-content/uploads/2023/06/500-KB-MP3.mp3",
+            type: "audio",
+          },
+          extensions: {
+            artist: "Artist",
+          },
+          id: "262082e9-4a49-4853-8750-ae403d8f6c0a",
+          media_group: [
             {
-              "key": "image_base",
-              "src": "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306499473715/unnamed.png"
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/306499473715/unnamed.png",
+                },
+                {
+                  key: "thumb_1",
+                  src: null,
+                },
+                {
+                  key: "thumb_2",
+                  src: null,
+                },
+                {
+                  key: "thumb_3",
+                  src: null,
+                },
+              ],
+              type: "image",
             },
-            {
-              "key": "thumb_1",
-              "src": null
-            },
-            {
-              "key": "thumb_2",
-              "src": null
-            },
-            {
-              "key": "thumb_3",
-              "src": null
-            }
           ],
-          "type": "image"
-        }
+          summary:
+            "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
+          title: "Song 3",
+          type: {
+            value: "audio",
+          },
+        },
       ],
-      "summary": "Here will be a short description of the movie. You can configure the number of displayed lines in the cell style.",
-      "title": "Song 3",
-      "type": {
-        "value": "audio"
-      }
-    }
-  ],
-  "extensions": {
-    "artist": "Artist"
-  },
-  "id": "b4dd77e7-f413-4721-bfe4-2c1b7e9cc435",
-  "title": "Title Header",
-  "type": {
-    "value": "feed",
+      extensions: {
+        artist: "Artist",
+      },
+      id: "b4dd77e7-f413-4721-bfe4-2c1b7e9cc435",
+      title: "Title Header",
+      type: {
+        value: "feed",
       },
     });
   });
@@ -5980,6 +5995,353 @@ module.exports.setup = (app) => {
           },
         },
       ],
+    });
+  });
+  app.get("/tabs-a-z", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      entry: [
+        {
+          extensions: {},
+          id: "40757cff-de05-4cf1-b32e-d17cfdf60c93",
+          title: "A",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "7c2eef3e-a9bb-4748-8d18-ddc07470e17f",
+          title: "B",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "5cf79688-c653-45f0-8973-a10c6286c583",
+          title: "C",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "e9930cd2-bce4-4c94-b14c-3533b9bacec8",
+          title: "D",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "1dec8aef-63b9-4ab9-a10c-9388c0b8be7c",
+          title: "E",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "746df72e-22c7-46e3-bb1e-3220f73ea8b8",
+          title: "F",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "04f1259a-ac28-43d1-a32a-155d1061f123",
+          title: "G",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "46c25898-9e15-43dd-8be1-f5cb24650983",
+          title: "H",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "2af45d7f-36c3-4baa-9f5e-e5b7a52e01ff",
+          title: "I",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "1ab37c04-58ab-491e-8565-53c55210edbf",
+          title: "J",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "26b08e14-0c7d-4b31-acf7-de7f53133b49",
+          summary: "",
+          title: "K",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "4cb155ac-97c3-49bf-8f5e-a42ae9228738",
+          title: "L",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "136eae58-6388-4f0b-8cb0-dd4656f369ef",
+          title: "M",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "a5c47905-5eb5-457d-8b3b-5962bb37f897",
+          title: "N",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "8d294ccb-088f-406c-8173-092a8809da7c",
+          title: "O",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "ce893ca9-fcbd-4866-a8a7-f444801cc3e0",
+          title: "P",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "509a5eb2-bd39-4727-aa03-caf95eca3690",
+          title: "Q",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "e242effb-3c10-41cc-a5bb-66028ccc4c5d",
+          title: "R",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "ba97f3e1-18e1-49a9-98b9-c5d17232947e",
+          title: "S",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "6b1943c4-7b10-42fa-bd42-4e2918c1fedf",
+          title: "T",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "130eee2e-9faf-4159-96a1-1508f98d9cdc",
+          title: "U",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "0d66b195-b596-4a66-9e17-15e2e077bb45",
+          title: "V",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "30c09937-78ec-4e78-8d54-c6ccdad9715e",
+          title: "W",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "e017215c-c40f-433a-9b25-12cdfdbd466e",
+          summary: "",
+          title: "X",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "5c971513-b22e-46fb-9236-8449d945325c",
+          title: "Y",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "20ec6721-6b0e-435a-a2cf-d831d00a874f",
+          title: "Z",
+          type: { value: "a-z" },
+        },
+        {
+          extensions: {},
+          id: "3b8015f1-2213-4fa3-893f-788e2a422dd0",
+          title: "#",
+          type: { value: "a-z" },
+        },
+      ],
+      extensions: {},
+      id: "55aa0efc-cf14-4edb-b986-66da25d8bb30",
+      title: "Web Tabs A-Z",
+      type: { value: "feed" },
+    });
+  });
+  app.get("/tabs-my-stuff", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      entry: [
+        {
+          extensions: {},
+          id: "7b3809ed-c342-40d0-849f-c31c05db2056",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/510167731360/watchlist-default.svg",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/408536684547/watchlist-hover.svg",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/273843487763/watchlist-selected.svg",
+                },
+                { key: "thumb_3", src: null },
+              ],
+              type: "image",
+            },
+          ],
+          title: "Watchlist",
+          type: { value: "tabs-watchlist" },
+        },
+        {
+          extensions: {},
+          id: "bb4e9fe4-1fe2-448f-9288-caaa59d60c7e",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/737357387816/account-default.svg",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/429397439239/account-hover.svg",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/951718108053/account-selected.svg",
+                },
+                { key: "thumb_3", src: null },
+              ],
+              type: "image",
+            },
+          ],
+          title: "My Account",
+          type: { value: "tabs-my-account" },
+        },
+        {
+          extensions: {},
+          id: "550d120c-75a3-4ef7-88f9-0e0c99895470",
+          media_group: [
+            {
+              media_item: [
+                {
+                  key: "image_base",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/830644007659/settings-default.svg",
+                },
+                {
+                  key: "thumb_1",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/702129650371/settings-hover.svg",
+                },
+                {
+                  key: "thumb_2",
+                  src: "https://assets-secure.applicaster.com/zapp/assets/app_family/2392/manual_feeds/103231011640/settings-selected.svg",
+                },
+                { key: "thumb_3", src: null },
+              ],
+              type: "image",
+            },
+          ],
+          title: "Settings",
+          type: { value: "tabs-settings" },
+        },
+      ],
+      extensions: {},
+      id: "8d825944-a132-407d-8b66-b0d6d1a2d592",
+      title: "Web Tabs My Stuff",
+      type: { value: "feed" },
+    });
+  });
+  app.get("/tabs-categories", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      entry: [
+        {
+          extensions: {},
+          id: "6e7c77ba-c6f2-4e2b-8a27-42c6fa12aaae",
+          title: "Action & Adventure",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "c073f9f7-87d0-40fb-9032-e247d1c47472",
+          title: "Comedy",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "9fbc5b6b-5344-4374-99a0-c3b83be252a5",
+          title: "Documentaries",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "44afe637-3dc4-4857-9310-6f0bb24ee606",
+          title: "Drama",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "f4f10cd0-d594-437e-8eec-dbc65902b271",
+          title: "Entertainment",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "0ae01680-49f8-40e1-87e4-f566af588273",
+          title: "Films",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "360a9831-7cc9-439c-9688-c0ec6cb457ac",
+          title: "Kids & Family",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "639ecb2e-837f-4ddc-9ffe-ac3bf197a911",
+          title: "Lifestyle",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "2c5c25cf-e455-4d22-ad10-e37a4ec6788c",
+          title: "News & Current Affairs",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "8be59495-0a1c-4e78-9101-b107d7685a1e",
+          title: "Reality",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "8640839e-f7e1-49fa-ada5-aaac9b9a221f",
+          title: "Sport",
+          type: { value: "categories" },
+        },
+        {
+          extensions: {},
+          id: "89efdcbc-0094-4fee-892c-dc9195bdb129",
+          title: "World Drama",
+          type: { value: "categories" },
+        },
+      ],
+      extensions: {},
+      id: "d812eb46-1c8d-4ef4-9413-7b00a0baf7a2",
+      title: "Web Tabs Categories",
+      type: { value: "feed" },
     });
   });
 };
