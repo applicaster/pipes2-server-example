@@ -245,6 +245,29 @@ module.exports.setup = (app) => {
     });
   });
 
+  app.get("/web-tabs-categories-header", (req, res) => {
+    res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
+    res.json({
+      entry: [
+        {
+          extensions: {},
+          id: "688e1dc3-5929-4b99-9bcf-8f133db4cf8c",
+          summary: "Looking for something to watch? Stream 100s of series and films",
+          title: "Categories",
+          type: {
+            value: "video",
+          },
+        },
+      ],
+      extensions: {},
+      id: "bc12088b-4c87-41f4-88f9-6c8f8f8939c7",
+      title: "Web Tabs Categories Header",
+      type: {
+        value: "feed",
+      },
+    });
+  });
+
   app.get("/tabs-vertical", (req, res) => {
     res.setHeader("content-type", "application/vnd+applicaster.pipes2+json");
     res.json({
